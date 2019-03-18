@@ -1,0 +1,4 @@
+.container.m-auto.flex.flex-col.md:flex-row.max-w-xl
+  .w-full.flex.flex-row.md:flex-col.justify-between.md:justify-center.items-center.p-2.md:p-8.items-center.md:items-start
+    .flex.items-center.sm:border-r.md:border-b.md:border-r-0.p-4.md:w-auto class="w-1/2" 
+      {{.Inner}}

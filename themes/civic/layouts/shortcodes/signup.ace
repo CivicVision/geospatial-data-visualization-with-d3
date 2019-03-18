@@ -1,0 +1,8 @@
+section.antialiased.font-sans.w-full.bg-grey-lighter.text-left.text-black.py-4
+  .container.mx-auto.max-w-xl.py-4.font-normal.leading-normal
+    h3.text-2xl {{.Get 0}}
+    p {{.Inner}}
+    .max-w-sm.mt-4.sm:flex
+      input.block.w-full.focus:outline-0.bg-white.py-3.px-6.mb-2.sm:mb-0 name="email" placeholder="Enter your email" required="" type="email"
+      button.uppercase.text-sm.text-white.focus:outline-0.w-full.sm:w-auto.bg-black.hover:bg-grey-darkest.focus:bg-grey-light.tracking-wide.px-6 Subscribe
+

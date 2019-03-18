@@ -1,0 +1,4 @@
+section.antialiased.font-sans.w-full.bg-grey-lighter.text-left.text-black.py-8
+  .container.mx-auto.max-w-xl.py-4.font-normal.leading-normal
+    h3.text-2xl {{.Get 0}}
+    p {{.Inner}}
