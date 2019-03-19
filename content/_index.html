@@ -1,27 +1,41 @@
 ---
 layout: landingpage
-body_classes: "font-light font-sans leading-normal text-lg lg:text-2xl text-black"
+body_classes: font-light font-sans leading-normal text-lg lg:text-2xl text-black
 form:
   id: 881267
   uid: 5e5e7f8875
-  subscribe_text: "Tell me more!"
+  subscribe_text: Tell me more!
   classes:
-    button: "uppercase text-sm text-white focus:outline-0 w-full sm:w-auto bg-blue-darker hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 ml-8"
-    form: "mt-4 w-full"
-    fields: "sm:flex"
-    error: "text-red-darker mb-4"
-    input: "max-w-sm block border border-transparent focus:border-grey-light rounded transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-2 sm:mb-0 flex-grow"
-  options: {"settings":{"after_subscribe":{"success_message":"Success! Now check your email to confirm your subscription.","action":"redirect","redirect_url":"https://civic.vision/geospatial-data-visualization/subscribe/thank-you"},"return_visitor":{"custom_content":"","action":"hide"},"recaptcha":{"enabled":false}}}
-  fields: [
-    { type: "email", name: "email", placeholder: "Your email address"}
-  ]
+    button: uppercase text-sm text-white focus:outline-0 w-full sm:w-auto bg-blue-darker
+      hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 ml-8
+    form: mt-4 w-full
+    fields: sm:flex
+    error: text-red-darker mb-4
+    input: max-w-sm block border border-transparent focus:border-grey-light rounded
+      transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-2 sm:mb-0 flex-grow
+  options:
+    settings:
+      after_subscribe:
+        success_message: Success! Now check your email to confirm your subscription.
+        action: redirect
+        redirect_url: https://civic.vision/geospatial-data-visualization/subscribe/thank-you
+      return_visitor:
+        custom_content: ''
+        action: hide
+      recaptcha:
+        enabled: false
+  fields:
+  - type: email
+    name: email
+    placeholder: Your email address
+
 ---
 {{< header>}}
   Learn how to create distraction-free maps.
 {{</ header>}}
 {{< image "https://res.cloudinary.com/civicvision/image/upload/v1552905044/Landingpages/Geospatial%20d3/hexmap.png" "hexmap in d3">}}
 {{< text "Let your data shine.">}}
-Are you tired of maps which distract your audience from reading the map becuase of the basemap beeing to distracting, too shiny and too overrepresented?
+Are you tired of maps which distract your audience from reading the map because of the basemap beeing to distracting, too shiny and too overrepresented?
 {{</ text >}}
 {{< signup "Learn how to create great looking, distraction free maps with this online course">}}
   {{< form >}}
