@@ -1,13 +1,27 @@
 ---
 layout: landingpage
 body_classes: "font-light font-sans leading-normal text-lg lg:text-2xl text-black"
+form:
+  id: 881267
+  uid: 5e5e7f8875
+  classes:
+    button: "uppercase text-sm text-white focus:outline-0 w-full sm:w-auto bg-black hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6"
+    form: "max-w-sm mt-4"
+    fields: "sm:flex"
+    error: "float-left"
+    input: "block w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-2 sm:mb-0"
+  options: {"settings":{"after_subscribe":{"success_message":"Success! Now check your email to confirm your subscription.","action":"redirect","redirect_url":"https://civic.vision/geospatial-data-visualization/subscribe/thank-you"},"return_visitor":{"custom_content":"","action":"hide"},"recaptcha":{"enabled":false}}}
+  fields: [
+    { type: "email", name: "email", placeholder: "Your email address"}
+  ]
 ---
 {{< header>}}
   Learn how to create distraction-free maps.
 {{</ header>}}
 {{< image "https://res.cloudinary.com/civicvision/image/upload/v1552905044/Landingpages/Geospatial%20d3/hexmap.png" "hexmap in d3">}}
 {{< text "Let your data shine.">}}
-Are you tired of maps which distract your audience from reading the map becuase of the basemap beeing to distracting, too shiny and too überrepreseant
+Are you tired of maps which distract your audience from reading the map becuase of the basemap beeing to distracting, too shiny and too overrepresented?
 {{</ text >}}
 {{< signup "Learn how to create great looking, distraction free maps with this course">}}
+  {{< form >}}
 {{</ signup >}}

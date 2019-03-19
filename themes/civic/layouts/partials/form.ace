@@ -1,0 +1,16 @@
+script src="https://f.convertkit.com/ckjs/ck.5.js"
+form#ck-simple action="https://app.convertkit.com/forms/{{.id}}/subscriptions" method="post" data-sv-form="{{.id}}" data-uid="{{.data.uid}}" data-format="inline" data-version="5" data-options="{{ .data.options | jsonify }}" class="{{.classes.form}}"
+  div data-style="clean"
+  ul.formkit-alert.formkit-alert-error data-element="errors" data-group="alert" class="{{.classes.error}}"
+  div class="{{.classes.fields}}"
+    {{ $inputclasses := .classes.input}}
+    {{ range .fields }}
+      .seva-fields.formkit-fields data-element="fields" data-stacked="false"
+        .formkit-field
+          input.formkit-input class="{{$inputclasses}}" id="{{.id}}" placeholder="{{.placeholder}}" type="{{.type}}" name="{{.name}}"
+    {{ end }}
+    .formkit-spinner
+    {{ if .before_button }}
+      p {{ .before_button | safeHTML }}
+    {{ end }}
+    button.btn class="{{.classes.button}}" data-element="submit" Subscribe
