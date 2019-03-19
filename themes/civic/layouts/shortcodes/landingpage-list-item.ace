@@ -1,2 +1,0 @@
-li class="pl-0 lg:pl-8 {{ .Get "class" }}"
-  {{ .Inner }}

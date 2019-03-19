@@ -1,3 +1,0 @@
-= content main
-  .container.m-auto.flex.flex-col.mt-8 class="md:flex-row max-w-xl"
-    {{.Content}}

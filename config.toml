@@ -1,4 +1,0 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "Geospatial Data Visualization with d3"
-theme = "civic"

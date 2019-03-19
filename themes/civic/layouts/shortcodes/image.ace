@@ -1,4 +1,0 @@
-section.font-sans
-  .container.m-auto.flex.flex-col.md:flex-row.max-w-xl
-    .w-full.lg:py-6
-      img.w-full alt="{{.Get 1}}" src="{{.Get 0}}"

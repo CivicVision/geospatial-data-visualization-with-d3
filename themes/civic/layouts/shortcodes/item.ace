@@ -1,3 +1,0 @@
-div
-  h2.text-black.font-medium {{.Get 0 }}
-  p.text-grey-dark.leading-normal {{.Inner}}
