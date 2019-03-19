@@ -13,4 +13,4 @@ form#ck-simple action="https://app.convertkit.com/forms/{{.id}}/subscriptions" m
     {{ if .before_button }}
       p {{ .before_button | safeHTML }}
     {{ end }}
-    button.btn class="{{.classes.button}}" data-element="submit" Subscribe
+    button.btn class="{{.classes.button}}" data-element="submit" {{.subscribe_text | default "Subscribe"}}
