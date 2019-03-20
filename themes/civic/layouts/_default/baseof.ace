@@ -1,6 +1,7 @@
 = doctype html
 html lang=en
   {{ partial "head.html" . }}
+  {{ partial "rightmessage" . }}
   body class="{{.Params.body_classes}}"
     = yield header
     main#content role="main"
