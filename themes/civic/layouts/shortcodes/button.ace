@@ -1,0 +1,1 @@
+a.btn href="{{.Site.BaseURL}}{{.Get 0}}" {{.Get 1}}

@@ -13,17 +13,18 @@ form:
     error: text-red-darker mb-4
     input: max-w-sm block border border-transparent focus:border-grey-light rounded
       transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-2 sm:mb-0 flex-grow
-  options:
-    settings:
-      after_subscribe:
-        success_message: Success! Now check your email to confirm your subscription.
-        action: redirect
-        redirect_url: https://civic.vision/geospatial-data-visualization/subscribe/thank-you
-      return_visitor:
-        custom_content: ''
-        action: hide
-      recaptcha:
-        enabled: false
+  data:
+    options:
+      settings:
+        after_subscribe:
+          success_message: Success! Now check your email to confirm your subscription.
+          action: redirect
+          redirect_url: https://civic.vision/geospatial-data-visualization/subscribe/thank-you
+        return_visitor:
+          custom_content: ''
+          action: hide
+        recaptcha:
+          enabled: false
   fields:
   - type: email
     name: email

@@ -1,3 +1,8 @@
 = content main
-  .container.m-auto.flex.flex-col.mt-8 class="md:flex-row max-w-xl"
+  .container.m-auto.mt-8 class="md:flex-row max-w-xl"
     {{.Content}}
+= content modal
+  .modal
+    {{ if .Page.Params.modal }}
+      {{ partial (.Page.Param "modal.template") . }}
+    {{ end }}
