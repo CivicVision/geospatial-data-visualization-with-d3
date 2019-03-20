@@ -27,7 +27,7 @@ modal:
             enabled: false
     fields:
     - type: email
-      name: email
+      name: email_address
       placeholder: Your email address
     - type: hidden
       name: "tags[]"
