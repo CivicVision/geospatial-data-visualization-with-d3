@@ -6,3 +6,4 @@ html lang=en
     main#content role="main"
       = yield main
     {{ partial "footer.html" . }}
+    = yield modal

@@ -1,0 +1,5 @@
+.modal.login.fixed.pin.bg-black-transparent.w-full.h-full
+.login.fixed.pin.z-10
+  .container.m-auto.my-10.p-8.bg-white.rounded class="w-1/2"
+    h1 {{ .Page.Params.modal.headline }}
+    {{ partial "form" .Page.Params.modal.form }}
