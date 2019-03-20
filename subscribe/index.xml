@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geospatial Data Visualization with d3</title>
-    <link>http://civic.vision/geospatial-data-visualization-with-d3/subscribe/</link>
+    <link>https://civic.vision/geospatial-data-visualization-with-d3/subscribe/</link>
     <description>Recent content on Geospatial Data Visualization with d3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://civic.vision/geospatial-data-visualization-with-d3/subscribe/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://civic.vision/geospatial-data-visualization-with-d3/subscribe/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://civic.vision/geospatial-data-visualization-with-d3/subscribe/thank-you/</link>
+      <link>https://civic.vision/geospatial-data-visualization-with-d3/subscribe/thank-you/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://civic.vision/geospatial-data-visualization-with-d3/subscribe/thank-you/</guid>
+      <guid>https://civic.vision/geospatial-data-visualization-with-d3/subscribe/thank-you/</guid>
       <description> Thank you for your interest. I will be in touch. </description>
     </item>
     
