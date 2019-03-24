@@ -5,3 +5,6 @@ theme = "civic"
 
 [params]
   rightmessage = "1998050406"
+  description = "Are you tired of maps which distract your audience from reading the map because of the basemap beeing to distracting, too shiny and too overrepresented? This video course about creating maps with d3 will help you."
+  images = ["https://res.cloudinary.com/civicvision/image/upload/v1552905044/Landingpages/Geospatial%20d3/hexmap.png"]
+  title = "Geospatial Data Visualization with d3"
