@@ -3,10 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/</loc>
-  </url>
-  
-  <url>
     <loc>https://civic.vision/geospatial-data-visualization-with-d3/f4gsd/</loc>
   </url>
   
@@ -25,6 +21,10 @@
   <url>
     <loc>https://civic.vision/geospatial-data-visualization-with-d3/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://civic.vision/geospatial-data-visualization-with-d3/</loc>
   </url>
   
   <url>
