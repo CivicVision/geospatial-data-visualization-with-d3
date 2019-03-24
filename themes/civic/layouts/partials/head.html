@@ -2,6 +2,7 @@
 
     <link rel="dns-prefetch" href="{{ .Site.BaseURL }}">
     <link rel="preconnect" href="{{ .Site.BaseURL }}" crossorigin>
+    <title>{{ .Site.Title }}</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
@@ -11,5 +12,7 @@
     {{ $style := resources.Get "css/styles.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js") | fingerprint}}
 
     <link rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.rel='stylesheet'">
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
 
 </head>
