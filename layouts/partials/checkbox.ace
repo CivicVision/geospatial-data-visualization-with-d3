@@ -1,7 +1,7 @@
 {{ $name := .id }}
 {{ $answers := .answers }}
 {{ range $answers }}
-  .row
-    input type="checkbox" id="{{.id}}" name="{{$name}}" value="{{.title}}"
-    label for="{{.id}}" {{.title}}
+  .mb-2
+    input.mr-2.align-top type="checkbox" id="{{.id}}" name="{{$name}}" value="{{.title}}"
+    label.align-middle for="{{.id}}" {{.title}}
 {{ end }}

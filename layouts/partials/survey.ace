@@ -3,11 +3,12 @@
 
 form#survey onsubmit="event.preventDefault(); sendSurveyResponse('survey');"
   {{ range $data }}
-    fieldset
-      legend {{.question}}
+    fieldset.mb-6
+      legend.mb-2.text-xl.font-bold {{.question}}
       .row
         {{ partial .type . }}
   {{ end }}
 
-  button type="submit" Submit
-#survey-response Thank you for filling out the survey. Have a great day!
+  button.uppercase.text-sm.text-white.focus:outline-0.w-full.sm:w-auto.bg-blue-darker.p-4 type="submit" Submit
+  .mb-10
+#survey-response.hidden Thank you for filling out the survey. Have a great day!
