@@ -1,0 +1,7 @@
+{{ $name := .id }}
+{{ $answers := .answers }}
+{{ range $answers }}
+  .row
+    input type="checkbox" id="{{.id}}" name="{{$name}}" value="{{.title}}"
+    label for="{{.id}}" {{.title}}
+{{ end }}

@@ -1,0 +1,13 @@
+{{- $survey := .Get 0 -}}
+{{- $data := index .Site.Data.survey "initial"}}
+
+form#survey onsubmit="event.preventDefault(); sendSurveyResponse('survey');"
+  {{ range $data }}
+    fieldset
+      legend {{.question}}
+      .row
+        {{ partial .type . }}
+  {{ end }}
+
+  button type="submit" Submit
+#survey-response Thank you for filling out the survey. Have a great day!
