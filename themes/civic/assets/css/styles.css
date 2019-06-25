@@ -2,6 +2,15 @@
 
 @tailwind components;
 
+.post h1 {
+  @apply my-4 text-4xl font-normal mt-8;
+}
+.post h2 {
+  @apply my-4 text-2xl font-normal;
+}
+.post p {
+  @apply leading-normal;
+}
 p strong {
     font-weight: bold;
 }

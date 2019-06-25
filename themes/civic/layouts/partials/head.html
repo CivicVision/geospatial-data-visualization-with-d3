@@ -15,5 +15,10 @@
     <link rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.rel='stylesheet'">
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
+    {{ if isset .Params "external_css" }}
+      {{ range index .Params "external_css" }}
+        <link href="{{.}}" rel="stylesheet" type="text/css">
+      {{ end }}
+    {{ end }}
 
 </head>
