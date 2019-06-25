@@ -18,7 +18,25 @@ body_classes = "font-sans post mb-6 text-lg leading-relaxed"
   </div>
 </div>
 
-In this post we're not only comparing the two libraries on a conceptiual basis but on a code basis as well.  
+When you want to create an online-map from your data you have a ton of options available.  
+When I teach d3 or talk to people what tools they're using the questions that comes up a lot is: "How do d3 and mapboxGL compare?".  
+That is the question that I want to answer on this site.  
+I'm not only comparing the two libraries on a conceptiual basis but on a code basis as well.  
+
+# Conceptional
+Let's start with the conecptiual stuff. D3.js and mapboxGL.js are conceptionally very different. Mapbox is a library to create so-called "Slippy-Maps" and is in good company with Leaflet, OpenLayers, GoogleMaps.
+
+> Slippy Map is, in general, a term referring to modern web maps which let you zoom and pan around (the map slips around when you drag the mouse).
+
+This quote from OpenStreetMap explains it very well :)  
+Although using this definition d3 maps can be slippy maps as well. You can add zoom and pan to them.  
+
+> A core component of Slippy Maps is that the images should be served as tiles on a grid. Tiling images is an efficient way to browse large amounts of raster and vector map data that would be much too large to render as a single map image. 
+
+This explanation from the Planet Developer Resource "Slippy Maps 101" is more technical but brings it more to the point. These maps (used to) load images from a server and tile them to make them faster to load. Nowadays vector tiles have replaced the images, but they still get served as tiles to load and render faster. 
+
+# Code
+Let's look at some code. Or to be exact the complete code to render above maps. Mapbox map is on the left. The d3 map on the right. 
 
 ## Mapbox GL.js
 {{< highlight js "linenos=table,linenostart=1" >}}
