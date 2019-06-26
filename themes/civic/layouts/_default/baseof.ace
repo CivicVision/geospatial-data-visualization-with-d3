@@ -8,3 +8,4 @@ html lang=en
       = yield main
     {{ partial "footer.html" . }}
     = yield modal
+    {{ partial "scripts" . }}

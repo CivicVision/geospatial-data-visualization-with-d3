@@ -2,6 +2,23 @@
 
 @tailwind components;
 
+html {
+}
+
+.post h1 {
+  @apply my-4 text-4xl font-normal mt-8;
+  font-family: 'Heebo', sans-serif;
+}
+.post h2 {
+  @apply my-4 text-2xl font-normal;
+  font-family: 'Heebo', sans-serif;
+}
+.post p {
+  @apply leading-normal;
+}
+.post blockquote {
+  @apply bg-grey-light my-2 p-2 leading-normal italic;
+}
 p strong {
     font-weight: bold;
 }

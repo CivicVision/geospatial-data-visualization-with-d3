@@ -1,0 +1,10 @@
+{{ if isset .Params "external_libs" }}
+  {{ range index .Params "external_libs" }}
+    <script src="{{.}}" type="text/javascript"></script>
+  {{ end }}
+{{ end }}
+{{ if isset .Params "include_js" }}
+  {{ range index .Params "include_js" }}
+    <script src="{{$.Site.BaseURL}}js/{{.}}" type="text/javascript"></script>
+  {{ end }}
+{{ end }}
