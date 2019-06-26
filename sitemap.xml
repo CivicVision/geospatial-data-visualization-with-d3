@@ -3,32 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/f4gsd/</loc>
+    <loc>https://mappingwithd3.com/f4gsd/</loc>
   </url>
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/f4gsd/resources/</loc>
+    <loc>https://mappingwithd3.com/f4gsd/resources/</loc>
   </url>
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/subscribe/</loc>
+    <loc>https://mappingwithd3.com/feature-comparison/thank-you/</loc>
   </url>
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/subscribe/thank-you/</loc>
+    <loc>https://mappingwithd3.com/feature-comparison/view/</loc>
   </url>
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/categories/</loc>
+    <loc>https://mappingwithd3.com/mapbox-d3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/subscribe/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/subscribe/thank-you/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/</loc>
+    <loc>https://mappingwithd3.com/feature-comparison/</loc>
   </url>
   
   <url>
-    <loc>https://civic.vision/geospatial-data-visualization-with-d3/tags/</loc>
+    <loc>https://mappingwithd3.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/tags/</loc>
     <priority>0</priority>
   </url>
   

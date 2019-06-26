@@ -524,6 +524,39 @@ table {
   }
 }
 
+html {
+}
+
+.post h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  font-family: 'Heebo', sans-serif;
+}
+
+.post h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Heebo', sans-serif;
+}
+
+.post p {
+  line-height: 1.5;
+}
+
+.post blockquote {
+  background-color: #dae1e7;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
 p strong {
   font-weight: bold;
 }
