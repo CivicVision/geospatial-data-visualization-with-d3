@@ -1,0 +1,2 @@
+section.max-w-lg.m-auto.pb-8.pt-100 class="{{ .Get "class" }}"
+  {{.Inner}}

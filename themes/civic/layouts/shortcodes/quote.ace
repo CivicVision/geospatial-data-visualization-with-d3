@@ -1,2 +1,2 @@
-.bg-blue-200.text-small.italic.my-4
+.text-small.italic.ml-2.my-4
   {{.Inner}}

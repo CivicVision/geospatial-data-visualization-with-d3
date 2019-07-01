@@ -1,4 +1,4 @@
-section.antialiased.font-sans.w-full.text-left.text-black.py-8
-  .container.mx-auto.max-w-xl.py-4.font-normal.leading-normal
-    h2.text-2xl {{.Get 0}}
-    p {{.Inner}}
+section.max-w-lg.m-auto.py-12 class="{{ .Get "class" }}"
+  h2.mb-4.text-2xl {{.Get 0}}
+  .markdown
+    {{.Inner | markdownify}}

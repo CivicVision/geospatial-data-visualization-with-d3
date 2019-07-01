@@ -1,2 +1,2 @@
-.container.mx-auto.max-w-xl.py-4.font-normal.leading-normal
+.mx-auto.max-w-lg.py-4.font-normal.leading-normal
   {{.Inner}}
