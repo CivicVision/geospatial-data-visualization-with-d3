@@ -1,44 +1,13 @@
----
-layout: "single"
-title: "Feature Comparison of popular online mapping libraries"
-description: Compare the features of popular online-mapping libraries, such as Mapbox, OpenLayers, Leaflet, GoogleMaps and D3.
-form:
-  id: 978704
-  uid: 7a7e3e9934
-  subscribe_text: Get the Feature Comparison
-  classes:
-    button: uppercase text-sm text-white focus:outline-0 w-full sm:w-auto bg-blue-darker
-      hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 ml-8
-    form: mt-4 w-full
-    fields: sm:flex
-    error: text-red-darker mb-4
-    input: max-w-sm block border border-transparent focus:border-grey-light rounded
-      transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-2 sm:mb-0 flex-grow
-  data:
-    options:
-      settings:
-        after_subscribe:
-          success_message: Success! Now check your email to get access.
-          action: redirect
-          redirect_url: https://mappingwithd3.com/feature-comparison/subscribe/thank-you
-        return_visitor:
-          custom_content: ''
-          action: hide
-        recaptcha:
-          enabled: false
-  fields:
-  - type: email
-    name: email_address
-    placeholder: Your email address
----
++++
+layout = "single"
+body_classes = "font-sans post mb-6 text-lg leading-relaxed"
+no_index = true
++++
 {{< header>}}
-  Feature Comparison Online-mapping libraries
+  Feature Comparison of Online Mapping Libraries
 {{</ header>}}
 {{< image "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/comparison.jpg" "Comparison: leaflet, mapbox, openlayers, d3, google maps">}}
-{{< text "Compare mapbox, openlayers, leaflet, d3 and google maps">}}
-I created a spreadsheet of features and compared them across different mapping libraries. You will see which libraries allow you to change the projection, which offer Heatmaps out of the box or which have support for raster tiles.  
-The list will be extended and updated periodically, so keep it handy :)
-{{</ text >}}
-{{< signup "Get access to Feature Comparison of popular online mapping libraries">}}
-  {{< form >}}
-{{</ signup >}}
+
+<iframe class="airtable-embed" src="https://airtable.com/embed/shrE5g8P4WCRG4mGj?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+
+<iframe class="airtable-embed" src="https://airtable.com/embed/shrdTmWwI3Or1z4t4?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
