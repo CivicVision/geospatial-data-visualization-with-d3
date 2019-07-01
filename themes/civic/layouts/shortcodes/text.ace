@@ -1,4 +1,4 @@
-section.max-w-lg.m-auto.py-12 class="{{ .Get "class" }}"
+section.max-w-lg.m-auto.px-8.py-12 class="{{ .Get "class" }}"
   h2.mb-4.text-2xl {{.Get 0}}
   .markdown
     {{.Inner | markdownify}}

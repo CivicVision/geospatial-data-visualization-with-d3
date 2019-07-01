@@ -1,2 +1,2 @@
-section class="{{ .Get "class" }}"
+section.px-8 class="{{ .Get "class" }}"
   {{.Inner}}
