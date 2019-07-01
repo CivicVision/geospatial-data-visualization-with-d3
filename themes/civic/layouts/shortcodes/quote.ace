@@ -1,0 +1,2 @@
+.bg-blue-200.text-small.italic.my-4
+  {{.Inner}}
