@@ -1,0 +1,2 @@
+section.max-w-lg.m-auto.px-8.py-12 class="{{ .Get "class" }}"
+  {{.Inner}}

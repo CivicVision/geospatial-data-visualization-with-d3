@@ -1,0 +1,2 @@
+.mx-auto.max-w-lg.py-4.font-normal.leading-normal
+  {{.Inner}}

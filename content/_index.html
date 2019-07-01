@@ -6,19 +6,21 @@ description: This online video course on creating maps with d3.js helps you lear
   javascript. The course is taught by Mila Frerichs who is a geospatial data visualization
   consultant. The course is modeled from successful hands-on workshops at geospatial
   conferences over the last 4 years.
-body_classes: font-light font-sans leading-normal text-lg lg:text-2xl text-black
+body_classes: font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black
 form:
   id: "881267"
   uid: 5e5e7f8875
   subscribe_text: Get on the waiting list!
+  after_button: Get early access and early insights into the course.
   classes:
-    button: uppercase text-sm text-white focus:outline-0 w-full sm:w-auto bg-blue-darker
-      hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 ml-8
+    button: text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold
+      hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 
     form: mt-4 w-full
-    fields: sm:flex
+    fields: ""
     error: text-red-darker mb-4
-    input: max-w-sm block border border-transparent focus:border-grey-light rounded
-      transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-2 sm:mb-0 flex-grow
+    input: block border border-transparent focus:border-grey-light rounded
+      transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-4 flex-grow
+    after_button: text-base mt-4 text-center
   data:
     options:
       settings:
@@ -38,15 +40,73 @@ form:
 
 ---
 {{< header>}}
-  Learn how to create distraction-free maps.
+  {{< headline-h1 >}}
+    Learn how to create great-looking, interactive maps with d3.
+  {{</ headline-h1 >}}
+  {{< headline-h2 class="font-light text-grey-darkest w-2/3 m-auto leading-tight" >}}
+    A comprehensive video course to create geospatial data visualizations with javascript and d3.
+  {{</ headline-h2 >}}
 {{</ header>}}
 {{< image "https://res.cloudinary.com/civicvision/image/upload/c_scale,w_auto,dpr_auto/v1552905044/Landingpages/Geospatial%20d3/hexmap.png" "hexmap in d3">}}
-{{< text "Let your data shine.">}}
-Are you tired of maps which distract your audience from reading the map because of the basemap being too distracting, too shiny and too overrepresented?
-{{</ text >}}
-{{< signup "Learn how to create great looking, distraction-free maps with this online course">}}
+{{< callout >}}
+  {{< headline class="font-normal text-center">}}
+      Sign-up for the waiting list, to be the first to know when it launches
+  {{</ headline >}}
   {{< form >}}
-{{</ signup >}}
-{{< text "Online video course">}}
-In this online video course I will show you how to create distraction-free (interactive) maps with d3.
+{{</ callout >}}
+{{< section-text >}}
+  {{< headline >}}
+    Learn with exercises not just examples
+  {{</ headline >}}
+  {{< paragraph >}}
+  Most people learn d3 by looking at examples and changing parts of it to fit their needs. 
+  {{</ paragraph >}}
+  {{< paragraph >}}
+  You iterate on these examples, look at the documentation, maybe consult a book or look at videos on YouTube.
+  {{</ paragraph >}}
+  {{< paragraph >}}
+  But people get __frustrated__ using this method. 
+  {{</ paragraph >}}
+  {{< paragraph >}}
+  Here are people sharing their struggles on twitter, Slack, forums and stackoverflow:
+  {{</ paragraph >}}
+  {{< quote >}}
+    "After looking at a few d3.js demos, I had thought that the above task would be trivially easy with d3.js, but in fact I have found it to be insanely difficult."
+  {{</ quote >}}
+  {{< quote >}}
+    "Most of the resources I’ve found are either old (v3, I know I can still follow them, but I’d rather follow a v4 tutorial) or very convoluted. It seems like I spend half my time trying to figure out why the graph won’t compile."
+  {{</ quote >}}
+  {{< quote >}}
+    "I want to just jump in, yet it seems like I need to know a bunch of the api to get even a simple graph up."
+  {{</ quote >}}
+  {{< paragraph >}}
+  __Geospatial Data Visualization with d3__ will help you take a more focussed approach learning d3. 
+  {{</ paragraph >}}
+{{</ section-text >}}
+{{< section class="bg-grey-lighter p-4">}}
+  {{< testimonial >}}
+    Inspired by the amazing @milafrerichs #D3 workshop at #foss4gna, I was able to create an interactive globe map of my twitter friends. 
+  {{</ testimonial >}}
+{{</ section-text >}}
+{{< text "Why should I take this online course?">}}
+- It includes __exercises__ not just examples
+- content has been adapdted from __conference workshops__
+- __real world__ data
+- __real world__ examples
 {{</ text >}}
+{{< section class="max-w-lg m-auto">}}
+  {{< signup "Learn how to create great-looking, distraction-free maps with this online course">}}
+    {{< form >}}
+  {{</ signup >}}
+{{</ section >}}
+{{< section >}}
+  {{< container >}}
+    {{< headline >}}
+      What kind of maps will you be able to create after you‘ve gone through the course?
+    {{</ headline >}}
+  {{</ container >}}
+  <div class="m-auto max-w-xl">
+    <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit,h_600/geospatial-d3/examples/choropleth-usa-drug-overdose.png" />
+    <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit,h_600/geospatial-d3/examples/bubblemap-energy-usa.png" />
+  </div>
+{{</ section >}}

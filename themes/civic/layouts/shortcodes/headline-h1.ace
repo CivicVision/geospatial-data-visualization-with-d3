@@ -1,0 +1,2 @@
+h1.my-4.font-normal.text-center.leading-tight
+  {{.Inner}}

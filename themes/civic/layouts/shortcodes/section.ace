@@ -1,2 +1,2 @@
-section.pb-8.pt-100 class="{{ .Get "class" }}"
+section.px-8 class="{{ .Get "class" }}"
   {{.Inner}}

@@ -1,0 +1,2 @@
+.max-w-md.bg-white.shadow-lg.rounded.mx-auto.p-8
+  {{.Inner}}

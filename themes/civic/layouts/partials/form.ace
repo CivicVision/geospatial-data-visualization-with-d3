@@ -18,3 +18,7 @@ form#ck-simple action="https://app.convertkit.com/forms/{{.id}}/subscriptions" m
       p {{ .before_button | safeHTML }}
     {{ end }}
     button.btn class="{{.classes.button}}" data-element="submit" {{.subscribe_text | default "Subscribe"}}
+    {{ if .after_button }}
+      div class="{{ .classes.after_button }}"
+        {{ .after_button | safeHTML }}
+    {{ end }}
