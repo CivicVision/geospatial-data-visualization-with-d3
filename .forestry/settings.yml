@@ -28,6 +28,8 @@ build:
   publish_env:
   - HUGO_ENV=production
   - HUGO_VERSION=0.54.0
+  - SEGMENT_KEY=TQtxpBDBl25APWnGP3NiJSGmH7uSHzZk
+  - RIGHTMESSAGE_KEY=1998050406
   preview_output_directory: public
   output_directory: public
   instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
