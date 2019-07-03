@@ -13,6 +13,10 @@ html {
   @apply my-4 text-2xl font-normal;
   font-family: 'Heebo', sans-serif;
 }
+.post h3 {
+  @apply my-4 text-xl font-bold;
+  font-family: 'Heebo', sans-serif;
+}
 .post p {
   @apply leading-normal;
 }
@@ -21,6 +25,12 @@ html {
 }
 p strong {
     font-weight: bold;
+}
+.content h2 {
+  @apply mt-8;
+}
+.content p {
+  @apply mb-4;
 }
 
 .check::before {
