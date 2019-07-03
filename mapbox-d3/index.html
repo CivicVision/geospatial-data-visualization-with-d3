@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo|Titillium+Web&display=swap" rel="stylesheet">
     
 
-    <link rel="preload" href="https://mappingwithd3.com/css/styles.6924733eca99deaa86afdd2ec6b1978d86da10a0114a9a009a2a2cee0f00554c.css" as="style" onload="this.rel='stylesheet'">
-    <meta property="og:title" content="" />
+    <link rel="preload" href="https://mappingwithd3.com/css/styles.12b82b8c5fc57215a27e354b08b06d4bc754c0e9d66e9a04127a02100acd4fc7.css" as="style" onload="this.rel='stylesheet'">
+    <meta property="og:title" content="Comparison of Mapbox GL JS and D3.js" />
 <meta property="og:description" content="This online video course on creating maps with d3.js helps you learn the geospatial concepts of d3 and how to create geospatial data visualizations with javascript. The course is taught by Mila Frerichs who is a geospatial data visualization consultant. The course is modeled from successful hands-on workshops at geospatial conferences over the last 4 years. " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mappingwithd3.com/mapbox-d3/" />
@@ -25,12 +25,12 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://res.cloudinary.com/civicvision/image/upload/v1552905044/Landingpages/Geospatial%20d3/hexmap.png"/>
 
-<meta name="twitter:title" content=""/>
+<meta name="twitter:title" content="Comparison of Mapbox GL JS and D3.js"/>
 <meta name="twitter:description" content="This online video course on creating maps with d3.js helps you learn the geospatial concepts of d3 and how to create geospatial data visualizations with javascript. The course is taught by Mila Frerichs who is a geospatial data visualization consultant. The course is modeled from successful hands-on workshops at geospatial conferences over the last 4 years. "/>
 
     
       
-        <link href="https://unpkg.com/mapbox-gl@0.49/dist/mapbox-gl.css" rel="stylesheet" type="text/css">
+        <link href="https://unpkg.com/mapbox-gl@0.49.0/dist/mapbox-gl.css" rel="stylesheet" type="text/css">
       
     
 
@@ -50,10 +50,12 @@
   analytics.page();
   }}();
 </script>
-<body class="font-sans post mb-6 text-lg leading-relaxed"><div class="logo absolute pin-t pin-l w-1/5 ml-4 mt-4"><a href="/"><img src="https://mappingwithd3.com/img/logo.svg"></a></div><main id="content" role="main"><div class="container m-auto mt-8 md:flex-row max-w-xl">
+<body class="font-sans content post mb-6 text-lg leading-relaxed"><div class="logo absolute pin-t pin-l w-1/5 ml-4 mt-4"><a href="/"><img src="https://mappingwithd3.com/img/logo.svg"></a></div><main id="content" role="main"><div class="container m-auto mt-8 md:flex-row max-w-xl">
 
 <section class="font-sans"><div class="container m-auto flex flex-col md:flex-row max-w-xl"><div class="w-full lg:py-6">
-  Comparison of Mapbox GL.js vs D3.js
+  <h1 class="my-4 font-normal text-center leading-tight">
+    Comparison of Mapbox GL JS vs D3.js
+  </h1>
 </div></div></section>
 
 <div class="flex h-64 mb-8">
@@ -66,13 +68,28 @@
 </div>
 
 <p>When you want to create an online-map from your data you have a ton of options available.<br />
-When I teach d3 or talk to people what tools they&rsquo;re using the questions that comes up a lot is: &ldquo;How do d3 and mapboxGL compare?&rdquo;.<br />
+When I teach d3 or talk to people what tools they&rsquo;re using the questions that comes up a lot is: <strong>&ldquo;How do d3 and mapboxGL compare?&rdquo;.</strong><br />
 That is the question that I want to answer on this site.<br />
-I&rsquo;m not only comparing the two libraries on a conceptiual basis but on a code basis as well.</p>
+I&rsquo;m not only comparing the two libraries on a conceptiual basis but on a code basis as well.<br />
+Let&rsquo;s start with one of the more confusing aspects:</p>
+
+<h1 id="the-name">The name</h1>
+
+<p>The definition of both libraries are as follow:</p>
+
+<blockquote>
+<p>Mapbox GL JS is a JavaScript library for interactive, customizable vector maps on the web. It takes map styles that conform to the Mapbox Style Specification, applies them to vector tiles that conform to the Mapbox Vector Tile Specification, and renders them using WebGL.</p>
+</blockquote>
+
+<p>Mapbox GL JS is part of Mapbox GL which is a cross-platform ecosystem and Mapbox is a company specializing in location data.</p>
+
+<blockquote>
+<p>D3 (or D3.js) is a JavaScript library for visualizing data using web standards. D3 helps you bring data to life using SVG, Canvas and HTML.</p>
+</blockquote>
 
 <h1 id="conceptional">Conceptional</h1>
 
-<p>Let&rsquo;s start with the conecptiual stuff. D3.js and mapboxGL.js are conceptionally very different. Mapbox is a library to create so-called &ldquo;Slippy-Maps&rdquo; and is in good company with Leaflet, OpenLayers, GoogleMaps.</p>
+<p>D3.js and Mapbox GL JS (or Mapbox for short for the sake of writing less ;) ) are conceptionally very different. Mapbox is a library to create so-called &ldquo;Slippy-Maps&rdquo; and is in good company with Leaflet, OpenLayers and GoogleMaps.</p>
 
 <blockquote>
 <p>Slippy Map is, in general, a term referring to modern web maps which let you zoom and pan around (the map slips around when you drag the mouse).</p>
@@ -91,9 +108,9 @@ Although using this definition d3 maps can be slippy maps as well. You can add z
 
 <p>Let&rsquo;s look at some code. Or to be exact the complete code to render above maps. Mapbox map is on the left. The d3 map on the right.</p>
 
-<h2 id="mapbox-gl-js">Mapbox GL.js</h2>
+<h2 id="mapbox">Mapbox</h2>
 
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 2
@@ -158,10 +175,11 @@ Although using this definition d3 maps can be slippy maps as well. You can add z
 </code></pre></td></tr></table>
 </div>
 </div>
+<a href="https://codesandbox.io/s/github/milafrerichs/mapping_examples/tree/master/mapbox/simple-map">Open in CodeSandbox</a></p>
 
 <h2 id="d3">D3</h2>
 
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 2
@@ -181,57 +199,110 @@ Although using this definition d3 maps can be slippy maps as well. You can add z
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">16
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">17
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">19
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://gist.githubusercontent.com/milafrerichs/78ef5702db2dc514fc2bed465d58406b/raw/f1366ee2a83a9afb1dd2427e9cbd4cd3db8d87ca/bundeslaender_simplify200.geojson&#34;</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bb</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">url</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bbox</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#d3-map&#39;</span>).<span style="color:#a6e22e">node</span>().<span style="color:#a6e22e">getBoundingClientRect</span>()
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bbox</span>.<span style="color:#a6e22e">width</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bbox</span>.<span style="color:#a6e22e">height</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">projection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">geoEqualEarth</span>();
-<span style="color:#a6e22e">projection</span>.<span style="color:#a6e22e">fitExtent</span>([[<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">20</span>], [<span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>]], <span style="color:#a6e22e">bb</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">geoGenerator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">geoPath</span>().<span style="color:#a6e22e">projection</span>(<span style="color:#a6e22e">projection</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">svg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;#d3-map&#34;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;svg&#39;</span>)
-    .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#34;width&#34;</span>, <span style="color:#e6db74">&#34;100%&#34;</span>)
-    .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#34;height&#34;</span>, <span style="color:#e6db74">&#34;100%&#34;</span>);
-<span style="color:#a6e22e">svg</span>.<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;g&#39;</span>).<span style="color:#a6e22e">selectAll</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
-.<span style="color:#a6e22e">data</span>(<span style="color:#a6e22e">bb</span>.<span style="color:#a6e22e">features</span>)
-.<span style="color:#a6e22e">enter</span>()
-  .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
-  .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#a6e22e">geoGenerator</span>)
-  .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;fill&#39;</span>, <span style="color:#e6db74">&#39;#088&#39;</span>)
-  .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;stroke&#39;</span>, <span style="color:#e6db74">&#39;#000&#39;</span>);
+<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">url</span>).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">bb</span>) {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bbox</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#d3-map&#39;</span>).<span style="color:#a6e22e">node</span>().<span style="color:#a6e22e">getBoundingClientRect</span>()
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bbox</span>.<span style="color:#a6e22e">width</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bbox</span>.<span style="color:#a6e22e">height</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">projection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">geoEqualEarth</span>();
+  <span style="color:#a6e22e">projection</span>.<span style="color:#a6e22e">fitExtent</span>([[<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">20</span>], [<span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>]], <span style="color:#a6e22e">bb</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">geoGenerator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">geoPath</span>().<span style="color:#a6e22e">projection</span>(<span style="color:#a6e22e">projection</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">svg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;#d3-map&#34;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;svg&#39;</span>)
+      .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#34;width&#34;</span>, <span style="color:#e6db74">&#34;100%&#34;</span>)
+      .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#34;height&#34;</span>, <span style="color:#e6db74">&#34;100%&#34;</span>);
+  <span style="color:#a6e22e">svg</span>.<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;g&#39;</span>).<span style="color:#a6e22e">selectAll</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+  .<span style="color:#a6e22e">data</span>(<span style="color:#a6e22e">bb</span>.<span style="color:#a6e22e">features</span>)
+  .<span style="color:#a6e22e">enter</span>()
+    .<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+    .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#a6e22e">geoGenerator</span>)
+    .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;fill&#39;</span>, <span style="color:#e6db74">&#39;#088&#39;</span>)
+    .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;stroke&#39;</span>, <span style="color:#e6db74">&#39;#000&#39;</span>);
+});
 </code></pre></td></tr></table>
 </div>
 </div>
+<a href="https://codesandbox.io/s/github/milafrerichs/mapping_examples/tree/master/d3/simple-map">Open in CodeSandbox</a></p>
+
+<div class="rm-area-middle-content"></div>
 
 <h1 id="amount-of-code">Amount of Code</h1>
 
 <p>The first difference you see is that the code for mapbox is almost twice as long as the d3 code. Which is a bit suprising. But the reason is that the styling takes a lot of effort and is formatted in a readable way.</p>
 
-<p><strong>Winner: D3</strong></p>
+<h3 id="winner-d3">Winner: D3</h3>
 
 <h1 id="ease-of-setup">Ease of Setup</h1>
 
-<p><strong>Winner: Even</strong></p>
+<p>Both are relatively easy to setup. You either download their code and integrate it. Or use a CDN like I did on this page.</p>
+
+<h2 id="mapbox-setup">Mapbox setup:</h2>
+
+<p>You need to include the javascript code and the CSS for mapbox. You need to include the stylesheet to make sure the navigation elements are visible. Furthermore, you need to signup at mapbox.com to get an API token to use it. But that is free, just your email as payment.</p>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/mapbox-gl@0.49.0&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/mapbox-gl@0.49.0/dist/mapbox-gl.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<h2 id="d3-setup">D3 setup:</h2>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/d3@5.9.7/dist/d3.min.js&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<h3 id="winner-d3-1">Winner: D3</h3>
 
 <h1 id="basemap">Basemap</h1>
 
-<p>The biggest visible difference is the lack of a basemap for d3. But I made this on purpose. The power of d3 is that it does not include a basemap my default. You want the data to be the center of your map, not the basemap.<br />
-This is one of the more important pieces, you choose the libraries based on your needs and d3 and mapbox serve different needs. Mapbox and other basemap-based libraries shine when you need more information than just the data. For example street locations, more labels, etc.</p>
+<p>The biggest visible difference is the lack of a basemap for d3. But I made this on purpose. The power of d3 is that it does not include a basemap by default. You want the data to be the center of your map, not the basemap.</p>
 
-<p><strong>Winner: Mapbox</strong></p>
+<p>This is one of the more important pieces, you choose the libraries based on your needs and d3 and mapbox serve different needs. Mapbox and other basemap-based libraries shine when you need more information than just the data. For example street locations, more labels, etc.</p>
+
+<h3 id="winner-mapbox">Winner: Mapbox</h3>
 
 <h1 id="projections">Projections</h1>
 
-<p>The second big difference is the projection of these maps. Mapbox uses Mercator as their default, wehereas in D3 you choose the projection yourself.</p>
+<p>The second big difference is the projection of these maps. Mapbox uses <strong>Mercator</strong> as their default and you cannot change the projection.</p>
 
-<p><strong>Winner: D3</strong></p>
+<p>In D3 you choose the projection yourself. You can pick from a list of 14 different projections or can create your own. <a href="https://github.com/d3/d3-geo-projection">D3 projection Resource</a></p>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">projection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">geoEqualEarth</span>();
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<h3 id="winner-d3-2">Winner: D3</h3>
 
 <h1 id="styling">Styling</h1>
 
-<p>Mapbox styling is done via [Mapbox Style Spec]() while D3 styling is done via normal SVG attributes and CSS.
-As you might have noticed we needed to create two layers in mapbox to style the fill as well as the stroke/outline of the feature.<br />
+<p>Mapbox styling is done via <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/">Mapbox Style Spec</a> while D3 styling is done via normal SVG attributes and CSS.</p>
+
+<p>As you might have noticed we needed to create two layers in mapbox to style the fill as well as the stroke/outline of the feature.<br />
+That is one of the many limitations of the style specification. But you can do a lot with the style spec and do not need to think to hard about the implementation.</p>
+
+<p>In d3 you have the power of SVG and CSS to style almost anything. And it is more convenient. In both cases you need to learn how you style elements.</p>
+
+<h2 id="mapbox-1">Mapbox:</h2>
+
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">11
@@ -275,7 +346,10 @@ As you might have noticed we needed to create two layers in mapbox to style the 
 </code></pre></td></tr></table>
 </div>
 </div>
-In d3 we only need two lines of code.<br />
+
+<h2 id="d3-1">D3:</h2>
+
+<p>In d3 we only need two lines of code.<br />
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">17
@@ -286,32 +360,69 @@ In d3 we only need two lines of code.<br />
   .<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;stroke&#39;</span>, <span style="color:#e6db74">&#39;#000&#39;</span>);
 </code></pre></td></tr></table>
 </div>
-</div>
-<strong>Winner: D3</strong></p>
+</div></p>
+
+<h3 id="winner-d3-3">Winner: D3</h3>
 
 <h1 id="centering-the-map">Centering the map</h1>
 
-<p>While mapbox GL.js relies on you, the creator to set the zoom, center and so forth in advance, d3.js allows you to use your data to set the extent. In mapbox this is more difficult and I did not include this in the main section. I might extent this post to include it.</p>
+<p>While Mapbox relies on you, the creator, to set the zoom, center and so forth in advance, d3.js allows you to use your data to set the extent.</p>
 
-<p><strong>Winner: D3</strong></p>
+<p>You can let mapbox figure out the best zoom and center as well, but it is more difficult and I did not include this currently. I might extent this post in the future.</p>
+
+<h3 id="mapbox-2">Mapbox</h3>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">  <span style="color:#a6e22e">center</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">13.79</span>,<span style="color:#ae81ff">53.545</span>], 
+  <span style="color:#a6e22e">zoom</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<h3 id="d3-2">D3</h3>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">projection</span>.<span style="color:#a6e22e">fitExtent</span>([[<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">20</span>], [<span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>]], <span style="color:#a6e22e">bb</span>);
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<h3 id="winner-d3-4">Winner: D3</h3>
 
 <h1 id="concepts-you-need-to-learn">Concepts you need to learn</h1>
 
-<h2 id="mapbox">Mapbox</h2>
+<p>There are definetely fewer concepts you need to learn or understand to use mapbox.js. You just need to know that there are layers and sources, call the appropriate functions (look at examples &amp; the docs :) ) and read the mapbox style spec and you&rsquo;re good to go.</p>
 
-<p>mapbox, sources, layers, mapbox style spec</p>
+<p>With d3, you should know the basics of HTML, learn a little bit of SVG and then know which d3 functions to call (look at examples, the docs).</p>
 
-<h2 id="d3-1">D3</h2>
+<h3 id="winner-mapbox-1">Winner: mapbox</h3>
 
-<p>SVG, CSS, d3
-<strong>Winner: mapbox</strong></p>
+<h1 id="conclusion">Conclusion</h1>
 
-<h1 id="customization">Customization</h1>
+<p>As I mentioned in the beginngin of this post, both d3 and mapbox.js serve somewhat different purposes. But they do have similar features.</p>
+
+<p>So how do they stack up against each other. Let&rsquo;s find out.</p>
+
+<p><strong>Mapbox</strong>: 2<br />
+<strong>D3</strong>: 5</p>
+
+<p>I declare D3 as the winner of this comparison. But keep in mind, that if you need a basemap, mapbox is probably easier to setup.</p>
+
+<div class="rm-area-end-of-content"></div>
 </div></main><div class="modal"></div>
   
     <script src="https://unpkg.com/mapbox-gl@0.49.0" type="text/javascript"></script>
   
-    <script src="https://unpkg.com/d3@5" type="text/javascript"></script>
+    <script src="https://unpkg.com/d3@5.9.7/dist/d3.min.js" type="text/javascript"></script>
   
 
 

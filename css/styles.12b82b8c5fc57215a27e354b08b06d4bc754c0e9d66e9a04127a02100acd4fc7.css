@@ -544,6 +544,14 @@ html {
   font-family: 'Heebo', sans-serif;
 }
 
+.post h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Heebo', sans-serif;
+}
+
 .post p {
   line-height: 1.5;
 }
@@ -559,6 +567,14 @@ html {
 
 p strong {
   font-weight: bold;
+}
+
+.content h2 {
+  margin-top: 2rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
 }
 
 .check::before {

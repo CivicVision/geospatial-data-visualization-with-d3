@@ -11,15 +11,7 @@
   </url>
   
   <url>
-    <loc>https://mappingwithd3.com/feature-comparison/</loc>
-  </url>
-  
-  <url>
     <loc>https://mappingwithd3.com/feature-comparison/thank-you/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mappingwithd3.com/mapbox-d3/</loc>
   </url>
   
   <url>
@@ -36,7 +28,20 @@
   </url>
   
   <url>
+    <loc>https://mappingwithd3.com/mapbox-d3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/feature-comparison/</loc>
+  </url>
+  
+  <url>
     <loc>https://mappingwithd3.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/categories/resource/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
