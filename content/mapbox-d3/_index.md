@@ -1,12 +1,14 @@
 +++
 include_js = ["mapbox-d3.js"]
-external_libs = ["https://unpkg.com/mapbox-gl@0.49.0", "https://unpkg.com/d3@5"]
-external_css = ["https://unpkg.com/mapbox-gl@0.49/dist/mapbox-gl.css"]
+external_libs = ["https://unpkg.com/mapbox-gl@0.49.0", "https://unpkg.com/d3@5.9.7/dist/d3.min.js"]
+external_css = ["https://unpkg.com/mapbox-gl@0.49.0/dist/mapbox-gl.css"]
 layout = "single"
 body_classes = "font-sans post mb-6 text-lg leading-relaxed"
 +++
 {{< header>}}
-  Comparison of Mapbox GL.js vs D3.js
+  {{< headline-h1>}}
+    Comparison of Mapbox GL.js vs D3.js
+  {{</ headline-h1>}}
 {{</ header>}}
 
 <div class="flex h-64 mb-8">
@@ -19,7 +21,7 @@ body_classes = "font-sans post mb-6 text-lg leading-relaxed"
 </div>
 
 When you want to create an online-map from your data you have a ton of options available.  
-When I teach d3 or talk to people what tools they're using the questions that comes up a lot is: "How do d3 and mapboxGL compare?".  
+When I teach d3 or talk to people what tools they're using the questions that comes up a lot is: __"How do d3 and mapboxGL compare?".__  
 That is the question that I want to answer on this site.  
 I'm not only comparing the two libraries on a conceptiual basis but on a code basis as well.  
 
@@ -98,6 +100,21 @@ The first difference you see is that the code for mapbox is almost twice as long
 __Winner: D3__
 
 # Ease of Setup
+Both are relatively easy to setup. You either download their code and integrate it. Or use a CDN like I did on this page:
+
+### Mapbox setup:
+
+{{< highlight html "linenos=table,linenostart=1" >}}
+<script src="https://unpkg.com/mapbox-gl@0.49.0" type="text/javascript"></script>
+<link href="https://unpkg.com/mapbox-gl@0.49.0/dist/mapbox-gl.css" rel="stylesheet" type="text/css">
+{{< / highlight >}}
+
+### D3 setup:
+
+{{< highlight html "linenos=table,linenostart=1" >}}
+<script src="https://unpkg.com/d3@5.9.7/dist/d3.min.js" type="text/javascript"></script>
+{{< / highlight >}}
+
 
 __Winner: Even__
 
