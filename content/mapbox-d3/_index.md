@@ -4,10 +4,12 @@ external_libs = ["https://unpkg.com/mapbox-gl@0.49.0", "https://unpkg.com/d3@5.9
 external_css = ["https://unpkg.com/mapbox-gl@0.49.0/dist/mapbox-gl.css"]
 layout = "single"
 body_classes = "font-sans content post mb-6 text-lg leading-relaxed"
+categories = ["resource"]
+title ="Comparison of Mapbox GL JS and D3.js"
 +++
 {{< header>}}
   {{< headline-h1>}}
-    Comparison of Mapbox GL.js vs D3.js
+    Comparison of Mapbox GL JS vs D3.js
   {{</ headline-h1>}}
 {{</ header>}}
 
@@ -24,9 +26,19 @@ When you want to create an online-map from your data you have a ton of options a
 When I teach d3 or talk to people what tools they're using the questions that comes up a lot is: __"How do d3 and mapboxGL compare?".__  
 That is the question that I want to answer on this site.  
 I'm not only comparing the two libraries on a conceptiual basis but on a code basis as well.  
+Let's start with one of the more confusing aspects:  
+
+# The name
+The definition of both libraries are as follow:
+
+> Mapbox GL JS is a JavaScript library for interactive, customizable vector maps on the web. It takes map styles that conform to the Mapbox Style Specification, applies them to vector tiles that conform to the Mapbox Vector Tile Specification, and renders them using WebGL.
+
+Mapbox GL JS is part of Mapbox GL which is a cross-platform ecosystem and Mapbox is a company specializing in location data.  
+
+> D3 (or D3.js) is a JavaScript library for visualizing data using web standards. D3 helps you bring data to life using SVG, Canvas and HTML.
 
 # Conceptional
-Let's start with the conecptiual stuff. D3.js and mapboxGL.js are conceptionally very different. Mapbox is a library to create so-called "Slippy-Maps" and is in good company with Leaflet, OpenLayers, GoogleMaps.
+D3.js and Mapbox GL JS (or Mapbox for short for the sake of writing less ;) ) are conceptionally very different. Mapbox is a library to create so-called "Slippy-Maps" and is in good company with Leaflet, OpenLayers and GoogleMaps.
 
 > Slippy Map is, in general, a term referring to modern web maps which let you zoom and pan around (the map slips around when you drag the mouse).
 
@@ -40,7 +52,7 @@ This explanation from the Planet Developer Resource "Slippy Maps 101" is more te
 # Code
 Let's look at some code. Or to be exact the complete code to render above maps. Mapbox map is on the left. The d3 map on the right. 
 
-## Mapbox GL.js
+## Mapbox
 {{< highlight js "linenos=table,linenostart=1" >}}
 var url = "https://gist.githubusercontent.com/milafrerichs/78ef5702db2dc514fc2bed465d58406b/raw/f1366ee2a83a9afb1dd2427e9cbd4cd3db8d87ca/bundeslaender_simplify200.geojson";
 mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN';
@@ -97,15 +109,18 @@ d3.json(url).then(function(bb) {
 {{< / highlight >}}
 [Open in CodeSandbox](https://codesandbox.io/s/github/milafrerichs/mapping_examples/tree/master/d3/simple-map)
 
+<div class="rm-area-middle-content"></div>
+
 # Amount of Code
 The first difference you see is that the code for mapbox is almost twice as long as the d3 code. Which is a bit suprising. But the reason is that the styling takes a lot of effort and is formatted in a readable way.  
 
 ### Winner: D3
 
 # Ease of Setup
-Both are relatively easy to setup. You either download their code and integrate it. Or use a CDN like I did on this page. With mapbox you need to include the stylesheet as well to make sure the navigation elements are visible.
+Both are relatively easy to setup. You either download their code and integrate it. Or use a CDN like I did on this page. 
 
 ## Mapbox setup:
+You need to include the javascript code and the CSS for mapbox. You need to include the stylesheet to make sure the navigation elements are visible. Furthermore, you need to signup at mapbox.com to get an API token to use it. But that is free, just your email as payment. 
 
 {{< highlight html "linenos=table,linenostart=1" >}}
 <script src="https://unpkg.com/mapbox-gl@0.49.0" type="text/javascript"></script>
@@ -119,7 +134,7 @@ Both are relatively easy to setup. You either download their code and integrate 
 {{</ highlight >}}
 
 
-### Winner: Even
+### Winner: D3
 
 # Basemap
 The biggest visible difference is the lack of a basemap for d3. But I made this on purpose. The power of d3 is that it does not include a basemap by default. You want the data to be the center of your map, not the basemap.
@@ -179,7 +194,7 @@ In d3 we only need two lines of code.
 ### Winner: D3
 
 # Centering the map
-While mapbox GL.js relies on you, the creator, to set the zoom, center and so forth in advance, d3.js allows you to use your data to set the extent. 
+While Mapbox relies on you, the creator, to set the zoom, center and so forth in advance, d3.js allows you to use your data to set the extent. 
 
 You can let mapbox figure out the best zoom and center as well, but it is more difficult and I did not include this currently. I might extent this post in the future.
 
@@ -203,4 +218,14 @@ With d3, you should know the basics of HTML, learn a little bit of SVG and then 
 
 ### Winner: mapbox
 
+# Conclusion
+As I mentioned in the beginngin of this post, both d3 and mapbox.js serve somewhat different purposes. But they do have similar features.
 
+So how do they stack up against each other. Let's find out.
+
+__Mapbox__: 2  
+__D3__: 5
+
+I declare D3 as the winner of this comparison. But keep in mind, that if you need a basemap, mapbox is probably easier to setup.  
+
+<div class="rm-area-end-of-content"></div>
