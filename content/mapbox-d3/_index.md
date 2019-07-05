@@ -6,6 +6,7 @@ layout = "single"
 body_classes = "font-sans content post mb-6 text-lg leading-relaxed"
 categories = ["resource"]
 title ="Comparison of Mapbox GL JS and D3.js"
+description = "How do d3.js and Mapbox GL JS compare? Which library shines on which front? And who will score the most wins? I compare these two libraries on amount of code, simplicity of setup, and much more."
 +++
 {{< header>}}
   {{< headline-h1>}}
