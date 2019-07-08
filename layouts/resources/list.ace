@@ -1,0 +1,11 @@
+= content main
+  .container.m-auto.mt-8 class="md:flex-row max-w-xl"
+    {{.Content}}
+    {{ range .Site.Taxonomies.categories.resource }}
+      a href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+    {{ end }}
+= content modal
+  .modal
+    {{ if .Page.Params.modal }}
+      {{ partial (.Page.Param "modal.template") . }}
+    {{ end }}
