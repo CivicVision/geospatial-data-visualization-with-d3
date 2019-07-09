@@ -3,7 +3,7 @@ include_js = ["mapbox-d3.js"]
 external_libs = ["https://unpkg.com/mapbox-gl@0.49.0", "https://unpkg.com/d3@5.9.7/dist/d3.min.js"]
 external_css = ["https://unpkg.com/mapbox-gl@0.49.0/dist/mapbox-gl.css"]
 layout = "single"
-body_classes = "font-sans content post mb-6 text-lg leading-relaxed"
+body_classes = "font-sans content post mb-6 p-2 text-lg leading-relaxed"
 categories = ["resource"]
 title ="Comparison of Mapbox GL JS and D3.js"
 description = "How do d3.js and Mapbox GL JS compare? Which library shines on which front? And who will score the most wins? I compare these two libraries on amount of code, simplicity of setup, and much more."
@@ -18,9 +18,11 @@ images = ["https://res.cloudinary.com/civicvision/image/upload/v1562687357/geosp
 <div class="flex h-64 mb-8">
   <div class="w-1/2">
     <div id="map" class="h-full"></div>
+    <div class="caption mt-2 text-center text-grey-dark text-xs">Mapbox map</div>
   </div>
   <div class="w-1/2">
     <div id="d3-map" class="h-full"></div>
+    <div class="caption mt-2 text-center text-grey-dark text-xs">D3 map</div>
   </div>
 </div>
 
