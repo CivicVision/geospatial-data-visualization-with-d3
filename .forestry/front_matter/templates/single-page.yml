@@ -8,3 +8,20 @@ fields:
 - type: text
   name: body_classes
   label: body_classes
+- name: images
+  type: select
+  default: ''
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: images
+- name: description
+  type: text
+  config:
+    required: false
+  label: description
