@@ -25,3 +25,5 @@ fields:
   config:
     required: false
   label: description
+pages:
+- content/mapping-resources/_index.md
