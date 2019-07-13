@@ -5,6 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: content
+  label: All Pages
+  create: all
+  match: "**/*"
+- type: directory
   path: content/f4gsd
   label: San Diego Workshop
   create: all
