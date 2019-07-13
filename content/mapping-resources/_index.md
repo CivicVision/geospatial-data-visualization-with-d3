@@ -1,5 +1,5 @@
 +++
-body_classes = "font-sans post mb-6 text-lg leading-relaxed"
+body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 description = ""
 draft = true
 images = ""
