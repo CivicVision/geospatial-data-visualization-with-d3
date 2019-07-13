@@ -8,22 +8,17 @@ fields:
 - type: text
   name: body_classes
   label: body_classes
-- name: images
-  type: select
-  default: ''
-  config:
-    required: false
-    options: []
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: images
 - name: description
   type: text
   config:
     required: false
   label: description
+- name: images
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Images
 pages:
 - content/mapping-resources/_index.md
