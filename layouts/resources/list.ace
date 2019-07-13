@@ -1,0 +1,17 @@
+= content header
+  {{ partial "subnav" . }}
+= content main
+  .container.m-auto.mt-8 class="md:flex-row max-w-xl"
+    {{.Content}}
+    .mt-8
+      h2.text-2xl Library Comparisons
+      p Articles and Resources about different libraries.  
+      .mt-2
+        {{ range where .Site.Taxonomies.categories.resource "Params.section" "comparison" }}
+          {{ partial "resource-item" . }}
+        {{ end }}
+= content modal
+  .modal
+    {{ if .Page.Params.modal }}
+      {{ partial (.Page.Param "modal.template") . }}
+    {{ end }}

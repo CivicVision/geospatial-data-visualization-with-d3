@@ -792,6 +792,20 @@ let colors = {
         // center: true,
         // padding: '1rem',
       }),
+      require("tailwind-heropatterns")({
+        variants: [],
+        patterns: ["topography", "signal"],
+        colors: {
+            default: "#fff",
+            "blue-light": "#adc5ea",
+            "blue-lighter": "#abc7f1"
+          },
+        opacity: {
+            default: "0.4",
+            "20": "0.2",
+            "10": "0.1"
+          }
+      }),
     ],
 
 

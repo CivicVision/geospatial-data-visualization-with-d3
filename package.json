@@ -8,5 +8,8 @@
   "main": "index.js",
   "repository": "git@github.com:CivicVision/geospatial-data-visualization-with-d3.git",
   "author": "Mila Frerichs <mila.frerichs@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tailwind-heropatterns": "0.0.7"
+  }
 }

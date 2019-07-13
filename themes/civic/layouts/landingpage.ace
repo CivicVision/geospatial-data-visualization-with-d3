@@ -1,4 +1,2 @@
-= content header
-  {{ partial "header" . }}
 = content main
   {{.Content}}

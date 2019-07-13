@@ -1,0 +1,5 @@
+.mb-4
+  a.text-xl.mb-2.text-black.no-underline.font-bold class="hover:underline" href="{{ .RelPermalink }}" {{ .Title }}
+  .mb-2
+    {{ .Description }}
+

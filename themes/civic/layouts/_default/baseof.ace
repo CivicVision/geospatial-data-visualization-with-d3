@@ -2,7 +2,7 @@
 html lang=en
   {{ partial "head.html" . }}
   {{ partial "rightmessage" . }}
-  body class="{{.Params.body_classes}}"
+  body class="{{ default .Site.Params.body_classes .Params.body_classes}}"
     = yield header
     main#content role="main"
       = yield main
