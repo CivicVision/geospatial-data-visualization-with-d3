@@ -20,5 +20,9 @@ fields:
     min: 
     max: 
   label: Images
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
 pages:
 - content/mapping-resources/_index.md
