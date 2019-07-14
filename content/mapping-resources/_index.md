@@ -1,8 +1,7 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 description = ""
-draft = true
-images = ""
+images = []
 layout = "single"
 
 +++
