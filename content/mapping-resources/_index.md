@@ -1,5 +1,6 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
+categories = ["resource"]
 description = ""
 images = []
 layout = "single"
