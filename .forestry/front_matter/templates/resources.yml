@@ -23,3 +23,5 @@ fields:
     min: 
     max: 
   label: Images
+pages:
+- content/resources/_index.md
