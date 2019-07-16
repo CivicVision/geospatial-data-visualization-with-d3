@@ -1,0 +1,9 @@
+{{ range .Site.Data.res.books }}
+  {{if .link }}
+    .mb-4
+      a.text-xl.mb-2.text-black.no-underline.font-bold class="hover:underline" href="{{ .link }}" {{ .title }}, {{.author}}
+      .mb-2
+        {{ .description | markdownify }}
+  {{ end }}
+
+{{ end }}
