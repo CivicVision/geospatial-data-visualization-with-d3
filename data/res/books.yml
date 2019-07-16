@@ -1,0 +1,54 @@
+- title: "Interactive Data Visualization for the Web: An Introduction to Designing with D3"
+  link: "https://amzn.to/2lIZxqz"
+  author: Scott Murray
+  description: |
+    Best __entry level__ book that is available. I used the first version a lot
+    to look up things. Highly recommended.
+- title: D3.js in Action
+  author: Elijah Meeks
+  link: "https://amzn.to/2lKJKYn"
+  description: |
+    Have not read it myself but heard good things and is always
+    recommended by others
+- title: "Storytelling with Data: A Data Visualization Guide for Business Professionals"
+  author: Cole Nusbaumer
+  link: "https://amzn.to/2lKY3fx"
+  description: |
+    Not a d3.js book, but a great read for all things Data Visualization and
+    where to focus your attention creating visualizations.
+- title: Data Visualization with d3.js
+  link_soon: "https://amzn.to/2ldHFne"
+  author: Swizec Teller
+- title: Practical d3
+  author: Arek Amr und Rayna Stamboliyska
+  link_soon: "https://amzn.to/2ldWoP5"
+- title: Learning D3.js Data Visualization
+  author: Ændrew Rininsland und Swizec Teller
+  link_soon: "https://amzn.to/2kaJv8t"
+- title: Data Visualization with D3.js Cookbook
+  author: Zhu
+- title: D3.js by Example (Heydt)
+  author: Heydt
+- title: Data Visualization with D3 and AngularJS
+  author: "Körner"
+- title: Visual Storytelling with D3
+  author: Meeks
+- title: Mastering D3.js
+  author: Meeks
+- title: Learning D3.js Mapping
+  author: Meeks
+- title: Cartography
+  author: Kenneth Field
+  link: "https://amzn.to/2lwowx5"
+- title: Cartography Toolkit
+  author: Gretchen N Peterson
+  link: "https://amzn.to/2lJZzi5"
+- title: GIS Cartography
+  author: Gretchen N Peterson
+  link: "https://amzn.to/2k3KDuG"
+- title: "Designing Better Maps: A Guide for GIS Users"
+  author: "Cynthia A. Brewer"
+  link: "https://amzn.to/2lATDaR"
+- title: "Datums and Map Projections: For Remote Sensing, GIS and Surveying"
+  author: "J.C. Iliffe"
+  link: "https://amzn.to/2k1icxr"
