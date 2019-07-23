@@ -6,6 +6,7 @@ categories = ["resource"]
 section = "comparison"
 title = "Feature Comparison of Online Mapping Libraries"
 description = "An overview of features from the top mapping libraries. "
+date = "2019-06-26"
 +++
 {{< header>}}
   {{< headline-h1>}}
