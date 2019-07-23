@@ -9,6 +9,7 @@ section = "comparison"
 title ="Comparison of Mapbox GL JS and D3.js"
 description = "How do d3.js and Mapbox GL JS compare? Which library shines on which front? And who will score the most wins? I compare these two libraries on amount of code, simplicity of setup, and much more."
 images = ["https://res.cloudinary.com/civicvision/image/upload/v1562687357/geospatial-d3/marketing/website/mapbox-d3.png"]
+date = "2019-07-09"
 +++
 {{< header>}}
   {{< headline-h1>}}
