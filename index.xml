@@ -6,9 +6,21 @@
     <description>Recent content on Geospatial Data Visualization with d3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mappingwithd3.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Comparison of Mapbox GL JS and D3.js</title>
+      <link>https://mappingwithd3.com/mapbox-d3/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/mapbox-d3/</guid>
+      <description>Comparison of Mapbox GL JS vs D3.js    Mapbox map   D3 map   When you want to create an online-map from your data you have a ton of options available.
+When I teach d3 or talk to people what tools they&amp;rsquo;re using the questions that comes up a lot is: &amp;ldquo;How do d3 and mapboxGL compare?&amp;rdquo;.
+That is the question that I want to answer on this site.</description>
+    </item>
     
     <item>
       <title></title>
@@ -36,17 +48,6 @@ Let&amp;rsquo;s get started </description>
       
       <guid>https://mappingwithd3.com/subscribe/thank-you/</guid>
       <description> Thank you for your interest. I will be in touch. </description>
-    </item>
-    
-    <item>
-      <title>Comparison of Mapbox GL JS and D3.js</title>
-      <link>https://mappingwithd3.com/mapbox-d3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mappingwithd3.com/mapbox-d3/</guid>
-      <description>Comparison of Mapbox GL JS vs D3.js    Mapbox map   D3 map   When you want to create an online-map from your data you have a ton of options available.
-When I teach d3 or talk to people what tools they&amp;rsquo;re using the questions that comes up a lot is: &amp;ldquo;How do d3 and mapboxGL compare?&amp;rdquo;.
-That is the question that I want to answer on this site.</description>
     </item>
     
   </channel>

@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mappingwithd3.com/mapping-resources/</loc>
+    <lastmod>2019-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/mapbox-d3/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mappingwithd3.com/feature-comparison/</loc>
+    <lastmod>2019-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mappingwithd3.com/f4gsd/</loc>
   </url>
   
@@ -12,10 +27,6 @@
   
   <url>
     <loc>https://mappingwithd3.com/feature-comparison/thank-you/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mappingwithd3.com/mapping-resources/</loc>
   </url>
   
   <url>
@@ -32,19 +43,13 @@
   </url>
   
   <url>
-    <loc>https://mappingwithd3.com/mapbox-d3/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mappingwithd3.com/feature-comparison/</loc>
-  </url>
-  
-  <url>
     <loc>https://mappingwithd3.com/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mappingwithd3.com/categories/resource/</loc>
+    <lastmod>2019-07-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
