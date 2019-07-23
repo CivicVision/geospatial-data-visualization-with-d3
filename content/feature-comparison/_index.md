@@ -37,19 +37,21 @@ Does the library support different projections?
 ### D3
 
 Does support projections. They prebuilt 13 projections you can find here but you can roll your own projection as well via
-Support: Yes
+{{<support true >}}
+{{<signal title="Easy of use" signal=1 value="Easy" >}}
 Easy of use: Easy
 Example: 
 Docs:
 
 ### Mapbox
 No support for other projections than the mercator projection. But a bird told me that this might be coming soon. :) 
-Support: No
+{{<support false >}}
 
 ### OpenLayers
 Does support other projections via EPSG codes. 
 You need to know the EPSG code, the projection definition and use proj4 
-Support: Yes
+{{<support true >}}
+{{<signal title="Easy of use" signal=2 value="Medium" >}}
 Easy of use: Medium
 Example: https://openlayers.org/en/latest/examples/reprojection-by-code.html
 Docs: https://openlayers.org/en/latest/doc/tutorials/raster-reprojection.html
@@ -159,10 +161,9 @@ Can you define a different basemap than the default?
 
 ### D3
 Yes. you can use whatever you want.
-
 Support: Yes
-Easy of use: Hard
-Example: 
+Easy of use: Medium
+Example: https://observablehq.com/@d3/vector-tiles
 Docs:
 
 ### Mapbox
@@ -196,7 +197,8 @@ Are you able to cluster markers based on their location and show the amount of m
 ### d3
 Support: Yes
 Easy of use: Hard
-Example: 
+Example: https://bl.ocks.org/Andrew-Reid/21ff4b57267fa91dacc57ef1ccb7afb3
+
 Docs:
 
 ### Mapbox
@@ -290,7 +292,7 @@ Support: No
 ### Mapbox
 Support: Yes
 Easy of use: Easy
-Example: 
+Example: https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
 Docs:
 
 ### OpenLayers
@@ -315,7 +317,8 @@ Support for integrating images via a tile server. For example satellite images f
 ### d3
 Support: Yes
 Easy of use: Medium
-Example: 
+Example: https://observablehq.com/@d3/raster-tiles-canvas
+https://observablehq.com/@d3/raster-tiles
 Docs:
 
 ### Mapbox
@@ -346,10 +349,11 @@ Docs:
 Display single raster images. Can you add single images like geotiffs to you map?
 
 ### d3
-Support: Yes
-Easy of use:
-Example: 
+Support: Yes, via geotiff
+Easy of use: Medium
+Example: https://observablehq.com/@lenninlasd/isobands-d3-geotiffjs
 Docs:
+
 ### Mapbox
 Support: Yes
 Easy of use: Easy
@@ -377,15 +381,13 @@ Can you style raster images within the library? For example on a pixel basis for
 
 ### d3
 Support: Yes
-Easy of use: Easy
-Example: 
+Easy of use: Medium
+Example via geotiff: https://observablehq.com/@d3/geotiff-contours-ii
 Docs:
 
 ### Mapbox
 Support: No
-Easy of use: Easy
-Example: 
-Docs:
+
 
 ### OpenLayers
 Support: Yes
@@ -400,75 +402,67 @@ Example: http://geoexamples.com/d3-raster-tools-docs/code_samples/leaflet-raster
 Docs:
 
 ### Google Maps
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+Support: No
 
 ## Heatmap 
 Can you display a heatmap? Can you change the weight? 
 
 ### d3
 Support: Yes
-Easy of use: Easy
+Easy of use: Medium
 Example: https://bl.ocks.org/patricksurry/803a131d4c34fde54b9fbb074341daa5
 https://www.visualcinnamon.com/2013/07/self-organizing-maps-creating-hexagonal.html
 
 ### Mapbox
 Support: Yes
 Easy of use: Easy
-Example: 
+Example: https://docs.mapbox.com/mapbox-gl-js/example/heatmap-layer/
 Docs:
 
 ### OpenLayers
 Support: Yes
 Easy of use: Easy
-Example: 
+Example: https://openlayers.org/en/latest/examples/heatmap-earthquakes.html
 Docs:
 
 ### Leaflet
-Support: Yes
+Support: Yes, via plugin
 Easy of use: Easy
 Example: 
-Docs:
+Docs: https://github.com/Leaflet/Leaflet.heat
 
 ### Google Maps
 Support: Yes
 Easy of use: Easy
-Example: 
+Example: https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap
 Docs:
 
 ## OGC Services (WMS, WFS)
-Can you integrate OGC Services lime WMS (Web Mapping Service) or a WFS? 
+Can you integrate OGC Services like WMS (Web Mapping Service) or a WFS? 
 ### d3
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+Support: No
 
 ### Mapbox
-Support: No
-Easy of use: Easy
-Example: 
-Docs:
+Support: Kind of, Only WMS via direct url
+Easy of use: Medium
+Example: https://docs.mapbox.com/mapbox-gl-js/example/wms/
 
 ### OpenLayers
 Support: Yes
 Easy of use: Easy
-Example: 
+Example WFS: https://openlayers.org/en/latest/examples/vector-wfs-getfeature.html
+Example WMS: https://openlayers.org/en/latest/examples/wms-tiled.html
 Docs:
 
 ### Leaflet
 Support: Yes
 Easy of use: Easy
-Example: 
+Example WMS: https://github.com/heigeo/leaflet.wms
+Example WFS: https://github.com/Flexberry/Leaflet-WFST
 Docs:
 
 ### Google Maps
 Support: No
-
-Example: 
-Docs:
 
 ## Company support
 ### d3
