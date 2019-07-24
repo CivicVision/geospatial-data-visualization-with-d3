@@ -1,0 +1,577 @@
+d3:
+  projection: &d3p
+    description: |
+      Does support projections. They prebuilt 13 projections you can find here but you can roll your own projection as well via
+    support: true
+    use: 1
+    examples:
+      - "https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef"
+  vector_styling: &d3vs
+    description: |
+      Yes. And very easily. You can use standard SVG and CSS to style your map and you have full control over everything.
+    support: true
+    use: 1
+    examples:
+      - 
+  default_basemap: &d3db
+    description: |
+      Check out the next section how to use a basemap
+    support: false
+  own_basemap: &d3ob
+    description: |
+      Yes. you can use whatever you want.
+    support: true
+    use: 2
+    examples:
+      - "https://observablehq.com/@d3/vector-tiles"
+  marker_clustering: &d3mc
+    description: |
+      Not as easy as you might think.
+    support: true
+    use: 3
+    examples:
+      - "https://bl.ocks.org/Andrew-Reid/21ff4b57267fa91dacc57ef1ccb7afb3"
+  custom_tooltip: &d3ct
+    description: |
+      Very easily done via html
+    support: true
+    use: 1
+    examples:
+      - 
+  user_drawing: &d3ud
+    description: |
+      User drawing
+    support: false
+  geocoder: &d3g
+    description: |
+      No geocoder integrsted, you need to use your own solution
+    support: false
+  image_tiles: &d3it
+    description: |
+      More explanation
+    support: true
+    use: 2
+    examples:
+      - "https://observablehq.com/@d3/raster-tiles"
+      - "https://observablehq.com/@d3/raster-tiles-canvas"
+  raster_data: &d3rd
+    description: |
+      If you use geotiff you can integrate your raster files
+    support: true
+    support_text: via geotiff
+    use: 2
+    examples:
+      - "https://observablehq.com/@lenninlasd/isobands-d3-geotiffjs"
+  raster_styling: &d3rs
+    description: |
+      If you use geotiff you can style your raster files
+    support: true
+    support_text: via geotiff
+    use: 2
+    examples:
+      - "https://observablehq.com/@d3/geotiff-contours-ii"
+  heatmap: &d3h
+    description: |
+      Not directly a heatmap but you can create something similar.
+    support: true
+    use: 2
+    examples:
+      - "https://bl.ocks.org/patricksurry/803a131d4c34fde54b9fbb074341daa5"
+      - "https://www.visualcinnamon.com/2013/07/self-organizing-maps-creating-hexagonal.html"
+  ogc_services: &d3ogc
+    description: |
+      D3 does not directly support OGC services. You need to roll your own solution.
+    support: false
+googlemaps:
+  projection: &gmp
+    description: |
+      You can use custom projections with google maps but it is very complex.
+
+      >  A Projection implementation must provide not only a mapping from one coordinate system to another, but a bi-directional mapping. That is, you must define how to translate from Earth coordinates (LatLng objects) to the Projection class's world coordinate system, and vice versa. Google Maps uses the Mercator projection to create its maps from geographic data and convert events on the map into geographic coordinates. 
+
+      So you need to do all the heavy lifting! 
+    support: true
+    use: 3
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/examples/map-projection-simple"
+  vector_styling: &gmvs
+    description: |
+      Similar to the other libraries using a style option
+    support: true
+    use: 2
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/reference/data#Data.StyleOptions"
+  default_basemap: &gmdb
+    description: |
+      Yes, the default Google Map. To use google maps you need to sign  up for a API key anyway.
+    support: true
+    use: 1
+    examples:
+      - 
+  own_basemap: &gmob
+    description: |
+      No! You can only use Google Maps basemap. But you can style it.
+    support: false
+  marker_clustering: &gmmc
+    description: |
+      More
+    support: true
+    use: 1
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/marker-clustering"
+  custom_tooltip: &gmct
+    support: true
+    use: 1
+    examples:
+      - 
+  user_drawing: &gmud
+    support: true
+    use: 1
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/examples/drawing-tools"
+  geocoder: &gmg
+    support: true
+    use: 1
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/geocoding"
+  image_tiles: &gmit
+    support: true
+    use: 1
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/examples/maptype-image-overlay"
+  raster_data: &gmrd
+    support: true
+    use: 3
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/examples/overlay-simple"
+  raster_styling: &gmrs
+    support: false
+  heatmap: &gmh
+    description: |
+      The example from google looks way more complicated than it should be.
+    support: true
+    use: 1
+    examples:
+      - "https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap"
+  ogc_services: &gmogc
+    support: false
+  company_support:
+    support: true
+    use: 1
+    examples:
+      - 
+  license:
+    support: true
+    use: 1
+    examples:
+      - 
+leaflet:
+  projection: &lp
+    description: |
+      You can use projections in leaflet via this plugin:  
+      https://kartena.github.io/Proj4Leaflet/
+    support: true
+    support_text: "via Plugin"
+    use: 2
+    examples:
+      - "https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef"
+  vector_styling: &lvs
+    description: |
+      Yes, leaflet is a mix from mapbox and open layers. You can use a style function and use some default elements
+    support: true
+    use: 2
+    examples:
+      - "https://leafletjs.com/examples/choropleth/"
+  default_basemap: &ldb
+    support: true
+    support_text: 'default OSM'
+    use: 1
+    examples:
+      - 
+  own_basemap: &lob
+    description: |
+      You can use whatever you want.
+    support: true
+    use: 1
+    examples:
+      - 
+  marker_clustering: &lmc
+    support: true
+    support_text: 'via plugin'
+    use: 1
+    examples:
+      - "https://github.com/Leaflet/Leaflet.markercluster"
+  custom_tooltip: &lct
+    support: true
+    use: 1
+    examples:
+      - 
+  user_drawing: &lud
+    support: true
+    support_text: 'via plugin'
+    use: 1
+    examples:
+      - 
+  geocoder: &lg
+    support: true
+    support_text: 'via plugin'
+    use: 1
+    examples:
+      - "https://github.com/perliedman/leaflet-control-geocoder"
+  image_tiles: &lit
+    support: true
+    use: 1
+    examples:
+      - 
+  raster_data: &lrd
+    support: true
+    use: 1
+    examples:
+      - 
+  raster_styling: &lrs
+    support: true
+    support_text: 'via plugin'
+    use: 1
+    examples:
+      - "http://geoexamples.com/d3-raster-tools-docs/code_samples/leaflet-raster-page.html"
+  heatmap: &lh
+    description: |
+      You need to change your data to make this plugin work for you, but other than that, should be quick to implement.
+    support: true
+    support_text: 'via plugin'
+    use: 2
+    examples:
+      - "https://github.com/Leaflet/Leaflet.heat"
+  ogc_services: &logc
+    support: true
+    support_text: 'via plugin'
+    use: 1
+    examples:
+      - "https://github.com/heigeo/leaflet.wms"
+      - "https://github.com/Flexberry/Leaflet-WFST"
+  company_support:
+    support: true
+    use: 1
+    examples:
+      - 
+  license:
+    support: true
+    use: 1
+    examples:
+      - 
+mapbox:
+  projection: &mp
+    description: |
+      No support for other projections than the mercator projection. But a bird told me that this might be coming soon. :) 
+    support: false
+  vector_styling: &mvs
+    description: |
+      Yes, not as easy and you don’t have full control. Check out the Mapbox Style Spec for more details how to style your layers.
+    support: true
+    use: 2
+    examples:
+      - 
+  default_basemap: &mdb
+    description: |
+      Yes, but you need to sign up for an API token to use it. 
+    support: true
+    use: 1
+    examples:
+      - 
+  own_basemap: &mob
+    description: |
+      Yes. you can use whatever you want.
+    support: true
+    use: 1
+    examples:
+      - 
+  marker_clustering: &mmc
+    support: true
+    use: 1
+    examples:
+      - 
+  custom_tooltip: &mct
+    support: true
+    use: 1
+    examples:
+      - 
+  user_drawing: &mud
+    support: true
+    support_text: 'via plugin'
+    use: 1
+    examples:
+      - 
+  geocoder: &mg
+    support: true
+    use: 1
+    examples:
+      - "https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/"
+  image_tiles: &mit
+    support: true
+    use: 1
+    examples:
+      - "https://docs.mapbox.com/mapbox-gl-js/example/map-tiles/"
+  raster_data: &mrd
+    support: true
+    use: 1
+    examples:
+      - "https://docs.mapbox.com/mapbox-gl-js/example/image-on-a-map/"
+  raster_styling: &mrs
+    support: false
+  heatmap: &mh
+    support: true
+    use: 1
+    examples:
+      - "https://docs.mapbox.com/mapbox-gl-js/example/heatmap-layer/"
+  ogc_services: &mogc
+    support: true
+    support_text: 'only WMS'
+    use: 2
+    examples:
+      - "https://docs.mapbox.com/mapbox-gl-js/example/wms/"
+  company_support:
+    support: true
+    use: 1
+    examples:
+      - 
+  license:
+    support: true
+    use: 1
+    examples:
+      - 
+openlayers:
+  projection: &olp
+    description: |
+      Does support other projections via EPSG codes. 
+      You need to know the EPSG code, the projection definition and use proj4 
+    support: true
+    use: 2
+    examples:
+      - "https://openlayers.org/en/latest/examples/reprojection-by-code.html"
+      - "https://openlayers.org/en/latest/doc/tutorials/raster-reprojection.html"
+  vector_styling: &olvs
+    description: | 
+      Using the style function and the Style class you can style elements. Not as powerful as the Mapbox Style Spec and you need to write more code
+    support: true
+    use: 2
+    examples:
+      - "https://openlayers.org/workshop/en/vector/style.html"
+  default_basemap: &oldb
+    support: true
+    support_text: 'default OSM'
+    use: 1
+    examples:
+      - 
+  own_basemap: &olob
+    support: true
+    use: 1
+    examples:
+      - 
+  marker_clustering: &olmc
+    support: true
+    use: 1
+    examples:
+      - "https://openlayers.org/en/latest/examples/cluster.html"
+  custom_tooltip: &olct
+    support: true
+    use: 1
+    examples:
+      - 
+  user_drawing: &olud
+    support: true
+    use: 1
+    examples:
+      - "https://openlayers.org/en/latest/examples/draw-features.html"
+  geocoder: &olg
+    support: true
+    support_text: "via plugin"
+    use: 1
+    examples:
+      - "https://github.com/jonataswalker/ol-geocoder"
+  image_tiles: &olit
+    support: true
+    use: 1
+    examples:
+      - "https://openlayers.org/en/latest/examples/xyz-retina.html"
+  raster_data: &olrd
+    support: true
+    use: 1
+    examples:
+      - 
+  raster_styling: &olrs
+    support: true
+    use: 1
+    examples:
+      - "https://openlayers.org/en/latest/examples/raster.html"
+  heatmap: &olh
+    support: true
+    use: 1
+    examples:
+      - "https://openlayers.org/en/latest/examples/heatmap-earthquakes.html"
+  ogc_services: &ologc
+    support: true
+    use: 2
+    examples:
+      - "https://openlayers.org/en/latest/examples/vector-wfs-getfeature.html"
+      - "https://openlayers.org/en/latest/examples/wms-tiled.html"
+  company_support:
+    support: true
+    use: 1
+    examples:
+      - 
+  license:
+    support: true
+    use: 1
+    examples:
+      - 
+projections:
+  - name: d3
+    detail: *d3p
+  - name: mapbox
+    detail: *mp
+  - name: OpenLayers
+    detail: *olp
+  - name: Leaflet
+    detail: *lp
+  - name: Google Maps
+    detail: *gmp
+
+vector_styling:
+  - name: d3
+    detail: *d3vs
+  - name: mapbox
+    detail: *mvs
+  - name: OpenLayers
+    detail: *olvs
+  - name: Leaflet
+    detail: *lvs
+  - name: Google Maps
+    detail: *gmvs
+
+default_basemap:
+  - name: d3
+    detail: *d3db
+  - name: mapbox
+    detail: *mdb
+  - name: OpenLayers
+    detail: *oldb
+  - name: Leaflet
+    detail: *ldb
+  - name: Google Maps
+    detail: *gmdb
+
+own_basemap:
+  - name: d3
+    detail: *d3ob
+  - name: mapbox
+    detail: *mob
+  - name: OpenLayers
+    detail: *olob
+  - name: Leaflet
+    detail: *lob
+  - name: Google Maps
+    detail: *gmob
+
+marker_clustering:
+  - name: d3
+    detail: *d3mc
+  - name: mapbox
+    detail: *mmc
+  - name: OpenLayers
+    detail: *olmc
+  - name: Leaflet
+    detail: *lmc
+  - name: Google Maps
+    detail: *gmmc
+
+custom_tooltip:
+  - name: d3
+    detail: *d3ct
+  - name: mapbox
+    detail: *mct
+  - name: OpenLayers
+    detail: *olct
+  - name: Leaflet
+    detail: *lct
+  - name: Google Maps
+    detail: *gmct
+
+user_drawing:
+  - name: d3
+    detail: *d3ud
+  - name: mapbox
+    detail: *mud
+  - name: OpenLayers
+    detail: *olud
+  - name: Leaflet
+    detail: *lud
+  - name: Google Maps
+    detail: *gmud
+
+geocoder:
+  - name: d3
+    detail: *d3g
+  - name: mapbox
+    detail: *mg
+  - name: OpenLayers
+    detail: *olg
+  - name: Leaflet
+    detail: *lg
+  - name: Google Maps
+    detail: *gmg
+
+image_tiles:
+  - name: d3
+    detail: *d3it
+  - name: mapbox
+    detail: *mit
+  - name: OpenLayers
+    detail: *olit
+  - name: Leaflet
+    detail: *lit
+  - name: Google Maps
+    detail: *gmit
+raster_data:
+  - name: d3
+    detail: *d3rd
+  - name: mapbox
+    detail: *mrd
+  - name: OpenLayers
+    detail: *olrd
+  - name: Leaflet
+    detail: *lrd
+  - name: Google Maps
+    detail: *gmrd
+raster_styling:
+  - name: d3
+    detail: *d3rs
+  - name: mapbox
+    detail: *mrs
+  - name: OpenLayers
+    detail: *olrs
+  - name: Leaflet
+    detail: *lrs
+  - name: Google Maps
+    detail: *gmrs
+heatmap:
+  - name: d3
+    detail: *d3h
+  - name: mapbox
+    detail: *mh
+  - name: OpenLayers
+    detail: *olh
+  - name: Leaflet
+    detail: *lh
+  - name: Google Maps
+    detail: *gmh
+ogc_services:
+  - name: d3
+    detail: *d3ogc
+  - name: mapbox
+    detail: *mogc
+  - name: OpenLayers
+    detail: *ologc
+  - name: Leaflet
+    detail: *logc
+  - name: Google Maps
+    detail: *gmogc

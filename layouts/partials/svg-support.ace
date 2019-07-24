@@ -1,0 +1,3 @@
+{{ $size := 10 }}
+svg width="{{ mul 2 $size}}" height="{{ mul 2 $size}}" class="fill-current {{ if eq . true }}text-green-dark{{else}}text-red-dark{{end}}"
+  circle r="{{$size}}" cx="{{$size}}" cy="{{$size}}"

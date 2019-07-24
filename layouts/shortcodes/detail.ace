@@ -1,0 +1,25 @@
+{{ with index (index $.Site.Data.resources.features.list (.Get 0)) (.Get 1) }}
+.mb-8
+  .pb-2
+    {{ .description | markdownify }}
+  .font-xl.py-1
+    b Support: &nbsp;
+      span class="{{ if eq .support true }}text-green-dark{{else}}text-red-dark{{end}}" {{ if eq .support true }}Yes{{if .support_text}}, {{.support_text}}{{end}}{{else}}No{{end}}
+  {{if eq .support true }}
+  .font-xl.py-1
+    b Ease of use: &nbsp;
+      {{ partial "signal" .}}
+  .font-xl.py-1
+    {{ $exampleLen := len .examples}} 
+    {{ range $elem_index, $elem_val := .examples }}
+      {{ if eq $exampleLen 1 }} 
+        b Example: &nbsp;
+        a href="{{$elem_val}}" {{$elem_val}}
+      {{ else }}
+        b Example {{add $elem_index 1}}: &nbsp;
+        a href="{{$elem_val}}" {{$elem_val}}
+        br
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ end }}

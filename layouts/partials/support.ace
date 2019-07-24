@@ -1,0 +1,1 @@
+span class="{{ if eq . true }}text-green-dark{{else}}text-red-dark{{end}}" {{ if eq . true }}Yes{{else}}No{{end}}

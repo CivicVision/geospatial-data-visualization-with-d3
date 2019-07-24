@@ -1,0 +1,24 @@
+{{ with index (index $.Site.Data.resources.features.list (.Get 0)) }}
+table.w-full
+  thead
+    tr
+      th
+      {{ range .}}
+        th {{.name}}
+      {{end}}
+  tbody
+    tr
+      td Support
+      {{ range .}}
+        td.text-center.p-2
+          {{ partial "svg-support" .detail.support}}
+      {{end}}
+    tr
+      td Ease of use
+      {{ range .}}
+        td.text-center.p-2
+          {{ if eq .detail.support true }}
+            {{ partial "svg-signal" .detail}}
+          {{end}}
+      {{end}}
+{{end}}
