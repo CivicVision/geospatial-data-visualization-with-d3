@@ -1,3 +1,5 @@
-.font-xl 
-  b Support
-  span class="{{ if .Get 0 }}text-green-100{{else}}text-red-100{{end}}" {{ if .Get 0 }}Yes{{else}}No{{end}}
+{{ with (.Get 0) }}
+.font-xl.py-1
+  b Support: &nbsp;
+    span class="{{ if eq . "true" }}text-green-dark{{else}}text-red-dark{{end}}" {{ if eq . "true" }}Yes{{else}}No{{end}}
+{{ end }}

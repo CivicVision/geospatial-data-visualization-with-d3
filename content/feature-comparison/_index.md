@@ -23,446 +23,272 @@ description = "An overview of features from the top mapping libraries. "
 Let’s have a closer look at these features, their availability and their easy of use.
 
 I refer to all the libraries by their name as follow:
-d3.js = D3
-Mapbox GL JS = Mapbox
-OpenLayers = Openlayers
-Leaflet = Leaflet
-Google Maps JavaScript API = Google Maps
+
+d3.js = D3  
+Mapbox GL JS = Mapbox  
+OpenLayers = Openlayers  
+Leaflet = Leaflet  
+Google Maps JavaScript API = Google Maps  
 
 
 
 ## Projections 
 Does the library support different projections? 
+{{<table "projections" >}}
 
 ### D3
 
-Does support projections. They prebuilt 13 projections you can find here but you can roll your own projection as well via
-{{<support true >}}
-{{<signal title="Easy of use" signal=1 value="Easy" >}}
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "d3" "projection" >}}
 
 ### Mapbox
-No support for other projections than the mercator projection. But a bird told me that this might be coming soon. :) 
-{{<support false >}}
+{{<detail "mapbox" "projection" >}}
 
 ### OpenLayers
-Does support other projections via EPSG codes. 
-You need to know the EPSG code, the projection definition and use proj4 
-{{<support true >}}
-{{<signal title="Easy of use" signal=2 value="Medium" >}}
-Easy of use: Medium
-Example: https://openlayers.org/en/latest/examples/reprojection-by-code.html
-Docs: https://openlayers.org/en/latest/doc/tutorials/raster-reprojection.html
 
-
+{{<detail "openlayers" "projection" >}}
 
 ### Leaflet
-You can use projections in leaflet via this plugin:
-https://kartena.github.io/Proj4Leaflet/
-Support: Yes
-Easy of use: Medium
-Example: 
-Docs:
+
+{{<detail "leaflet" "projection" >}}
 
 ### Google Maps
-You can use custom projections with google maps but it is very complex.
->  A Projection implementation must provide not only a mapping from one coordinate system to another, but a bi-directional mapping. That is, you must define how to translate from Earth coordinates (LatLng objects) to the Projection class's world coordinate system, and vice versa. Google Maps uses the Mercator projection to create its maps from geographic data and convert events on the map into geographic coordinates. 
 
-So you need to do all the heavy lifting! 
-
-Support: Yes
-Easy of use: Hard
-Example: https://developers.google.com/maps/documentation/javascript/examples/map-projection-simple
-Docs:
+{{<detail "googlemaps" "projection" >}}
 
 ## Dynamic vector styling
 Can you style your layers depending on values of your features?
 
+{{<table "vector_styling" >}}
+
 ### D3
-Yes. And very easily. You can use standard SVG and CSS to style your map and you have full control over everything.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+
+{{<detail "d3" "vector_styling" >}}
 
 ### Mapbox
-Yes, not as easy and you don’t have full control. Check out the Mapbox Style Spec for more details how to style your layers.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+
+{{<detail "mapbox" "vector_styling" >}}
 
 ### OpenLayers
-Yes, using the style function and the Style class you can style elements. Not as powerful as the Mapbox Style Spec and you need to write more code:
-https://openlayers.org/workshop/en/vector/style.html
-Support: Yes
-Easy of use: Medium
-Example: 
-Docs:
+
+{{<detail "openlayers" "vector_styling" >}}
+
 
 ### Leaflet
-Yes, leaflet is a mix from mapbox and open layers. You can use a style function and use some default elements:
-https://leafletjs.com/reference-1.5.0.html#path-option
-https://leafletjs.com/examples/choropleth/
-Support: Yes
-Easy of use: Medium
-Example: 
-Docs:
+
+{{<detail "leaflet" "vector_styling" >}}
 
 ### Google Maps
-Similar to the other libraries using a style option:
 
-https://developers.google.com/maps/documentation/javascript/reference/data#Data.StyleOptions
-Support: Yes
-Easy of use: Medium
-Example: 
-Docs:
+{{<detail "googlemaps" "vector_styling" >}}
 
 ## Default Basemaps 
 Does the library ship a default basemap you can use right away. 
+{{<table "default_basemap" >}}
 
 ### D3
-No. And it’s not trivial to use a basemap. 
-Support: No
-Example: 
+{{<detail "d3" "default_basemap" >}}
 
 ### Mapbox
-Yes, but you need to sign up for an API token to use it. 
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "mapbox" "default_basemap" >}}
 
 ### OpenLayers
-Yes, the default OSM street map.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "openlayers" "default_basemap" >}}
 
 ### Leaflet
-Yes, the default OSM street map.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "leaflet" "default_basemap" >}}
 
 ### Google Maps
-Yes, the default Google Map. To use google maps you need to sign  up for a API key anyway.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "googlemaps" "default_basemap" >}}
 
 ## Use your own Basemap
 Can you define a different basemap than the default? 
 
+{{<table "own_basemap" >}}
+
 ### D3
-Yes. you can use whatever you want.
-Support: Yes
-Easy of use: Medium
-Example: https://observablehq.com/@d3/vector-tiles
-Docs:
+{{<detail "d3" "own_basemap" >}}
 
 ### Mapbox
-Yes. you can use whatever you want.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "mapbox" "own_basemap" >}}
 
-### OL
-Yes. you can use whatever you want.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+### OpenLayers
+{{<detail "openlayers" "own_basemap" >}}
 
 ### Leaflet
-Yes. you can use whatever you want.
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "leaflet" "own_basemap" >}}
 
 ### Google Maps
-No! You can only use Google Maps basemap. But you can style it.
-Support: No
+{{<detail "googlemaps" "own_basemap" >}}
 
 ## Marker clustering
 Are you able to cluster markers based on their location and show the amount of markers
 
-### d3
-Support: Yes
-Easy of use: Hard
-Example: https://bl.ocks.org/Andrew-Reid/21ff4b57267fa91dacc57ef1ccb7afb3
+{{<table "marker_clustering" >}}
 
-Docs:
+### d3
+{{<detail "d3" "marker_clustering" >}}
 
 ### Mapbox
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "mapbox" "marker_clustering" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example: https://openlayers.org/en/latest/examples/cluster.html
-Docs:
+{{<detail "openlayers" "marker_clustering" >}}
 
 ### Leaflet
-Support: Yes, via plugin
-Easy of use: Easy
-Example: 
-Docs: https://github.com/Leaflet/Leaflet.markercluster
+{{<detail "leaflet" "marker_clustering" >}}
 
 ### Google Maps
-Support: Yes
-Easy of use: Easy
-Example: https://developers.google.com/maps/documentation/javascript/marker-clustering
-Docs:
+{{<detail "googlemaps" "marker_clustering" >}}
 
 ## Custom Tooltip
+
+{{<table "custom_tooltip" >}}
+
 ### d3
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "d3" "custom_tooltip" >}}
 
 ### Mapbox
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "mapbox" "custom_tooltip" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example:
-Docs:
+{{<detail "openlayers" "custom_tooltip" >}}
 
 ### Leaflet
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "leaflet" "custom_tooltip" >}}
 
 ### Google Maps
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "googlemaps" "custom_tooltip" >}}
 
 ## User Drawing
+{{<table "user_drawing" >}}
 ### d3
-Support: No 
+{{<detail "d3" "user_drawing" >}}
 
 ### Mapbox
-Support: Yes, via plugin
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "mapbox" "user_drawing" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example: https://openlayers.org/en/latest/examples/draw-features.html
-Docs:
+{{<detail "openlayers" "user_drawing" >}}
 
 ### Leaflet
-Support: Yes, via plugin
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "leaflet" "user_drawing" >}}
 
 ### Google Maps
-Support: Yes
-Easy of use: Easy
-Example: https://developers.google.com/maps/documentation/javascript/examples/drawing-tools
-Docs:
+{{<detail "googlemaps" "user_drawing" >}}
 
 ## Geocoder
 Does the library provide a geocoder for the user to search for addresses and center on the map?
+{{<table "geocoder" >}}
 
 ### d3
-Support: No
+{{<detail "d3" "geocoder" >}}
+
 ### Mapbox
-Support: Yes
-Easy of use: Easy
-Example: https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
-Docs:
+{{<detail "mapbox" "geocoder" >}}
 
 ### OpenLayers
-Support: Yes, via plugin
-Example: https://github.com/jonataswalker/ol-geocoder
+{{<detail "openlayers" "geocoder" >}}
 
 ### Leaflet
-Support: Yes, via plugin
-Easy of use: Easy
-Example: 
-Docs: https://github.com/perliedman/leaflet-control-geocoder
+{{<detail "leaflet" "geocoder" >}}
 
 ### Google Maps
-Support: Yes
-Easy of use: Easy
-Example: https://developers.google.com/maps/documentation/javascript/geocoding
-Docs:
+{{<detail "googlemaps" "geocoder" >}}
 
 ## Image Tiles
 Support for integrating images via a tile server. For example satellite images from sentinel data. 
+{{<table "image_tiles" >}}
 
 ### d3
-Support: Yes
-Easy of use: Medium
-Example: https://observablehq.com/@d3/raster-tiles-canvas
-https://observablehq.com/@d3/raster-tiles
-Docs:
+{{<detail "d3" "image_tiles" >}}
 
 ### Mapbox
-Support: Yes
-Easy of use: Easy
-Example: https://docs.mapbox.com/mapbox-gl-js/example/map-tiles/
-Docs:
+{{<detail "mapbox" "image_tiles" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example: https://openlayers.org/en/latest/examples/xyz-retina.html
-Docs:
+{{<detail "openlayers" "image_tiles" >}}
 
 ### Leaflet
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "leaflet" "image_tiles" >}}
 
 ### Google Maps
-Support: Yes
-Easy of use: Easy
-Example: https://developers.google.com/maps/documentation/javascript/examples/maptype-image-overlay
-Docs:
+{{<detail "googlemaps" "image_tiles" >}}
 
 ## Raster data
 Display single raster images. Can you add single images like geotiffs to you map?
 
+{{<table "raster_data" >}}
 ### d3
-Support: Yes, via geotiff
-Easy of use: Medium
-Example: https://observablehq.com/@lenninlasd/isobands-d3-geotiffjs
-Docs:
+{{<detail "d3" "raster_data" >}}
 
 ### Mapbox
-Support: Yes
-Easy of use: Easy
-Example: https://docs.mapbox.com/mapbox-gl-js/example/image-on-a-map/
+{{<detail "mapbox" "raster_data" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "openlayers" "raster_data" >}}
 
 ### Leaflet
-Support: Yes
-Easy of use: Easy
-Example: 
-Docs:
+{{<detail "leaflet" "raster_data" >}}
 
 ### Google Maps 
-Support: Yes
-Easy of use: Hard
-Example: https://developers.google.com/maps/documentation/javascript/examples/overlay-simple
+{{<detail "googlemaps" "raster_data" >}}
 
 ## Raster Styling
 Can you style raster images within the library? For example on a pixel basis for raster tiles.
+{{<table "raster_styling" >}}
 
 ### d3
-Support: Yes
-Easy of use: Medium
-Example via geotiff: https://observablehq.com/@d3/geotiff-contours-ii
-Docs:
+{{<detail "d3" "raster_styling" >}}
 
 ### Mapbox
-Support: No
-
+{{<detail "mapbox" "raster_styling" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example: https://openlayers.org/en/latest/examples/raster.html
-Docs:
+{{<detail "openlayers" "raster_styling" >}}
 
 ### Leaflet
-Support: Yes, via geotiff
-Easy of use: Hard
-Example: http://geoexamples.com/d3-raster-tools-docs/code_samples/leaflet-raster-page.html
-Docs:
+{{<detail "leaflet" "raster_styling" >}}
 
 ### Google Maps
-Support: No
+{{<detail "googlemaps" "raster_styling" >}}
 
 ## Heatmap 
 Can you display a heatmap? Can you change the weight? 
 
+{{<table "heatmap" >}}
 ### d3
-Support: Yes
-Easy of use: Medium
-Example: https://bl.ocks.org/patricksurry/803a131d4c34fde54b9fbb074341daa5
-https://www.visualcinnamon.com/2013/07/self-organizing-maps-creating-hexagonal.html
+{{<detail "d3" "heatmap" >}}
 
 ### Mapbox
-Support: Yes
-Easy of use: Easy
-Example: https://docs.mapbox.com/mapbox-gl-js/example/heatmap-layer/
-Docs:
+{{<detail "mapbox" "heatmap" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example: https://openlayers.org/en/latest/examples/heatmap-earthquakes.html
-Docs:
+{{<detail "openlayers" "heatmap" >}}
 
 ### Leaflet
-Support: Yes, via plugin
-Easy of use: Easy
-Example: 
-Docs: https://github.com/Leaflet/Leaflet.heat
+{{<detail "leaflet" "heatmap" >}}
 
 ### Google Maps
-Support: Yes
-Easy of use: Easy
-Example: https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap
-Docs:
+{{<detail "googlemaps" "heatmap" >}}
 
 ## OGC Services (WMS, WFS)
 Can you integrate OGC Services like WMS (Web Mapping Service) or a WFS? 
+
+{{<table "ogc_services" >}}
 ### d3
-Support: No
+{{<detail "d3" "ogc_services" >}}
 
 ### Mapbox
-Support: Kind of, Only WMS via direct url
-Easy of use: Medium
-Example: https://docs.mapbox.com/mapbox-gl-js/example/wms/
+{{<detail "mapbox" "ogc_services" >}}
 
 ### OpenLayers
-Support: Yes
-Easy of use: Easy
-Example WFS: https://openlayers.org/en/latest/examples/vector-wfs-getfeature.html
-Example WMS: https://openlayers.org/en/latest/examples/wms-tiled.html
-Docs:
+{{<detail "openlayers" "ogc_services" >}}
 
 ### Leaflet
-Support: Yes
-Easy of use: Easy
-Example WMS: https://github.com/heigeo/leaflet.wms
-Example WFS: https://github.com/Flexberry/Leaflet-WFST
-Docs:
+{{<detail "leaflet" "ogc_services" >}}
 
 ### Google Maps
-Support: No
+{{<detail "googlemaps" "ogc_services" >}}
 
 ## Company support
 ### d3

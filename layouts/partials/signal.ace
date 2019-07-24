@@ -1,0 +1,17 @@
+{{ $type := .use }}
+{{ $className := "" }}
+{{ $value := "" }}
+
+{{ if eq $type 1 }}
+  {{ $className = "text-green-dark" }}
+  {{ $value = "Easy" }}
+{{ end }}
+{{ if (eq $type 2) }}
+  {{ $className = "text-orange-dark" }}
+  {{ $value = "Medium" }}
+{{ end }}
+{{ if (eq $type 3) }}
+  {{ $className = "text-red-dark" }}
+  {{ $value = "Hard" }}
+{{ end }}
+  span class="{{ $className}}" {{ $value }}
