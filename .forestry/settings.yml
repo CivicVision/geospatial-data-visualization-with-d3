@@ -4,6 +4,10 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: data/resources/features/list.yml
+  label: Features
+  match: "**/*"
 - type: directory
   path: content
   label: All Pages
