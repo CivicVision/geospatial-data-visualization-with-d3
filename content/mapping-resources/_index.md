@@ -4,7 +4,7 @@ categories = ["resource"]
 description = ""
 images = []
 layout = "single"
-
+date = "2019-07-20"
 +++
 {{< header>}}
 {{< headline-h1>}}
