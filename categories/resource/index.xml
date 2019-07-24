@@ -37,7 +37,15 @@ That is the question that I want to answer on this site.</description>
       <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mappingwithd3.com/feature-comparison/</guid>
-      <description>Feature Comparison of Online Mapping Libraries      </description>
+      <description>Feature Comparison of Online Mapping Libraries   
+  Feature Comparison Let’s have a closer look at these features, their availability and their easy of use.
+I refer to all the libraries by their name as follow:
+d3.js = D3
+Mapbox GL JS = Mapbox
+OpenLayers = Openlayers
+Leaflet = Leaflet
+Google Maps JavaScript API = Google Maps
+Projections Does the library support different projections? d3mapboxOpenLayersLeafletGoogle MapsSupportEase of use</description>
     </item>
     
   </channel>
