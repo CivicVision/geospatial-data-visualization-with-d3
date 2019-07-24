@@ -4,10 +4,11 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
-- type: document
-  path: data/resources/features/list.yml
-  label: Features
-  match: "**/*"
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
 - type: directory
   path: content
   label: All Pages
@@ -18,11 +19,10 @@ sections:
   label: San Diego Workshop
   create: all
   match: "**/*"
-- type: directory
-  path: content
-  label: Pages
-  create: all
-  match: "*"
+- type: document
+  path: data/resources/features/list.yml
+  label: Features
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
