@@ -1,0 +1,6 @@
+{{ $name := .id }}
+{{ range .answers }}
+  .mb-2
+    input.mr-2.align-top type="radio" id="{{.id}}" name="{{$name}}" value="{{.title}}"
+    label.align-middle for="{{.id}}" {{.title}}
+{{ end }}

@@ -1,0 +1,2 @@
+.border
+  textarea name="{{.id}}" id="{{.id}}" rows={{.rows}}

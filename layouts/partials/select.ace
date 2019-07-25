@@ -1,0 +1,4 @@
+select id="{{.id}}" name="{{.id}}"
+  {{ range .answers }}
+    option name="{{.id}}" value="{{.id}}" {{.title}}
+  {{ end }}
