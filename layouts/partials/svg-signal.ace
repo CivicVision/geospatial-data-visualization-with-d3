@@ -3,15 +3,15 @@
 {{ $value := "" }}
 {{ $size := 10 }}
 
-{{ if eq $type 1 }}
+{{ if eq (int $type) 1 }}
   {{ $className = "text-green-dark" }}
   {{ $value = "Easy" }}
 {{ end }}
-{{ if (eq $type 2) }}
+{{ if (eq (int $type) 2) }}
   {{ $className = "text-orange-dark" }}
   {{ $value = "Medium" }}
 {{ end }}
-{{ if (eq $type 3) }}
+{{ if (eq (int $type) 3) }}
   {{ $className = "text-red-dark" }}
   {{ $value = "Hard" }}
 {{ end }}
