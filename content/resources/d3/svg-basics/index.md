@@ -29,5 +29,3 @@ But it’s actually quite simple. So here is a short explanation of it:
 With `transform=„translate(20,20)“` you‘re moving that element 20 pixel to the right and 20 pixel to the bottom. Why? Because in the browser the coordinate system start in the top left corner of an element.
 Why is that useful?
 Because now you can move elements that have no x,y attributes. Like a group for example.
-
-Other SVG basics that are good to know:
