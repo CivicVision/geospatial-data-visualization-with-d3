@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "postcss-cli": "^6.1.2",
-    "tailwindcss": "^0.7.4"
+    "tailwindcss": "^1.1.1"
   },
   "name": "geospatial-data-visualization-with-d3",
   "version": "1.0.0",
