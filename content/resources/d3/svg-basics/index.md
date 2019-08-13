@@ -4,6 +4,7 @@ categories = []
 description = "Three basic elements of SVG you should know if you want to create maps with d3. "
 images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/SVG-basics.png"]
 layout = ""
+title = "SVG Basics for d3"
 
 +++
 # SVG Basics for d3
