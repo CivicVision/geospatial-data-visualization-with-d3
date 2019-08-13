@@ -1,5 +1,5 @@
 +++
-body_classes = ""
+body_classes = "mt-4"
 categories = []
 description = ""
 draft = true
