@@ -2,7 +2,6 @@
 body_classes = ""
 categories = []
 description = ""
-draft = true
 images = []
 layout = ""
 
