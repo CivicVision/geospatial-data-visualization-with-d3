@@ -24,6 +24,11 @@ fields:
   type: tag_list
   default: []
   label: Categories
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
 pages:
 - content/resources/d3/svg-basics/index.md
 - content/mapping-resources/_index.md
