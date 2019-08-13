@@ -8,8 +8,9 @@ layout = ""
 +++
 # SVG Basics for d3
 
-When you start learning or using d3 you will come across SVGs. That‘s what most people use when they create a visualization with d3. And it‘s the easier choice and the more documented one.
-So you need to understand a few basic concepts of SVG to make better use of d3 and learn faster.
+When you start learning or using d3 you will come across SVGs. That‘s what most people use when they create a visualization with d3. And it‘s the easier choice and the more documented one. So you need to understand a few basic concepts of SVG to make better use of d3 and learn faster. 
+
+In this short post I will show you three elements of SVG that are worth knowing. 
 
 ## Groups
 
@@ -28,3 +29,5 @@ But it’s actually quite simple. So here is a short explanation of it:
 With `transform=„translate(20,20)“` you‘re moving that element 20 pixel to the right and 20 pixel to the bottom. Why? Because in the browser the coordinate system start in the top left corner of an element.
 Why is that useful?
 Because now you can move elements that have no x,y attributes. Like a group for example.
+
+Hope you enjoyed this short post. 
