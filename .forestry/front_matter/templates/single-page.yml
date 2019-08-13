@@ -25,5 +25,5 @@ fields:
   default: []
   label: Categories
 pages:
-- content/resources/d3/svg-basics/_index.md
+- content/resources/d3/svg-basics/index.md
 - content/mapping-resources/_index.md
