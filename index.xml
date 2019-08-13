@@ -48,7 +48,7 @@ Let&amp;rsquo;s get started </description>
       
       <guid>https://mappingwithd3.com/resources/d3/svg-basics/</guid>
       <description>SVG Basics for d3 When you start learning or using d3 you will come across SVGs. That‘s what most people use when they create a visualization with d3. And it‘s the easier choice and the more documented one. So you need to understand a few basic concepts of SVG to make better use of d3 and learn faster.
-Groups You‘ve probably come across a visualization where the person used a g element within their svg.</description>
+In this short post I will show you three elements of SVG that are worth knowing.</description>
     </item>
     
     <item>
