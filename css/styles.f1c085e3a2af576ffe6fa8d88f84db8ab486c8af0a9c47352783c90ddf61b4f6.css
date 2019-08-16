@@ -577,6 +577,12 @@ p strong {
   margin-bottom: 1rem;
 }
 
+code {
+  background: #fdf6e3;
+  padding: .1em .5em;
+  color: #657b83;
+}
+
 .check::before {
   content: "";
   color: #36bf4e;

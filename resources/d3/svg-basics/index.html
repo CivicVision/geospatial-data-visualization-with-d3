@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo|Titillium+Web&display=swap" rel="stylesheet">
     
 
-    <link rel="preload" href="https://mappingwithd3.com/css/styles.82f0a7dd29d8d5b449f0abf7097f6bf4dac84231e69ec3d62260a44b72c30d67.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://mappingwithd3.com/css/styles.f1c085e3a2af576ffe6fa8d88f84db8ab486c8af0a9c47352783c90ddf61b4f6.css" as="style" onload="this.rel='stylesheet'">
     <meta property="og:title" content="SVG Basics for d3" />
 <meta property="og:description" content="Three basic elements of SVG you should know if you want to create maps with d3. " />
 <meta property="og:type" content="article" />
@@ -46,7 +46,7 @@
   analytics.page();
   }}();
 </script>
-<body class="font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black"><div class="w-full bg-blue-darker p-6 bg-hero-topography-blue-lighter-10"><div class="container m-auto max-w-xl flex justify-between md:flex-row"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com/">Geospatial Data Visualization with d3</a><div class="flex"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com//resources">Resources</a></div></div></div><main id="content" role="main"><div class="container m-auto px-8 md:px-4 lg:p-0 md:flex-row max-w-xl">
+<body class="font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"><div class="w-full bg-blue-darker p-6 bg-hero-topography-blue-lighter-10"><div class="container m-auto max-w-xl flex justify-between md:flex-row"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com/">Geospatial Data Visualization with d3</a><div class="flex"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com//resources">Resources</a></div></div></div><main id="content" role="main"><div class="container m-auto px-8 md:px-4 lg:p-0 md:flex-row max-w-xl">
 
 <h1 id="svg-basics-for-d3">SVG Basics for d3</h1>
 
@@ -56,20 +56,20 @@
 
 <h2 id="groups">Groups</h2>
 
-<p>You‘ve probably come across a visualization where the person used a <code>g</code> element within their svg.
+<p>You‘ve probably come across a visualization where the person used a <code>g</code> element within their svg.<br />
 The <code>g</code> stands for group and is an easy way to structure your svg. Especially if you have any kind of interaction or want to update your chart it‘s easier to group your svg elements into groups. You can select them easily and add just one class to the group. It makes it easy to style them as well, when you have groups.</p>
 
 <h2 id="the-path-element">The path element</h2>
 
-<p>The most common used element with d3 is the path element. It‘s also the most flexible element. You can create almost any shape with it.
+<p>The most common used element with d3 is the path element. It‘s also the most flexible element. You can create almost any shape with it.<br />
 We can do that with the <code>d</code> attribute of the path. The good thing is, you don‘t really need to know how it works. You just need to be aware that it exists and that you will use it with d3 to create custom elements. For mapping we mostly just use the path element.</p>
 
 <h2 id="translation">Translation</h2>
 
-<p>This is the part where a lot of people struggle with. And I honestly did not tried too hard to understand it for a long time but just used it the way other people were using it.
-But it’s actually quite simple. So here is a short explanation of it:
-With <code>transform=„translate(20,20)“</code> you‘re moving that element 20 pixel to the right and 20 pixel to the bottom. Why? Because in the browser the coordinate system start in the top left corner of an element.
-Why is that useful?
+<p>This is the part where a lot of people struggle with. And I honestly did not tried too hard to understand it for a long time but just used it the way other people were using it.<br />
+But it’s actually quite simple. So here is a short explanation of it:<br />
+With <code>transform=&quot;translate(20,20)&quot;</code> you‘re moving that element 20 pixel to the right and 20 pixel to the bottom. Why? Because in the browser the coordinate system start in the top left corner of an element.<br />
+Why is that useful?<br />
 Because now you can move elements that have no x,y attributes. Like a group for example.</p>
 
 <p>Hope you enjoyed this short post.</p>
