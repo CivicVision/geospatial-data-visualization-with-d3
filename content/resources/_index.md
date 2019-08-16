@@ -4,6 +4,13 @@ images = []
 title = "Resources"
 
 +++
+
+{{< category-pages "D3" "d3" >}}
+Resources about d3 specifically.
+{{</ category-pages >}}
+{{< category-pages "Library Comparisons" "comparison" >}}
+Articles and Resources about different libraries.  
+{{</ category-pages >}}
 <div class="mt-24">&nbsp;</div>
 ## Books
 List of books I recommend for learning d3.

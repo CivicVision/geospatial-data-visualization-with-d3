@@ -33,6 +33,12 @@ p strong {
   @apply mb-4;
 }
 
+code {
+  background: #fdf6e3;
+  padding: 0.1em 0.5em ;
+  color: #657b83;
+}
+
 .check::before {
     content: "";
     color: #36bf4e;
