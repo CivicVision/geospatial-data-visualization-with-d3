@@ -1,4 +1,4 @@
 section.font-sans
   .container.m-auto.flex.flex-col.md:flex-row.max-w-xl
-    .w-full.lg:py-6
+    .w-full.lg:pt-6
       {{.Inner}}

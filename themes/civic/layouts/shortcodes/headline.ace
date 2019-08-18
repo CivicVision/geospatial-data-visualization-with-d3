@@ -1,2 +1,2 @@
 h2.font-bold.mb-4.text-2xl.text-left class="{{ .Get "class" }}"
-  {{.Inner}}
+  {{.Inner | markdownify }}

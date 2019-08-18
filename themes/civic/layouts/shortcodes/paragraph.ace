@@ -1,2 +1,2 @@
-p.mb-4
+p.mb-4 class="{{ .Get "class" }}"
   {{.Inner | markdownify}}
