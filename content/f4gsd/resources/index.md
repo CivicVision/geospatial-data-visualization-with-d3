@@ -1,4 +1,5 @@
 ---
+no_index: true
 modal:
   template: login
   headline: "To access this content you need to provide your email address"
