@@ -1,6 +1,7 @@
 ---
 layout: single
 body_classes: font-light font-sans leading-normal text-lg lg:text-2xl text-black
+no_index: true
 ---
 {{< header>}}
   Welcome to San Diego.
