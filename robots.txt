@@ -1,3 +1,13 @@
 User-agent: *
 
 
+Disallow: /f4gsd/
+
+Disallow: /f4gsd/resources/
+
+Disallow: /subscribe/
+
+Disallow: /subscribe/survey/
+
+Disallow: /subscribe/thank-you/
+

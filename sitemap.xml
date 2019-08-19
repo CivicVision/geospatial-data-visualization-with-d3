@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -7,53 +8,45 @@
     <lastmod>2019-07-20T00:00:00+00:00</lastmod>
   </url>
   
+  
   <url>
     <loc>https://mappingwithd3.com/mapbox-d3/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
   </url>
+  
   
   <url>
     <loc>https://mappingwithd3.com/feature-comparison/</loc>
     <lastmod>2019-06-26T00:00:00+00:00</lastmod>
   </url>
   
-  <url>
-    <loc>https://mappingwithd3.com/f4gsd/</loc>
-  </url>
   
-  <url>
-    <loc>https://mappingwithd3.com/f4gsd/resources/</loc>
-  </url>
+  
   
   <url>
     <loc>https://mappingwithd3.com/feature-comparison/thank-you/</loc>
   </url>
   
-  <url>
-    <loc>https://mappingwithd3.com/subscribe/</loc>
-  </url>
   
-  <url>
-    <loc>https://mappingwithd3.com/subscribe/survey/</loc>
-  </url>
   
-  <url>
-    <loc>https://mappingwithd3.com/subscribe/thank-you/</loc>
-  </url>
+  
   
   <url>
     <loc>https://mappingwithd3.com/categories/</loc>
     <priority>0</priority>
   </url>
   
+  
   <url>
     <loc>https://mappingwithd3.com/resources/d3/</loc>
   </url>
+  
   
   <url>
     <loc>https://mappingwithd3.com/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
   </url>
+  
   
   <url>
     <loc>https://mappingwithd3.com/categories/resource/</loc>
@@ -61,17 +54,21 @@
     <priority>0</priority>
   </url>
   
+  
   <url>
     <loc>https://mappingwithd3.com/resources/</loc>
   </url>
+  
   
   <url>
     <loc>https://mappingwithd3.com/resources/d3/svg-basics/</loc>
   </url>
   
+  
   <url>
     <loc>https://mappingwithd3.com/tags/</loc>
     <priority>0</priority>
   </url>
+  
   
 </urlset>
