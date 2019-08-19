@@ -1,2 +1,2 @@
-h2.mb-10.text-2xl.text-center class="{{ .Get "class" }}"
+h2.text-2xl.text-center class="{{ .Get "class" }}"
   {{.Inner}}

@@ -8,10 +8,10 @@ description: This online video course on creating maps with d3.js helps you lear
   conferences over the last 4 years.
 body_classes: font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black
 form:
-  id: "881267"
-  uid: 5e5e7f8875
-  subscribe_text: Get on the waiting list!
-  after_button: Get early access and early insights into the course.
+  id: "1028115"
+  uid: ecf915d632
+  subscribe_text: Send me the free lesson!
+  after_button: Learn how to create a simple map with d3.
   classes:
     button: text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold
       hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 
@@ -25,15 +25,18 @@ form:
     options:
       settings:
         after_subscribe:
-          success_message: Success! Now check your email to confirm your subscription.
+          success_message: Success! Now, you need to perform an action! Check your email!! Maybe even your SPAM folder. 
           action: redirect
-          redirect_url: https://civic.vision/geospatial-data-visualization/subscribe/thank-you
+          redirect_url: https://mappingwithd3.com/subscribe
         return_visitor:
-          custom_content: ''
+          custom_content: "Check your SPAM if you have not received the course yet"
           action: hide
         recaptcha:
           enabled: false
   fields:
+  - type: text
+    name: "fields[first_name]"
+    placeholder: Your first name
   - type: email
     name: email_address
     placeholder: Your email address
@@ -48,16 +51,16 @@ form:
   {{</ headline-h2 >}}
 {{</ header>}}
 {{< image "https://res.cloudinary.com/civicvision/image/upload/c_scale,w_auto,dpr_auto/v1552905044/Landingpages/Geospatial%20d3/hexmap.png" "hexmap in d3">}}
-<a href="https://observablehq.com/@d3/hexbin-map" class="text-xs text-center w-full block -mt-6 mb-6">by Mike Bostock</a>
+<a href="https://observablehq.com/@d3/hexbin-map" class="text-xs text-center w-full block -mt-8 mb-2">by Mike Bostock</a>
 {{< callout >}}
-  {{< headline class="font-normal text-center">}}
-      Sign-up for the waiting list, to be the first to know when it launches
-  {{</ headline >}}
+  {{< paragraph class="text-2xl font-normal text-center">}}
+  Get the first __six-part lesson for free__ on creating a simple map.
+  {{</ paragraph >}}
   {{< form >}}
 {{</ callout >}}
 {{< section-text >}}
   {{< headline >}}
-    Learn with exercises not just examples
+  Learn with exercises not just examples
   {{</ headline >}}
   {{< paragraph >}}
   Most people learn d3 by looking at examples and changing parts of it to fit their needs. 
@@ -102,9 +105,9 @@ form:
 {{</ section >}}
 {{< section >}}
   {{< container >}}
-    {{< headline >}}
-      What kind of maps will you be able to create after you‘ve gone through the course?
-    {{</ headline >}}
+  {{< headline >}}
+  What kind of maps will you be able to create after you‘ve gone through the course?
+  {{</ headline >}}
   {{</ container >}}
   <div class="m-auto max-w-xl">
     <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit,h_600/geospatial-d3/examples/choropleth-usa-drug-overdose.png" />
@@ -113,9 +116,9 @@ form:
 {{</ section >}}
 {{< section class="text-xs text-grey">}}
   {{< container >}}
-    {{< headline >}}
-    Attributions:
-    {{</ headline >}}
+  {{< headline >}}
+  Attributions:
+  {{</ headline >}}
   {{< paragraph >}}
   Hexbin map at top: [Mike Bostock](https://observablehq.com/@d3/hexbin-map)  
   Choropleth Map: [New York Time](https://www.nytimes.com/interactive/2017/12/22/upshot/opioid-deaths-are-spreading-rapidly-into-black-america.html)  
