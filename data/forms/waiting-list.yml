@@ -1,0 +1,29 @@
+id: "881267"
+uid: 5e5e7f8875
+subscribe_text: Get on the waiting list!
+after_button: Get early access and early insights into the course.
+classes:
+  button: text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold
+    hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 
+  form: mt-4 w-full
+  fields: ""
+  error: text-red-darker mb-4
+  input: block border border-transparent focus:border-grey-light rounded
+    transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-4 flex-grow
+  after_button: text-base mt-4 text-center
+data:
+  options:
+    settings:
+      after_subscribe:
+        success_message: Success! Now check your email to confirm your subscription.
+        action: redirect
+        redirect_url: https://civic.vision/geospatial-data-visualization/subscribe/thank-you
+      return_visitor:
+        custom_content: ''
+        action: hide
+      recaptcha:
+        enabled: false
+fields:
+- type: email
+  name: email_address
+  placeholder: Your email address
