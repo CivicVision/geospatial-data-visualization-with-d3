@@ -6,10 +6,23 @@
     <description>Recent content on Geospatial Data Visualization with d3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mappingwithd3.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Toooltip in d3</title>
+      <link>https://mappingwithd3.com/resources/d3/tooltip/</link>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/resources/d3/tooltip/</guid>
+      <description>Tooltip in d3   A common question I see on stackoverflow a lot is around Tooltips.
+There are a bunch of examples out there but people sometimes confuse their intention.
+So I thought I create a short post about Tooltips.
+Goal of a tooltip The goal of the tooltip is to show information on things when you hover over them.
+And in our specific case we want the tooltip to follow the mouse.</description>
+    </item>
     
     <item>
       <title>Comparison of Mapbox GL JS and D3.js</title>

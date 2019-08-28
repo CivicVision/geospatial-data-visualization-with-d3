@@ -577,10 +577,23 @@ p strong {
   margin-bottom: 1rem;
 }
 
+.highlight {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.highlight pre {
+  padding: 1rem;
+}
+
 code {
   background: #fdf6e3;
   padding: .1em .5em;
   color: #657b83;
+}
+
+.highlight code {
+  background: none;
 }
 
 .check::before {
