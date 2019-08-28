@@ -3,6 +3,9 @@
     "postcss-cli": "^6.1.2",
     "tailwindcss": "^0.7.4"
   },
+  "scripts": {
+    "copy:repl": "cp node_modules/javascript-repl/index.js static/js/repl.js && cp node_modules/codemirror/lib/codemirror.js static/js && cp node_modules/codemirror/lib/codemirror.css static/css"
+  },
   "name": "geospatial-data-visualization-with-d3",
   "version": "1.0.0",
   "main": "index.js",
@@ -10,6 +13,7 @@
   "author": "Mila Frerichs <mila.frerichs@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "javascript-repl": "^0.3.0",
     "tailwind-heropatterns": "0.0.7"
   }
 }

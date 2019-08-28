@@ -33,10 +33,20 @@ p strong {
   @apply mb-4;
 }
 
+.highlight {
+  @apply my-4;
+}
+.highlight pre {
+  @apply p-4;
+}
+
 code {
   background: #fdf6e3;
   padding: 0.1em 0.5em ;
   color: #657b83;
+}
+.highlight code {
+  background: none;
 }
 
 .check::before {
