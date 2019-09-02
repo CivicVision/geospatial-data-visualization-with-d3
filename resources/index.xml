@@ -19,14 +19,14 @@
                 <description>
 
 &lt;section class=&#34;font-sans&#34;&gt;&lt;div class=&#34;container m-auto flex flex-col md:flex-row max-w-xl&#34;&gt;&lt;div class=&#34;w-full lg:pt-6&#34;&gt;
-  &lt;h1 class=&#34;my-4 font-normal text-center leading-tight&#34;&gt;
-    Tooltip in d3
-  &lt;/h1&gt;
+&lt;h1 class=&#34;my-4 font-normal text-center leading-tight&#34;&gt;
+Tooltip in d3
+&lt;/h1&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
 
 &lt;p&gt;A common question I see on stackoverflow a lot is around Tooltips.&lt;br /&gt;
 There are a bunch of examples out there but people sometimes confuse their intention.&lt;br /&gt;
-So I thought I create a short post about Tooltips.&lt;/p&gt;
+So I thought I create a short post about Tooltips for d3.&lt;/p&gt;
 
 &lt;h2 id=&#34;goal-of-a-tooltip&#34;&gt;Goal of a tooltip&lt;/h2&gt;
 
@@ -40,7 +40,7 @@ And in our specific case we want the tooltip to follow the mouse.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;body&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;append&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;div&amp;#39;&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Important here: &lt;/strong&gt;&lt;br /&gt;
+&lt;p&gt;**Important here: **&lt;br /&gt;
 Add it to the body or an div &lt;strong&gt;outside&lt;/strong&gt; your SVG/Canvas. This is important!&lt;/p&gt;
 
 &lt;h3 id=&#34;why&#34;&gt;Why?&lt;/h3&gt;
@@ -77,10 +77,10 @@ We use three events to handle the tooltip.&lt;br /&gt;
 })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Let‘s look first at the &lt;code&gt;mouseover&lt;/code&gt;`:&lt;/p&gt;
+&lt;p&gt;Let‘s look first at the ``mouseover```:&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mouseover&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;) {
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;opacity&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;opacity&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;)
 })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -89,7 +89,7 @@ In our example, if we hover over the first element the tooltip would have &lt;co
 You could even do it more smoothly using &lt;code&gt;transition&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mouseover&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;) {
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;transition&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;duration&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;opacity&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;transition&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;duration&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;opacity&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;text&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;)
 })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -98,7 +98,7 @@ You could even do it more smoothly using &lt;code&gt;transition&lt;/code&gt;&lt;
 &lt;p&gt;Next up is the &lt;code&gt;mouseout&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mouseout&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;() {
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;opacity&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;opacity&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
 })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -107,18 +107,18 @@ You could even do it more smoothly using &lt;code&gt;transition&lt;/code&gt;&lt;
 &lt;p&gt;And finally (which is optional) we look at &lt;code&gt;mousemove&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mousemove&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;() {
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;)
-  .&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;left&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageX&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
-  .&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;top&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageY&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;)
+.&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;left&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageX&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
+.&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;top&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageY&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
 })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;On the &lt;code&gt;mousemove&lt;/code&gt; event we change the position of the tooltip to follow the mouse. Sometimes you want this, sometimes you don‘t. That‘s why it‘s optional. I usually add some padding to the position of the tooltip so that the cursor is not within the tooltip and the tooltip does not hide the element were looking at.&lt;/p&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mousemove&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;() {
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;)
-  .&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;left&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageX&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
-  .&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;top&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#tooltip&amp;#39;&lt;/span&gt;)
+.&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;left&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageX&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
+.&lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;top&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;pageY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;px&amp;#39;&lt;/span&gt;)
 })
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 

@@ -3,7 +3,7 @@
     <link rel="dns-prefetch" href="https://mappingwithd3.com/">
     <link rel="preconnect" href="https://mappingwithd3.com/" crossorigin>
     <title>Toooltip in d3 – Geospatial Data Visualization with d3</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. " />
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
@@ -15,11 +15,7 @@
 
     <link rel="preload" href="https://mappingwithd3.com/css/styles.4eba3ca0ca6f43b67fcadcb387dc5a9061885c4edcebad6a1ed7e109c1331ff0.css" as="style" onload="this.rel='stylesheet'">
     <meta property="og:title" content="Toooltip in d3" />
-<meta property="og:description" content="Tooltip in d3   A common question I see on stackoverflow a lot is around Tooltips.
-There are a bunch of examples out there but people sometimes confuse their intention.
-So I thought I create a short post about Tooltips.
-Goal of a tooltip The goal of the tooltip is to show information on things when you hover over them.
-And in our specific case we want the tooltip to follow the mouse." />
+<meta property="og:description" content="Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mappingwithd3.com/resources/d3/tooltip/" />
 
@@ -31,11 +27,7 @@ And in our specific case we want the tooltip to follow the mouse." />
 <meta name="twitter:image" content="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/tweets/tooltip-full.png"/>
 
 <meta name="twitter:title" content="Toooltip in d3"/>
-<meta name="twitter:description" content="Tooltip in d3   A common question I see on stackoverflow a lot is around Tooltips.
-There are a bunch of examples out there but people sometimes confuse their intention.
-So I thought I create a short post about Tooltips.
-Goal of a tooltip The goal of the tooltip is to show information on things when you hover over them.
-And in our specific case we want the tooltip to follow the mouse."/>
+<meta name="twitter:description" content="Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. "/>
 
     
       
@@ -62,14 +54,14 @@ And in our specific case we want the tooltip to follow the mouse."/>
 <body class="font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"><div class="w-full bg-blue-darker p-6 bg-hero-topography-blue-lighter-10"><div class="container m-auto max-w-xl flex justify-between md:flex-row"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com/">Geospatial Data Visualization with d3</a><div class="flex"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com//resources">Resources</a></div></div></div><main id="content" role="main"><div class="container m-auto px-8 md:px-4 lg:p-0 md:flex-row max-w-xl">
 
 <section class="font-sans"><div class="container m-auto flex flex-col md:flex-row max-w-xl"><div class="w-full lg:pt-6">
-  <h1 class="my-4 font-normal text-center leading-tight">
-    Tooltip in d3
-  </h1>
+<h1 class="my-4 font-normal text-center leading-tight">
+Tooltip in d3
+</h1>
 </div></div></section>
 
 <p>A common question I see on stackoverflow a lot is around Tooltips.<br />
 There are a bunch of examples out there but people sometimes confuse their intention.<br />
-So I thought I create a short post about Tooltips.</p>
+So I thought I create a short post about Tooltips for d3.</p>
 
 <h2 id="goal-of-a-tooltip">Goal of a tooltip</h2>
 
@@ -83,7 +75,7 @@ And in our specific case we want the tooltip to follow the mouse.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;body&#39;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;div&#39;</span>);
 </code></pre></div>
 
-<p><strong>Important here: </strong><br />
+<p>**Important here: **<br />
 Add it to the body or an div <strong>outside</strong> your SVG/Canvas. This is important!</p>
 
 <h3 id="why">Why?</h3>
@@ -120,10 +112,10 @@ We use three events to handle the tooltip.<br />
 })
 </code></pre></div>
 
-<p>Let‘s look first at the <code>mouseover</code>`:</p>
+<p>Let‘s look first at the ``mouseover```:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;mouseover&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
-  <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>).<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;opacity&#39;</span>, <span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">d</span>)
+<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>).<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;opacity&#39;</span>, <span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">d</span>)
 })
 </code></pre></div>
 
@@ -132,7 +124,7 @@ In our example, if we hover over the first element the tooltip would have <code>
 You could even do it more smoothly using <code>transition</code></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;mouseover&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
-  <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>).<span style="color:#a6e22e">transition</span>().<span style="color:#a6e22e">duration</span>(<span style="color:#ae81ff">200</span>).<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;opacity&#39;</span>, <span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">d</span>)
+<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>).<span style="color:#a6e22e">transition</span>().<span style="color:#a6e22e">duration</span>(<span style="color:#ae81ff">200</span>).<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;opacity&#39;</span>, <span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">d</span>)
 })
 </code></pre></div>
 
@@ -141,7 +133,7 @@ You could even do it more smoothly using <code>transition</code></p>
 <p>Next up is the <code>mouseout</code>:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;mouseout&#39;</span>, <span style="color:#66d9ef">function</span>() {
-  <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>).<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;opacity&#39;</span>, <span style="color:#ae81ff">0</span>)
+<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>).<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;opacity&#39;</span>, <span style="color:#ae81ff">0</span>)
 })
 </code></pre></div>
 
@@ -150,18 +142,18 @@ You could even do it more smoothly using <code>transition</code></p>
 <p>And finally (which is optional) we look at <code>mousemove</code>:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>, <span style="color:#66d9ef">function</span>() {
-  <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>)
-  .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;left&#39;</span>, <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageX</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
-  .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;top&#39;</span>, <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageY</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
+<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>)
+.<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;left&#39;</span>, <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageX</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
+.<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;top&#39;</span>, <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageY</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
 })
 </code></pre></div>
 
 <p>On the <code>mousemove</code> event we change the position of the tooltip to follow the mouse. Sometimes you want this, sometimes you don‘t. That‘s why it‘s optional. I usually add some padding to the position of the tooltip so that the cursor is not within the tooltip and the tooltip does not hide the element were looking at.</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;mousemove&#39;</span>, <span style="color:#66d9ef">function</span>() {
-  <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>)
-  .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;left&#39;</span>, (<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageX</span><span style="color:#f92672">+</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
-  .<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;top&#39;</span>, (<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageY</span><span style="color:#f92672">+</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
+<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#39;#tooltip&#39;</span>)
+.<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;left&#39;</span>, (<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageX</span><span style="color:#f92672">+</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
+.<span style="color:#a6e22e">style</span>(<span style="color:#e6db74">&#39;top&#39;</span>, (<span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">pageY</span><span style="color:#f92672">+</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>)
 })
 </code></pre></div>
 
