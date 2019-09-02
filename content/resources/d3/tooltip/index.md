@@ -9,12 +9,12 @@ images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_a
 include_js = ["repl.js", "tooltip.js"]
 layout = "single"
 section = "d3"
-title = "Toooltip in d3"
+title = "How to create a simple tooltip in d3.js"
 
 +++
 {{< header>}}
 {{< headline-h1>}}
-Tooltip in d3
+How to create a simple tooltip in d3
 {{</ headline-h1>}}
 {{</ header>}}
 
