@@ -12,7 +12,7 @@
     
         
             <item>
-                <title>Toooltip in d3</title>
+                <title>How to create a simple tooltip in d3.js</title>
                 <link>https://mappingwithd3.com/resources/d3/tooltip/</link>
                 <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
                 
@@ -21,7 +21,7 @@
 
 &lt;section class=&#34;font-sans&#34;&gt;&lt;div class=&#34;container m-auto flex flex-col md:flex-row max-w-xl&#34;&gt;&lt;div class=&#34;w-full lg:pt-6&#34;&gt;
 &lt;h1 class=&#34;my-4 font-normal text-center leading-tight&#34;&gt;
-Tooltip in d3
+How to create a simple tooltip in d3
 &lt;/h1&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
 
