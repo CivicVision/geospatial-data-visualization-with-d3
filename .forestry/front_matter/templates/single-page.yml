@@ -60,6 +60,7 @@ fields:
   label: section
   default: d3
 pages:
+- content/resources/d3/simplest-map/simplest-map-in-d3-js.md
 - content/resources/d3/projections/index.md
 - content/resources/d3/simplest-map/simplest-map-in-d3-js.md
 - content/resources/d3/svg-basics/index.md
