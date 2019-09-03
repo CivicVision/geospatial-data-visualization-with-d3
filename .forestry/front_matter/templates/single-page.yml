@@ -30,5 +30,6 @@ fields:
     required: false
   label: Title
 pages:
+- content/resources/d3/projections/index.md
 - content/resources/d3/svg-basics/index.md
 - content/mapping-resources/_index.md
