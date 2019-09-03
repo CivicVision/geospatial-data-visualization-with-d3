@@ -5,9 +5,11 @@ fields:
 - type: text
   name: layout
   label: layout
+  default: single
 - type: text
   name: body_classes
   label: body_classes
+  default: font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed
 - name: description
   type: text
   config:
