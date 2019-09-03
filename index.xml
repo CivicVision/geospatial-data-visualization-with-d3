@@ -6,7 +6,7 @@
     <description>Recent content on Geospatial Data Visualization with d3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2019 22:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mappingwithd3.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>How to create a simple tooltip in d3.js</title>
       <link>https://mappingwithd3.com/resources/d3/tooltip/</link>
-      <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Sep 2019 22:00:00 +0000</pubDate>
       
       <guid>https://mappingwithd3.com/resources/d3/tooltip/</guid>
       <description>How to create a simple tooltip in d3   A common question I see on stackoverflow a lot is around Tooltips.
