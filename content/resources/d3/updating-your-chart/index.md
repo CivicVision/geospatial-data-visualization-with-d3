@@ -11,7 +11,7 @@ images = []
 include_js = []
 layout = "single"
 section = "d3"
-title = ""
+title = "Updating your chart in d3.js"
 
 +++
 # Updating your chart
