@@ -24,11 +24,33 @@ fields:
     max: 
   label: Images
 - name: sitemap
-  type: blocks
+  type: field_group
+  config: {}
+  fields:
+  - name: priority
+    type: text
+    config:
+      required: false
+    label: priority
+  - name: changefreq
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - always
+      - hourly
+      - daily
+      - weekly
+      - monthly
+      - yearly
+      - never
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: ChangeFreq
   label: sitemap
-  template_types: []
-  config:
-    min: 
-    max: 
 pages:
 - content/resources/_index.md
