@@ -32,7 +32,7 @@ And if you want to dive into the math, go over [here](http://mathworld.wolfram.c
 
 {{< highlight js >}}
 var projection = d3.geoNaturalEarth1();
-{{< / highlight js >}}
+{{< / highlight >}}
 Easy, right? In d3 these are functions we can call with an array of coordinates.  
 `projection([3.4, 52.3]`
 One important thing to remember is that in d3 we call projections with `**\[longitude,latitude\]**`. Read more about the way different libraries handle it [here](https://macwright.org/lonlat/).  
@@ -44,7 +44,7 @@ We got some X, Y coordinates as output, but theres something missing: the projec
 {{< highlight js >}}
 center = \[0,0\]
 transform = \[480,250\]
-{{< / highlight js >}}
+{{< / highlight >}}
 
 The center of the map would be somewhere in the ocean near Africa (the 0,0 coordinate) and would only work if your element is 960x500 pixels.
 
@@ -58,7 +58,7 @@ Or in other words we set the translation offset to half of the width and height 
 var projection = d3.geoNaturalEarth1();
 projection.center(\[3.4, 52.3\])
 .translate(\[200,200\]);
-{{< / highlight js >}}
+{{< / highlight >}}
 
 With these parameters we change the "position" of the map.
 
