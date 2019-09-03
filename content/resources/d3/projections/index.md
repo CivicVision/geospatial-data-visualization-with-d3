@@ -1,11 +1,18 @@
 +++
-body_classes = ""
+body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = []
+date = "2019-09-02T23:00:00+00:00"
 description = ""
 draft = true
+external_css = []
+external_libs = []
 images = []
-layout = ""
+include_js = []
+layout = "single"
+section = "d3"
 title = ""
+[sitemap]
+changefreq = []
 
 +++
 # Projections
