@@ -59,6 +59,15 @@ fields:
     required: false
   label: section
   default: d3
+- name: codeexample
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: code example
 pages:
 - content/resources/d3/simplest-map/simplest-map-in-d3-js.md
 - content/resources/d3/projections/index.md
