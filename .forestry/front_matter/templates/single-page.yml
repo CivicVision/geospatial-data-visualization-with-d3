@@ -24,7 +24,8 @@ fields:
   label: Images
 - name: categories
   type: tag_list
-  default: []
+  default:
+  - resources
   label: Categories
 - name: title
   type: text
@@ -57,6 +58,7 @@ fields:
   config:
     required: false
   label: section
+  default: d3
 pages:
 - content/resources/d3/projections/index.md
 - content/resources/d3/svg-basics/index.md
