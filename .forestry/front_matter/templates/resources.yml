@@ -23,5 +23,12 @@ fields:
     min: 
     max: 
   label: Images
+- name: sitemap
+  type: blocks
+  label: sitemap
+  template_types: []
+  config:
+    min: 
+    max: 
 pages:
 - content/resources/_index.md
