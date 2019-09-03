@@ -49,6 +49,8 @@
   
   <url>
     <loc>https://mappingwithd3.com/resources/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
   
   <url>
