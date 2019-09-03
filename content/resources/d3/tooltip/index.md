@@ -1,7 +1,7 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = ["resource"]
-date = "2019-08-24"
+date = "2019-09-01T22:00:00+00:00"
 description = "Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. "
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"]
 external_libs = ["https://unpkg.com/d3@5.9.7/dist/d3.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js"]
