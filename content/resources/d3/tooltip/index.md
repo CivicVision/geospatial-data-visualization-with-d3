@@ -6,11 +6,28 @@ description = "Learn how to create tooltips in d3. This post shows you actual d3
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"]
 external_libs = ["https://unpkg.com/d3@5.9.7/dist/d3.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js"]
 images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/tweets/tooltip-full.png"]
-include_js = ["repl.js", "tooltip.js"]
+include_js = ["repl.js"]
 layout = "single"
 section = "d3"
 title = "How to create a simple tooltip in d3.js"
-
+codeexample = """
+d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: absolute; opacity: 0;');
+ d3.select('body').append('svg').attr('width', 300).attr('height', 300);
+ d3.select('svg').selectAll('circle').data(['a','b','c'])
+ .join('circle')
+ .attr('r', 3)
+ .attr('cy', 5)
+ .attr('cx', (d,i) => i*15+15)
+ .on('mouseover', function(d) {
+ d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
+ })
+ .on('mouseout', function() {
+ d3.select('#tooltip').style('opacity', 0)
+ })
+ .on('mousemove', function() {
+ d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
+ })
+"""
 +++
 {{< header>}}
 {{< headline-h1>}}
@@ -35,7 +52,7 @@ First off let’s add a new element to the page.
 d3.select('body').append('div');
 {{< / highlight >}}
 
-\**Important here: **  
+**Important here: **  
 Add it to the body or an div **outside** your SVG/Canvas. This is important!
 
 ### Why?
@@ -74,7 +91,7 @@ d3.select('svg').selectAll('circle').data(data)
 })
 {{< / highlight >}}
 
-Let‘s look first at the \`\`mouseover\`\`\`:
+Let‘s look first at the ``mouseover``:
 
 {{< highlight js >}}
 on('mouseover', function(d) {
@@ -126,4 +143,4 @@ d3.select('#tooltip')
 
 This is the complete code and you can see the result below. Play around with it. It is interactive!
 
-<div id="code-example"></div>
+{{< repl >}}

@@ -1,0 +1,22 @@
+#code-example
+
+= javascript
+  function loadExample() {
+    const replCode = '{{.Page.Params.codeexample}}';
+    new JavascriptRepl({
+      target: document.querySelector('#code-example'),
+      props: {
+        files: [{name: 'index.js', content: replCode, type: 'js' }],
+        mode: 'minimal'
+      }
+    });
+  }
+  function makeDoubleDelegate(function1, function2) {
+      return function() {
+          if (function1)
+              function1();
+          if (function2)
+              function2();
+      }
+  }
+  window.onload = makeDoubleDelegate(window.onload, loadExample);
