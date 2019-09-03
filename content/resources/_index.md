@@ -2,6 +2,9 @@
 description = ""
 images = []
 title = "Resources"
+[sitemap]
+changefreq = "daily"
+priority = "0.7"
 
 +++
 {{< category-pages "D3" "d3" >}}
