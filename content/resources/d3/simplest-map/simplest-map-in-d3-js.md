@@ -1,7 +1,7 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = ["resources"]
-codeexample = "var width = 400;\nvar height = 400;\nvar data = [144.960930,-37.797831];\nvar projection = d3.geoEqualEarth();\nprojection.center(data).translate([200,200]);\nvar svg = d3.select(\"body\").append(\"svg\")\n.attr(\"width\",width )\n.attr(\"height\", height);\nsvg\n.append('circle')\n.attr('cx', projection(data)[0])\n.attr('cy', projection(data)[1])\n.attr('r',5)\n.attr('fill','blue');"
+codeexample = "var width = 200;\nvar height = 100;\nvar data = [144.960930,-37.797831];\nvar projection = d3.geoEqualEarth();\nprojection.center(data).translate([width/2, height/2]);\nvar svg = d3.select(\"body\").append(\"svg\")\n.attr(\"width\",width )\n.attr(\"height\", height);\nsvg\n.append('circle')\n.attr('cx', projection(data)[0])\n.attr('cy', projection(data)[1])\n.attr('r',5)\n.attr('fill','blue');"
 date = "2019-09-04T00:00:00+00:00"
 description = ""
 draft = true
