@@ -1,6 +1,6 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
-categories = []
+categories = ["resources"]
 date = "2019-09-02T23:00:00+00:00"
 description = ""
 draft = true
@@ -10,7 +10,7 @@ images = []
 include_js = []
 layout = "single"
 section = "d3"
-title = ""
+title = "Projections"
 [sitemap]
 changefreq = []
 
