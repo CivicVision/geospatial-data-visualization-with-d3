@@ -30,9 +30,9 @@ And if you want to dive into the math, go over [here](http://mathworld.wolfram.c
 
 ## Let's define our first projection:
 
-```js
+{{< highlight js >}}
 var projection = d3.geoNaturalEarth1();
-```
+{{</ highlight js >}}
 Easy, right? In d3 these are functions we can call with an array of coordinates.  
 `projection([3.4, 52.3]`
 One important thing to remember is that in d3 we call projections with __`[longitude,latitude]`__. Read more about the way different libraries handle it [here](https://macwright.org/lonlat/).  
@@ -41,10 +41,10 @@ The result of this call is an array of x,y coordinates. E.g.:
 
 We got some X, Y coordinates as output, but theres something missing: the projection has no knowledge of the size or extent of our SVG element. If we don‘t provide more information to the projection function you won‘t see a thing on the screen. Because the defaults for projections are:
 
-```js
+{{< highlight js >}}
 center = [0,0]
 transform = [480,250]
-```
+{{</ highlight js >}}
 
 The center of the map would be somewhere in the ocean near Africa (the 0,0 coordinate) and would only work if your element is 960x500 pixels.
 
@@ -54,13 +54,12 @@ The most important for us right now are `center` and `translate`. With `center` 
 „The translation offset determines the pixel coordinates of the projection’s center“ ([D3 Documentation](https://github.com/d3/d3-geo#projections)).   
 Or in other words we set the translation offset to half of the width and height of our svg. So that the center of our SVG element (half of width and half of height = center of the svg) corresponds to the center of the projection. 
 
-```js
+{{< highlight js >}}
 var projection = d3.geoNaturalEarth1();
 projection.center([3.4, 52.3])
 .translate([200,200]);
-```
+{{</ highlight js >}}
 
 With these parameters we change the "position" of the map.
 
 D3 comes with a long list of projections, you will find them [here](https://github.com/d3/d3-geo/blob/master/README.md#azimuthal-projections).
-
