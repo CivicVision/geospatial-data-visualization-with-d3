@@ -29,6 +29,32 @@ fields:
   config:
     required: false
   label: Title
+- name: date
+  type: datetime
+  label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: external_css
+  type: tag_list
+  default: []
+  label: external_css
+- name: external_libs
+  type: tag_list
+  default: []
+  label: external_libs
+- name: include_js
+  type: tag_list
+  default: []
+  label: include_js
+- name: section
+  type: text
+  config:
+    required: false
+  label: section
 pages:
 - content/resources/d3/projections/index.md
 - content/resources/d3/svg-basics/index.md
