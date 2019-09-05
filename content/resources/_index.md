@@ -12,8 +12,7 @@ Resources about d3 specifically.
 {{</ category-pages >}}
 {{< category-pages "Library Comparisons" "comparison" >}}
 Articles and Resources about different libraries.  
-{{</ category-pages >}}
-<div class="mt-24"> </div>
+{{</ category-pages >}} <div class="mt-24"></div>
 
 ## Books
 
