@@ -12,6 +12,64 @@
     
         
             <item>
+                <title>Updating your chart in d3.js</title>
+                <link>https://mappingwithd3.com/resources/d3/updating-your-chart/</link>
+                <pubDate>Tue, 03 Sep 2019 02:00:00 +0000</pubDate>
+                
+                <guid>https://mappingwithd3.com/resources/d3/updating-your-chart/</guid>
+                <description>
+
+&lt;h1 id=&#34;updating-your-chart&#34;&gt;Updating your chart&lt;/h1&gt;
+
+&lt;p&gt;Updating your d3 chart used to be a bit confusing for most people.&lt;/p&gt;
+
+&lt;p&gt;The data pattern takes some time to understand properly and when I teach d3 courses people always got trip up on it.&lt;/p&gt;
+
+&lt;p&gt;But d3 version 5 just made it a &lt;strong&gt;whole lot easier&lt;/strong&gt; to use and understand.&lt;/p&gt;
+
+&lt;p&gt;There is a new method: &lt;code&gt;join&lt;/code&gt;
+And with it we don&amp;rsquo;t need to use &lt;code&gt;enter&lt;/code&gt; and &lt;code&gt;exit&lt;/code&gt; directly anymore. These were the methods with the most confusion.&lt;/p&gt;
+
+&lt;p&gt;But you still can use them. You pass them to the &lt;code&gt;join&lt;/code&gt; method to have more fine grain control.&lt;/p&gt;
+
+&lt;p&gt;Let‘s take a look at how it works.&lt;/p&gt;
+
+&lt;h2 id=&#34;before&#34;&gt;Before:&lt;/h2&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;svg&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;selectAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;([&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;])
+&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;enter&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;append&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;exit&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;remove&lt;/span&gt;()
+&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;merge&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;attr&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;) =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;after&#34;&gt;After&lt;/h2&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;svg&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;selectAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;([&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;])
+&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;join&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;attr&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;) =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;What?&lt;/strong&gt; Pretty great, right?
+That means less boilerplate code. I used to write the &lt;em&gt;enter, append, exit, remove&lt;/em&gt; code a lot of times. So it‘s great that this is now gone. The  &lt;code&gt;join&lt;/code&gt; method will call &lt;code&gt;append&lt;/code&gt; and &lt;code&gt;remove&lt;/code&gt; internally.&lt;/p&gt;
+
+&lt;p&gt;But what if you want to animate the remove?
+You still can. It‘s just a little different:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;svg&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;selectAll&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;([&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;])
+&lt;span style=&#34;color:#a6e22e&#34;&gt;circles&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;join&lt;/span&gt;(
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;enter&lt;/span&gt; =&amp;gt;   
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;enter&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;append&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;attr&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fill&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;),   
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;exit&lt;/span&gt; =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;exit&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;attr&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fill&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;brown&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;call&lt;/span&gt;(
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;exit&lt;/span&gt; =&amp;gt;   
+      &lt;span style=&#34;color:#a6e22e&#34;&gt;exit&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;transition&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;svg&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;transition&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;duration&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;750&lt;/span&gt;))
+    .&lt;span style=&#34;color:#a6e22e&#34;&gt;remove&lt;/span&gt;()
+    )
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;This looks a little crazy. But is kinda genius. The uses-cases for these animations and changes are rare, so most people will benefit greatly from this change and the others just need to learn a little bit different syntax.&lt;/p&gt;
+</description>
+            </item>
+        
+            <item>
                 <title>How to create a simple tooltip in d3.js</title>
                 <link>https://mappingwithd3.com/resources/d3/tooltip/</link>
                 <pubDate>Sun, 01 Sep 2019 22:00:00 +0000</pubDate>

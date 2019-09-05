@@ -6,22 +6,10 @@
     <description>Recent content in Resources on Geospatial Data Visualization with d3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Sep 2019 02:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Sep 2019 23:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mappingwithd3.com/categories/resources/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Updating your chart in d3.js</title>
-      <link>https://mappingwithd3.com/resources/d3/updating-your-chart/</link>
-      <pubDate>Tue, 03 Sep 2019 02:00:00 +0000</pubDate>
-      
-      <guid>https://mappingwithd3.com/resources/d3/updating-your-chart/</guid>
-      <description>Updating your chart Updating your d3 chart used to be a bit confusing for most people.
-The data pattern takes some time to understand properly and when I teach d3 courses people always got trip up on it.
-But d3 version 5 just made it a whole lot easier to use and understand.
-There is a new method: join And with it we don&amp;rsquo;t need to use enter and exit directly anymore.</description>
-    </item>
     
     <item>
       <title>Projections</title>
