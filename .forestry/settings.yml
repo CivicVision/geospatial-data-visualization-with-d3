@@ -5,6 +5,13 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: content/resources/d3
+  label: d3
+  create: all
+  match: "**/*"
+  templates:
+  - single-page
+- type: directory
   path: content/resources
   label: Resources
   create: all
