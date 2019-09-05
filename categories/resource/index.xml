@@ -24,6 +24,20 @@ There is a new method: join And with it we don&amp;rsquo;t need to use enter and
     </item>
     
     <item>
+      <title>Projections</title>
+      <link>https://mappingwithd3.com/resources/d3/projections/</link>
+      <pubDate>Mon, 02 Sep 2019 23:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/resources/d3/projections/</guid>
+      <description>Projections Let&amp;rsquo;s talk about projections!
+We need projections to create an actual map.
+Geospatial data is usally in the form of latitude and longitude but in the browser we don&amp;rsquo;t have these concepts.
+We only have x and y coordinates.
+ Goal: Our goal is to transform geo-coordinates to screen-coordinates.
+ Projections are just math. And what they do is transform latitude and longitude coordinates to x and y coordinates on a flat surface (e.</description>
+    </item>
+    
+    <item>
       <title>How to create a simple tooltip in d3.js</title>
       <link>https://mappingwithd3.com/resources/d3/tooltip/</link>
       <pubDate>Sun, 01 Sep 2019 22:00:00 +0000</pubDate>

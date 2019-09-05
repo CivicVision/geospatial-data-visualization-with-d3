@@ -70,6 +70,64 @@ You still can. It‘s just a little different:
             </item>
         
             <item>
+                <title>Projections</title>
+                <link>https://mappingwithd3.com/resources/d3/projections/</link>
+                <pubDate>Mon, 02 Sep 2019 23:00:00 +0000</pubDate>
+                
+                <guid>https://mappingwithd3.com/resources/d3/projections/</guid>
+                <description>
+
+&lt;h1 id=&#34;projections&#34;&gt;Projections&lt;/h1&gt;
+
+&lt;p&gt;Let&amp;rsquo;s talk about projections!&lt;br /&gt;
+We need projections to create an actual map.&lt;br /&gt;
+Geospatial data is usally in the form of &lt;code&gt;latitude&lt;/code&gt; and &lt;code&gt;longitude&lt;/code&gt; but in the browser we don&amp;rsquo;t have these concepts.&lt;br /&gt;
+We only have &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; coordinates.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Our goal is to transform geo-coordinates to screen-coordinates.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Projections are just math. And what they do is transform latitude and longitude coordinates to x and y coordinates on a flat surface (e.g. your screen).&lt;br /&gt;
+Learn more about projections &lt;a href=&#34;https://www.axismaps.com/guide/general/map-projections/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And if you want to dive into the math, go over &lt;a href=&#34;http://mathworld.wolfram.com/Projection.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;let-s-define-our-first-projection&#34;&gt;Let&amp;rsquo;s define our first projection:&lt;/h2&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;projection&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;geoNaturalEarth1&lt;/span&gt;();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+Easy, right? In d3 these are functions we can call with an array of coordinates.&lt;br /&gt;
+&lt;code&gt;projection([3.4, 52.3]&lt;/code&gt; One important thing to remember is that in d3 we call projections with &lt;code&gt;**[longitude,latitude]**&lt;/code&gt;. Read more about the way different libraries handle it &lt;a href=&#34;https://macwright.org/lonlat/&#34;&gt;here&lt;/a&gt;.&lt;br /&gt;
+The result of this call is an array of x,y coordinates. E.g.:&lt;br /&gt;
+&lt;code&gt;[300,400]&lt;/code&gt; or &lt;code&gt;[x,y]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We got some X, Y coordinates as output, but theres something missing: the projection has no knowledge of the size or extent of our SVG element. If we don‘t provide more information to the projection function you won‘t see a thing on the screen. Because the defaults for projections are:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;center&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;transform&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;480&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The center of the map would be somewhere in the ocean near Africa (the 0,0 coordinate) and would only work if your element is 960x500 pixels.&lt;/p&gt;
+
+&lt;p&gt;We can change these defaults with the methods &lt;code&gt;scale&lt;/code&gt; &lt;code&gt;center&lt;/code&gt; and &lt;code&gt;translate&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The most important for us right now are &lt;code&gt;center&lt;/code&gt; and &lt;code&gt;translate&lt;/code&gt;. With &lt;code&gt;center&lt;/code&gt; we set the center of the projection. So the point we want to be the center of our SVG.&lt;br /&gt;
+„The translation offset determines the pixel coordinates of the projection’s center“ (&lt;a href=&#34;https://github.com/d3/d3-geo#projections&#34;&gt;D3 Documentation&lt;/a&gt;).&lt;br /&gt;
+Or in other words we set the translation offset to half of the width and height of our svg. So that the center of our SVG element (half of width and half of height = center of the svg) corresponds to the center of the projection.&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;projection&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;d3&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;geoNaturalEarth1&lt;/span&gt;();
+&lt;span style=&#34;color:#a6e22e&#34;&gt;projection&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;center&lt;/span&gt;(&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;3.4&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;52.3&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;])
+.&lt;span style=&#34;color:#a6e22e&#34;&gt;translate&lt;/span&gt;(&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;\&lt;/span&gt;]);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With these parameters we change the &amp;ldquo;position&amp;rdquo; of the map.&lt;/p&gt;
+
+&lt;p&gt;D3 comes with a long list of projections, you will find them &lt;a href=&#34;https://github.com/d3/d3-geo/blob/master/README.md#azimuthal-projections&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+            </item>
+        
+            <item>
                 <title>How to create a simple tooltip in d3.js</title>
                 <link>https://mappingwithd3.com/resources/d3/tooltip/</link>
                 <pubDate>Sun, 01 Sep 2019 22:00:00 +0000</pubDate>
