@@ -69,9 +69,9 @@ fields:
       format: markdown
   label: code example
 pages:
+- content/resources/d3/updating-your-chart/index.md
 - content/resources/d3/examples/simple-choropleth-map-example.md
 - content/resources/d3/tutorials/simple-choropleth-map/index.md
-- content/resources/d3/updating-your-chart/index.md
 - content/resources/d3/simplest-map/simplest-map-in-d3-js.md
 - content/resources/d3/simplest-map/simplest-map-in-d3-js.md
 - content/resources/d3/projections/index.md
