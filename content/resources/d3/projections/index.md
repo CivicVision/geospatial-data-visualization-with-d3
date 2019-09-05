@@ -1,6 +1,7 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
-categories = ["resources"]
+categories = ["resource"]
+codeexample = ""
 date = "2019-09-02T23:00:00+00:00"
 description = ""
 external_css = []
@@ -34,8 +35,7 @@ And if you want to dive into the math, go over [here](http://mathworld.wolfram.c
 var projection = d3.geoNaturalEarth1();
 {{< / highlight >}}
 Easy, right? In d3 these are functions we can call with an array of coordinates.  
-`projection([3.4, 52.3]`
-One important thing to remember is that in d3 we call projections with `**\[longitude,latitude\]**`. Read more about the way different libraries handle it [here](https://macwright.org/lonlat/).  
+`projection([3.4, 52.3]` One important thing to remember is that in d3 we call projections with `**[longitude,latitude]**`. Read more about the way different libraries handle it [here](https://macwright.org/lonlat/).  
 The result of this call is an array of x,y coordinates. E.g.:  
 `[300,400]` or `[x,y]`
 
