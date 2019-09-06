@@ -1,4 +1,5 @@
 User-agent: *
+Sitemap: https://mappingwithd3.com/sitemap.xml
 
 {{range where .Pages "Params.no_index" true}}
 Disallow: {{.RelPermalink}}
