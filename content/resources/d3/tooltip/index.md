@@ -1,6 +1,7 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = ["resource"]
+keywords = ["d3", "map", "tooltip"]
 date = "2019-09-01T22:00:00+00:00"
 description = "Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. "
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"]

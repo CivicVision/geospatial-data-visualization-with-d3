@@ -1,6 +1,7 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = ["resource"]
+keywords = ["d3", "map", "svg", "groups", "path"]
 section = "d3"
 description = "Three basic elements of SVG you should know if you want to create maps with d3. "
 images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/SVG-basics.png"]
