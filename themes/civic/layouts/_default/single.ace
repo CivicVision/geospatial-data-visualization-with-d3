@@ -3,6 +3,7 @@
 = content main
   .container.m-auto.px-8.md:px-4.lg:p-0 class="md:flex-row max-w-xl"
     {{.Content}}
+    {{partial "related" . }}
 = content modal
   .modal
     {{ if .Page.Params.modal }}
