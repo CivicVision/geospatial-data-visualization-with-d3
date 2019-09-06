@@ -25,7 +25,7 @@ fields:
 - name: categories
   type: tag_list
   default:
-  - resources
+  - resource
   label: Categories
 - name: title
   type: text
