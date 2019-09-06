@@ -68,6 +68,10 @@ fields:
     schema:
       format: markdown
   label: code example
+- name: keywords
+  type: tag_list
+  default: []
+  label: keywords
 pages:
 - content/resources/d3/updating-your-chart/index.md
 - content/resources/d3/projections/index.md
