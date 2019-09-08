@@ -48,6 +48,8 @@ let colors = {
     'blue-darker': '#2b4c7e',
     'blue-darkest': '#25364c',
     'yellow': '#ffcc01',
+    'blue': '#3490DC',
+    'blue-dark': '#2779BD',
 
     'orange-darkest': '#462a16',
     'orange-darker': '#613b1f',
