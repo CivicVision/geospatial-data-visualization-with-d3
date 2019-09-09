@@ -72,6 +72,11 @@ fields:
   type: tag_list
   default: []
   label: keywords
+- name: tweet
+  type: text
+  config:
+    required: false
+  label: tweet
 pages:
 - content/resources/d3/updating-your-chart/index.md
 - content/resources/d3/projections/index.md
