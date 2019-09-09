@@ -1,34 +1,19 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = ["resource"]
-keywords = ["d3", "map", "tooltip"]
+codeexample = "d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: absolute; opacity: 0;');\n d3.select('body').append('svg').attr('width', 300).attr('height', 300);\n d3.select('svg').selectAll('circle').data(['a','b','c'])\n .join('circle')\n .attr('r', 3)\n .attr('cy', 5)\n .attr('cx', (d,i) => i*15+15)\n .on('mouseover', function(d) {\n d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)\n })\n .on('mouseout', function() {\n d3.select('#tooltip').style('opacity', 0)\n })\n .on('mousemove', function() {\n d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')\n })\n"
 date = "2019-09-01T22:00:00+00:00"
 description = "Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. "
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"]
 external_libs = ["https://unpkg.com/d3@5.9.7/dist/d3.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js"]
 images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/tweets/tooltip-full.png"]
 include_js = ["repl.js"]
+keywords = ["d3", "map", "tooltip"]
 layout = "single"
 section = "d3"
 title = "How to create a simple tooltip in d3.js"
-codeexample = """
-d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: absolute; opacity: 0;');
- d3.select('body').append('svg').attr('width', 300).attr('height', 300);
- d3.select('svg').selectAll('circle').data(['a','b','c'])
- .join('circle')
- .attr('r', 3)
- .attr('cy', 5)
- .attr('cx', (d,i) => i*15+15)
- .on('mouseover', function(d) {
- d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)
- })
- .on('mouseout', function() {
- d3.select('#tooltip').style('opacity', 0)
- })
- .on('mousemove', function() {
- d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
- })
-"""
+tweet = "1171067111655038977"
+
 +++
 {{< header>}}
 {{< headline-h1>}}
