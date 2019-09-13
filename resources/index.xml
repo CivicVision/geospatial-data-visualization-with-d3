@@ -11,6 +11,88 @@
     
         
             <item>
+                <title>D Attribute</title>
+                <link>https://mappingwithd3.com/resources/d3/d-attribute/</link>
+                <pubDate>Fri, 13 Sep 2019 06:00:00 +0000</pubDate>
+                
+                <guid>https://mappingwithd3.com/resources/d3/d-attribute/</guid>
+                <description>
+
+&lt;h1 id=&#34;d-attribute-in-path&#34;&gt;d attribute in path&lt;/h1&gt;
+
+&lt;p&gt;The infamous &lt;code&gt;d&lt;/code&gt; attribute in a path element for SVG is a handful. Or at least at first. Especially for mapping.&lt;/p&gt;
+
+&lt;p&gt;Let‘s look at a &lt;code&gt;d&lt;/code&gt; attribute for a geojson feature:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;feature&lt;/span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; { 
+  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Feature&amp;#34;&lt;/span&gt;, 
+  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;geometry&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { 
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Polygon&amp;#34;&lt;/span&gt;, 
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;coordinates&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; [ [
+    [ &lt;span style=&#34;color:#ae81ff&#34;&gt;13.31&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;52.79&lt;/span&gt; ], 
+    [ &lt;span style=&#34;color:#ae81ff&#34;&gt;13.35&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;52.79&lt;/span&gt; ], 
+    [ &lt;span style=&#34;color:#ae81ff&#34;&gt;13.35&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;52.80&lt;/span&gt; ], 
+    [ &lt;span style=&#34;color:#ae81ff&#34;&gt;13.31&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;52.80&lt;/span&gt; ], 
+    [ &lt;span style=&#34;color:#ae81ff&#34;&gt;13.31&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;52.79&lt;/span&gt; ]]] 
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M2&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.9103830456733704e-11&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;282.68992037849966&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;L400&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;282.68992037849966&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;L400&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;117.31007962138392&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;L2&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.9103830456733704e-11&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;117.31007962138392&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Z&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pretty daunting right?
+Let‘s simplify that.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;282&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;L400&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;282&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;L400&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;117&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;L0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;117&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Z&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;That looks not too bad.
+Let’s break this down even further.&lt;/p&gt;
+
+&lt;h2 id=&#34;creating-a-simple-rectangle&#34;&gt;Creating a simple rectangle&lt;/h2&gt;
+
+&lt;p&gt;Creating a rectangle is an easy example. You would not use a &lt;code&gt;path&lt;/code&gt; element for it, but it‘s a good way to learn the &lt;code&gt;d&lt;/code&gt; attribute. So we’re doing it anyway.&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M10&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;L10&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;L20&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;L20&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Z&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pretty similar to our version above, right?
+If we take a look at what these things are, it starts to make more sense.&lt;/p&gt;
+
+&lt;h3 id=&#34;m-m-m-ove-to&#34;&gt;M, m (&lt;strong&gt;M&lt;/strong&gt;ove To)&lt;/h3&gt;
+
+&lt;p&gt;Move the current Point to x,y coordinates
+&lt;code&gt;Mx,y&lt;/code&gt; &lt;code&gt;M10,20&lt;/code&gt;
+&lt;strong&gt;uppercase&lt;/strong&gt;: absolute
+&lt;strong&gt;lowercase&lt;/strong&gt;: relative&lt;/p&gt;
+
+&lt;h3 id=&#34;l-l-l-ineto&#34;&gt;L, l (&lt;strong&gt;L&lt;/strong&gt;ineTo)&lt;/h3&gt;
+
+&lt;p&gt;Draw a line from the current point to the end point specified by x,y
+&lt;code&gt;Lx,y&lt;/code&gt; &lt;code&gt;L20,30&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;z&#34;&gt;Z&lt;/h3&gt;
+
+&lt;p&gt;Close the element. Which means the shortest straight line to the beginning of the polygon.&lt;/p&gt;
+
+&lt;h2 id=&#34;rectangle-example&#34;&gt;Rectangle Example&lt;/h2&gt;
+
+&lt;p&gt;Let’s look at our rectangle example again. Now with real values.
+So we start at &lt;code&gt;10,10&lt;/code&gt; and then draw a line to &lt;code&gt;10,20&lt;/code&gt; and from there a line to &lt;code&gt;20,20&lt;/code&gt; and then to &lt;code&gt;20,10&lt;/code&gt; and close the element (which would go back to &lt;code&gt;10,10&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;If we go back to our example from the GeoJSON. It is similar:
+Start at &lt;code&gt;0,282&lt;/code&gt; draw a line to &lt;code&gt;400,282&lt;/code&gt; another line to &lt;code&gt;400,117&lt;/code&gt; and then to &lt;code&gt;0,117&lt;/code&gt;  and close the element (go back to &lt;code&gt;0,282&lt;/code&gt; )&lt;/p&gt;
+
+&lt;p&gt;This is just a shot explanation of a simple case. The path element is capable of much more. But it is sufficient enough for us to know that much. D3 offers us great helpers, so we don’t have to deal with it directly.&lt;/p&gt;
+
+&lt;p&gt;Here is a great illustrated article that goes even deeper on the &lt;a href=&#34;https://css-tricks.com/svg-path-syntax-illustrated-guide/&#34;&gt;topic&lt;/a&gt;&lt;/p&gt;
+</description>
+            </item>
+        
+            <item>
                 <title>Updating your chart in d3.js</title>
                 <link>https://mappingwithd3.com/resources/d3/updating-your-chart/</link>
                 <pubDate>Tue, 03 Sep 2019 02:00:00 +0000</pubDate>
