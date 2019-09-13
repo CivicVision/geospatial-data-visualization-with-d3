@@ -4,7 +4,6 @@ categories = ["resource"]
 codeexample = ""
 date = "2019-09-13T06:00:00+00:00"
 description = ""
-draft = true
 external_css = []
 external_libs = []
 images = []
@@ -81,7 +80,7 @@ Let’s look at our rectangle example again. Now with real values.
 So we start at `10,10` and then draw a line to `10,20` and from there a line to `20,20` and then to `20,10` and close the element (which would go back to `10,10`). 
 
 If we go back to our example from the GeoJSON. It is similar: 
-Start at `0,282` draw a line to `400,282` another line to `400,117` and then to `0,117`  and close the element (bo back to `0,282` )
+Start at `0,282` draw a line to `400,282` another line to `400,117` and then to `0,117`  and close the element (go back to `0,282` )
 
 This is just a shot explanation of a simple case. The path element is capable of much more. But it is sufficient enough for us to know that much. D3 offers us great helpers, so we don’t have to deal with it directly. 
 
