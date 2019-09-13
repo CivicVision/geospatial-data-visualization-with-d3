@@ -78,7 +78,7 @@ fields:
     required: false
   label: tweet
 pages:
-- content/resources/d3/d-attribute/d-attribute.md
+- content/resources/d3/d-attribute/index.md
 - content/resources/d3/updating-your-chart/index.md
 - content/resources/d3/projections/index.md
 - content/resources/d3/svg-basics/index.md
