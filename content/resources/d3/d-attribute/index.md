@@ -23,7 +23,13 @@ The infamous `d` attribute in a path element for SVG is a handful. Or at least a
 Let‘s look at a `d` attribute for a geojson feature:
 
 {{< highlight js >}}
-const feature  = { "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [[ 13.31, 52.79 ], [ 13.35, 52.79 ], [ 13.35, 52.80 ], [ 13.31, 52.80 ], [ 13.31, 52.79 ]]] }};
+const feature  = { 
+  "type": "Feature", 
+  "geometry": { 
+    "type": "Polygon", 
+    "coordinates": [ [[ 13.31, 52.79 ], [ 13.35, 52.79 ], [ 13.35, 52.80 ], [ 13.31, 52.80 ], [ 13.31, 52.79 ]]] 
+  }
+};
 {{</ highlight >}}
   
 {{< highlight js >}}
@@ -71,4 +77,4 @@ Start at `0,282` draw a line to `400,282` another line to `400,117` and then to 
 
 This is just a shot explanation of a simple case. The path element is capable of much more. But it is sufficient enough for us to know that much. D3 offers us great helpers, so we don’t have to deal with it directly. 
 
-Here is a great illustrated article that goes even deeper on the (topic)[https://css-tricks.com/svg-path-syntax-illustrated-guide/]
+Here is a great illustrated article that goes even deeper on the [topic](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
