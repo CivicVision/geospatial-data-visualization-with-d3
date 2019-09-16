@@ -7,7 +7,7 @@ description = "Three basic elements of SVG you should know if you want to create
 images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/SVG-basics.png"]
 layout = ""
 title = "SVG Basics for d3"
-
+tweet = "1169988449539153921"
 +++
 # SVG Basics for d3
 
