@@ -64,33 +64,79 @@
   <script src="https://f.convertkit.com/ckjs/ck.5.js"></script><form id="ck-simple" class="mt-4 w-full" action="https://app.convertkit.com/forms/1028115/subscriptions" method="post" data-sv-form="1028115" data-uid="" data-format="inline" data-version="5" data-options="{&#34;settings&#34;:{&#34;after_subscribe&#34;:{&#34;action&#34;:&#34;redirect&#34;,&#34;redirect_url&#34;:&#34;https://mappingwithd3.com/subscribe&#34;,&#34;success_message&#34;:&#34;Success! Now, you need to perform an action! Check your email!! Maybe even your SPAM folder.&#34;},&#34;recaptcha&#34;:{&#34;enabled&#34;:false},&#34;return_visitor&#34;:{&#34;action&#34;:&#34;hide&#34;,&#34;custom_content&#34;:&#34;Check your SPAM if you have not received the course yet&#34;}}}"><div data-style="clean"></div><ul class="formkit-alert formkit-alert-error text-red-darker mb-4" data-element="errors" data-group="alert"></ul><div class=""><div class="seva-fields formkit-fields" data-element="fields" data-stacked="false"><div class="formkit-field"><input id="" class="formkit-input block border border-transparent focus:border-grey-light rounded transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-4 flex-grow" placeholder="Your first name" type="text" name="fields[first_name]"></div></div><div class="seva-fields formkit-fields" data-element="fields" data-stacked="false"><div class="formkit-field"><input id="" class="formkit-input block border border-transparent focus:border-grey-light rounded transition w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-4 flex-grow" placeholder="Your email address" type="email" name="email_address"></div></div><div class="formkit-spinner"></div><button class="btn text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6" data-element="submit">Send me the free lesson!</button><div class="text-base mt-4 text-center">Learn how to create a simple map with d3.</div></div></form>
 </div>
 <section class="max-w-lg m-auto px-8 py-12 ">
-  <h2 class="font-bold mb-4 text-2xl text-left ">Learn with exercises not just examples</h2>
-  <p class="mb-4 ">Most people learn d3 by looking at examples and changing parts of it to fit their needs.</p>
-  <p class="mb-4 ">You iterate on these examples, look at the documentation, maybe consult a book or look at videos on YouTube.</p>
-  <p class="mb-4 ">But people get <strong>frustrated</strong> using this method.</p>
-  <p class="mb-4 ">Here are people sharing their struggles on twitter, Slack, forums and stackoverflow:</p>
-  <div class="text-small italic ml-2 my-4">
-    "After looking at a few d3.js demos, I had thought that the above task would be trivially easy with d3.js, but in fact I have found it to be insanely difficult."
-  </div>
-  <div class="text-small italic ml-2 my-4">
-    "Most of the resources I’ve found are either old (v3, I know I can still follow them, but I’d rather follow a v4 tutorial) or very convoluted. It seems like I spend half my time trying to figure out why the graph won’t compile."
-  </div>
+  <h2 class="font-bold mb-4 text-2xl text-left ">Learning d3 can be hard</h2>
+  <p class="mb-4 "><p>You not only need to learn d3 but a lot of other concepts before that.</p>
+
+<ul>
+<li>SVG/Canvas</li>
+<li>HTML</li>
+<li>Javascript</li>
+</ul>
+
+<p>There are a lot of ways of doing things in d3. There is no one approach.<br />
+  If you search on social networks and google, there are a ton of tweets and blog posts about why d3 is hard for them.</p>
+</p>
   <div class="text-small italic ml-2 my-4">
     "I want to just jump in, yet it seems like I need to know a bunch of the api to get even a simple graph up."
   </div>
-  <p class="mb-4 "><strong>Geospatial Data Visualization with d3</strong> will help you take a more focussed approach learning d3.</p>
+  <h2 class="font-bold mb-4 text-2xl text-left ">Learning with examples is frustrating</h2>
+  <p class="mb-4 ">Most people learn d3 by looking at examples and changing parts of it to fit their needs.</p>
+  <p class="mb-4 ">You iterate on these examples, look at the documentation, maybe consult a book or look at videos on YouTube.</p>
+  <p class="mb-4 ">But people get <strong>frustrated</strong> using this method.</p>
+  <div class="text-small italic ml-2 my-4">
+    "After looking at a few d3.js demos, I had thought that the above task would be trivially easy with d3.js, but in fact I have found it to be insanely difficult."
+  </div>
+  <h3>Undocumented example code makes it harder to learn</h3>
+  <p class="mb-4 ">A lot of examples don&rsquo;t have of comments or explanations. Which makes it hard to understand what is being done.</p>
+  <div class="text-small italic ml-2 my-4">
+  "Without comments and explanations of what is happening along the way, it’s very hard for someone starting out to figure out what’s going on."
+  </div>
+  <h3>Potentially bad code is hard to fix</h3>
+  <p class="mb-4 ">Everyone can create examples with d3, and it&rsquo;s hard to know the experience level of the creator.<br />
+  Examples may have bad or repetitive code.
+  If you learn with these possibly bad examples, you could learn the wrong things.</p>
+  <div class="text-small italic ml-2 my-4">
+  "There’s the problem of blocks that are written with bad code, or don’t include the necessary data files or libraries."
+  </div>
+  <h3>Old examples lead to more frustration</h3>
+  <p class="mb-4 ">Thanks to the introduction of <a href="https://observable.org">observable</a> more examples are created with the current version of d3. But on <a href="https://bl.ocks.org">bl.ocks</a> a majority of examples are still created with v3 which was replaced in 2016 with v4.</p>
+  <div class="text-small italic ml-2 my-4">
+    "Most of the resources I’ve found are either old (v3, I know I can still follow them, but I’d rather follow a v4 tutorial) or very convoluted. It seems like I spend half my time trying to figure out why the graph won’t compile."
+  </div>
+  <h2 class="font-bold mb-4 text-2xl text-left ">Most d3.js tutorials only scratch the surface</h2>
+  <p class="mb-4 "></p>
+  <div class="text-small italic ml-2 my-4">
+  "I’ve gone through some tutorials but I find that they only scratch the surface and are often fragmented — learning the code for building a scale doesn’t mean anything to me without the accompanying chart."
+  </div>
 </section>
 <section class="px-8 bg-grey-lighter p-4">
   <div class="max-w-2xl mx-auto mt-8 text-center px-4 text-2xl lg:px-0 "><p class="max-w-lg mb-8 mx-auto text-left text-lg">
     Inspired by the amazing @milafrerichs #D3 workshop at #foss4gna, I was able to create an interactive globe map of my twitter friends. 
-  </p></div>
+  </p><img class="rounded-full max-w-testimonial mb-8" src="https://pbs.twimg.com/profile_images/897656134118645760/WVanjgdR_400x400.jpg" alt="Chris Marx"><h3 class="font-bold text-blue-lighter text-lg mb-2">Chris Marx</h3></div>
 </section>
-<section class="max-w-lg m-auto px-8 py-12 "><h2 class="mb-4 text-2xl">Why should I take this online course?</h2><div class="markdown"><ul>
-<li>It includes <strong>exercises</strong> not just examples</li>
-<li>content has been adapdted from <strong>conference workshops</strong></li>
-<li><strong>real world</strong> data</li>
-<li><strong>real world</strong> examples</li>
+<section class="max-w-lg m-auto px-8 py-12 "><h2 class="mb-4 text-2xl">How this course is different</h2><div class="markdown"><p><p class="mb-4 "><strong>Geospatial Data Visualization with d3</strong> will help you take a more focussed approach for learning d3.</p>
+  <h3>Retain more by learning with projects</h3>
+  <p class="mb-4 ">Project-based learning is believed to result in more in-depth knowledge through active exploration of real-world challenges and problems.</p>
+  <div class="text-small italic ml-2 my-4">
+  &ldquo;[Project-based learning] encourages higher order critical thinking and de-emphasizes memorization. Increases motivation to learn in order to arrive at a solution. &ldquo;
+  </div>
+  <h3>Self-check your learning</h3>
+  <p class="mb-4 ">Check what you learn after each section with exercises.</p>
+  <h3>Stay on top of your learning path</h3>
+  <p class="mb-4 ">Weekly accountability emails will help you stay on top of your learning experience and keep you motivated.</p>
+  <h3>Modeled from successful hands-on workshops</h3>
+  <p class="mb-4 ">This course is modeled from hands-on workshops at geospatial conferences I gave over the last three years.</p>
+  <p class="mb-4 ">I iterated on the format, the course content, and examples over the years to land on this course format and content.</p>
+  <p class="mb-4 ">Conferences I gave this workshop at:</p></p>
+
+<p><ul>
+<li>FOSS4G UK 2019</li>
+<li>FOSS4G Noth America 2019</li>
+<li>FOSS4G Oceania 2018</li>
+<li>FOSS4G 2017
+<br /></li>
 </ul>
+</p></p>
 </div></section>
 <section class="px-8 max-w-lg m-auto">
   <section class="antialiased font-sans w-full text-left text-black py-4"><div class="container mx-auto max-w-xl py-4 font-normal leading-normal"><h3 class="text-2xl">Learn how to create great-looking, distraction-free maps with this online course</h3><div class="py-4">
