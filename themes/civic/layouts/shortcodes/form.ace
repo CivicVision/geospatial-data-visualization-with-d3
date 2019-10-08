@@ -1,1 +1,5 @@
-{{ partial "form" .Page.Params.form }}
+{{ $form := .Page.Params.form }}
+{{ if (.Get 0) }}
+  {{ $form = .Page.Param (.Get 0) }}
+{{ end}}
+{{ partial "form" $form }}
