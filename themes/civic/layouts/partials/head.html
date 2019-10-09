@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo|Titillium+Web&display=swap" rel="stylesheet">
     {{ $style := resources.Get "css/styles.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js") | fingerprint}}
 
-    <link rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="{{ $style.Permalink }}" as="style">
+    <link rel="stylesheet" href="{{ $style.Permalink }}" >
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
