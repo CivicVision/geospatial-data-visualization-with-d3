@@ -113,6 +113,18 @@ Have a great day!</description>
     </item>
     
     <item>
+      <title>Geospatial Data Visualization with d3</title>
+      <link>https://mappingwithd3.com/pre-launch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/pre-launch/</guid>
+      <description>Learn how to create great-looking, interactive maps with d3.  A comprehensive video course to create geospatial data visualizations with javascript and d3.    by Mike Bostock Get the first six-part lesson for free on creating a simple map.
+Send me the free lesson!Learn how to create a simple map with d3.
+Preorder the course now!
+  Learning d3 can be hard You not only need to learn d3 but a lot of other concepts before that.</description>
+    </item>
+    
+    <item>
       <title>SVG Basics for d3</title>
       <link>https://mappingwithd3.com/resources/d3/svg-basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
