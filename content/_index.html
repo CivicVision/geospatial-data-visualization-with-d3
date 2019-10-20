@@ -13,7 +13,7 @@ form:
   subscribe_text: Send me the free lesson!
   after_button: |
     <p>Learn how to create a <b>simple map</b> with d3.</p>
-    <p><a href="#waiting_list">Get on the waiting list right away!</a></p>
+    <p><a href="#buy">Preorder the course now!</a></p>
   classes:
     button: text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold
       hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6 
@@ -198,11 +198,14 @@ waiting_list_form:
   - FOSS4G 2017
   {{</ paragraph >}}
 {{</ text >}}
-{{< section class="max-w-lg m-auto">}}
-  <a name="waiting_list"></a>
-  {{< signup "Get on the waiting list to be the first to know when the course launches!">}}
-    {{< form "waiting_list_form" >}}
-  {{</ signup >}}
+{{< section class="p-4 m-auto max-w-2xl">}}
+  <a name="buy"></a>
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+  {{< headline >}}
+  Plans
+  {{</ headline >}}
+  {{< pricing >}}
+  {{< course-content >}}
 {{</ section >}}
 {{< section >}}
   {{< container >}}
