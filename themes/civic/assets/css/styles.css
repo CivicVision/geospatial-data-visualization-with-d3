@@ -5,6 +5,10 @@
 html {
 }
 
+.list-none {
+  list-style: none;
+}
+
 .post h1 {
   @apply my-4 text-4xl font-normal mt-8;
   font-family: 'Heebo', sans-serif;
