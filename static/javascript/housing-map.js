@@ -8,7 +8,7 @@ const chart = async () => {
 
   d3.select('#tooltip').attr('style', 'position: absolute; top: 0; left: 0;')
 
-  const chicago_communities_affordable_housing = await d3.json('http://milafrerichs.de/chicago-housing-burden/chicago.json')
+  const chicago_communities_affordable_housing = await d3.json('/data/chicago.json')
   const g = d3.select('#housing-map').select('svg').select('g')
   g.selectAll('path')
   .data(chicago_communities_affordable_housing.features)
