@@ -4,12 +4,14 @@ const smallGeoGenerator = d3.geoPath()
 
 const chart = async () => {
   const indicator = 'paying_30';
-
+  const parent = document.querySelector('#content')
+  const width = parent.clientWidth;
+  const mapId = width > 800 ? '#housing-map' : (width > 640 ? '#housing-map-tablet' : '#housing-map-mobile');
 
   d3.select('#tooltip').attr('style', 'position: absolute; top: 0; left: 0;')
 
   const chicago_communities_affordable_housing = await d3.json('/data/chicago.json')
-  const g = d3.select('#housing-map').select('svg').select('g')
+  const g = d3.select(mapId).select('svg').select('g')
   g.selectAll('path')
   .data(chicago_communities_affordable_housing.features)
   .on('mouseover', function(d) {
