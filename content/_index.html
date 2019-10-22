@@ -12,7 +12,7 @@ form:
   uid: ecf915d632
   subscribe_text: Send me the free lesson!
   after_button: |
-    <p>Learn how to create a <b>simple map</b> with d3.</p>
+    <p>Want to learn how to create <span class="lg:hidden">this map?</span><span class="hidden lg:inline">the map to the left? </span></p>
     <p><a href="#buy">Preorder the course now!</a></p>
   classes:
     button: text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold
@@ -86,14 +86,30 @@ waiting_list_form:
     A comprehensive video course to create geospatial data visualizations with javascript and d3.
   {{</ headline-h2 >}}
 {{</ header>}}
-{{< image "https://res.cloudinary.com/civicvision/image/upload/c_scale,w_auto,dpr_auto/v1552905044/Landingpages/Geospatial%20d3/hexmap.png" "hexmap in d3">}}
-<a href="https://observablehq.com/@d3/hexbin-map" class="text-xs text-center w-full block -mt-8 mb-2">by Mike Bostock</a>
-{{< callout >}}
-  {{< paragraph class="text-2xl font-normal text-center">}}
-  Get the first __six-part lesson for free__ on creating a simple map.
-  {{</ paragraph >}}
-  {{< form >}}
-{{</ callout >}}
+<div class="flex-col lg:flex-row flex">
+  <div class="w-full lg:w-2/3 xl:w-1/2" id="housing-map-parent">
+    <div class="hidden lg:block" id="housing-map">
+      {{< housing-map >}}
+    </div>
+    <div class="hidden md:block lg:hidden" id="housing-map-tablet">
+      {{< housing-map-tablet>}}
+    </div>
+    <div class="md:hidden" id="housing-map-mobile">
+      {{< housing-map-phone >}}
+    </div>
+    <div class="mx-auto md:p-0 md:w-1/2" style="width: 320px">
+      {{< housing-legend>}}
+    </div>
+  </div>
+  <div class="w-full lg:w-1/3 xl:w-1/2 mt-8 lg:-ml-6 xl:-ml-8">
+    {{< callout >}}
+    {{< paragraph class="text-2xl font-normal text-center">}}
+Get the first __six-part lesson for free__ on creating a simple map.
+    {{</ paragraph >}}
+    {{< form >}}
+    {{</ callout >}}
+  </div>
+</div>
 {{< section-text >}}
   {{< headline >}}
   Learning d3 can be hard
@@ -228,4 +244,3 @@ waiting_list_form:
   Choropleth Map: [New York Time](https://www.nytimes.com/interactive/2017/12/22/upshot/opioid-deaths-are-spreading-rapidly-into-black-america.html)  
   Bubble Map: [Washington Post](https://www.washingtonpost.com/graphics/national/power-plants/)
   {{</ paragraph >}}
-
