@@ -53,6 +53,36 @@
 </div></div></section>
 <section class="font-sans"><div class="container m-auto flex flex-col md:flex-row max-w-xl"><div class="w-full lg:py-6"><img class="w-full" alt="hexmap in d3" src="https://res.cloudinary.com/civicvision/image/upload/v1552905044/Landingpages/Geospatial%20d3/hexmap.png"></div></div></section>
 <a class="btn" href="https://mappingwithd3.com//f4gsd/resources">Let&#39;s get started</a></p>
-<div class="rm-after-resource-article"></div></div></main><div class="modal"></div>
+<div class="rm-after-resource-article"></div></div></main><div id="tooltip" class="bg-white p-2 border">
+  <div class="text-center" id="small-map"></div>
+  <div class="text-xl text-center border-b" id="community"></div>
+  <div class="flex mt-2">
+    <div class="w-1/2 ">
+      <div class="text-gray-600 text-xs">30% of income</div>
+      <div class="font-bold text-black" id="percentage-30">100</div>
+    </div>
+    <div class="w-1/2">
+      <div class="text-gray-600 text-xs">50% of income</div>
+      <div class="font-bold text-black" id="percentage-50">100</div>
+    </div>
+  </div>
+</div>
+<style>
+  #tooltip {
+    width: 250px;
+    opacity: 0;
+  }
+</style>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="/javascript/housing-map.js"></script>
+<script type="text/javascript">
+  if(document.querySelector('#housing-map-parent')) {
+    chart();
+  }
+</script>
+<div class="footer">
+  - Resources
+</div>
+<div class="modal"></div>
 
 </body></html>

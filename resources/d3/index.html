@@ -50,6 +50,36 @@
   }}();
 </script>
 <body class="font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black"><div class="w-full bg-blue-darker p-6 bg-hero-topography-blue-lighter-10"><div class="container m-auto max-w-xl flex justify-between md:flex-row"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com/">Geospatial Data Visualization with d3</a><div class="flex"><a class="no-underline text-white font-medium tracking-tight" href="https://mappingwithd3.com//resources">Resources</a></div></div></div><main id="content" role="main"><div class="container m-auto mt-8 md:flex-row max-w-xl"><h1>D3</h1><div class="mt-8"></div><h2 class="text-2xl">D3</h2><p> Resources about d3 specifically. </p><div class="mt-4 mb-8"><div class="mb-4"><a class="text-xl mb-2 text-black no-underline font-bold hover:underline" href="/resources/d3/d-attribute/">D Attribute</a><div class="mb-2">A short introduction into the the d attribute of path elements</div></div><div class="mb-4"><a class="text-xl mb-2 text-black no-underline font-bold hover:underline" href="/resources/d3/updating-your-chart/">Updating your chart in d3.js</a><div class="mb-2">How v5 helps clean up your updating code</div></div><div class="mb-4"><a class="text-xl mb-2 text-black no-underline font-bold hover:underline" href="/resources/d3/projections/">Projections</a><div class="mb-2">Learn all the things that are important about projections in d3.</div></div><div class="mb-4"><a class="text-xl mb-2 text-black no-underline font-bold hover:underline" href="/resources/d3/tooltip/">How to create a simple tooltip in d3.js</a><div class="mb-2">Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. </div></div><div class="mb-4"><a class="text-xl mb-2 text-black no-underline font-bold hover:underline" href="/resources/d3/svg-basics/">SVG Basics for d3</a><div class="mb-2">Three basic elements of SVG you should know if you want to create maps with d3. </div></div></div>
-</div></main><div class="modal"></div>
+</div></main><div id="tooltip" class="bg-white p-2 border">
+  <div class="text-center" id="small-map"></div>
+  <div class="text-xl text-center border-b" id="community"></div>
+  <div class="flex mt-2">
+    <div class="w-1/2 ">
+      <div class="text-gray-600 text-xs">30% of income</div>
+      <div class="font-bold text-black" id="percentage-30">100</div>
+    </div>
+    <div class="w-1/2">
+      <div class="text-gray-600 text-xs">50% of income</div>
+      <div class="font-bold text-black" id="percentage-50">100</div>
+    </div>
+  </div>
+</div>
+<style>
+  #tooltip {
+    width: 250px;
+    opacity: 0;
+  }
+</style>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="/javascript/housing-map.js"></script>
+<script type="text/javascript">
+  if(document.querySelector('#housing-map-parent')) {
+    chart();
+  }
+</script>
+<div class="footer">
+  - Resources
+</div>
+<div class="modal"></div>
 
 </body></html>
