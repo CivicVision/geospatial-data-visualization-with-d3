@@ -1,0 +1,4 @@
+.w-full.bg-blue-darker.p-6.bg-hero-topography-blue-lighter-10
+  .container.m-auto.max-w-xl.flex.justify-between.flex-col
+    a.no-underline.text-white.font-medium.tracking-tight href="{{ .Site.BaseURL }}/resources" Resources
+    a.no-underline.text-white.font-medium.tracking-tight href="http://milafrerichs.de" Instructor's Homepage
