@@ -1,0 +1,16 @@
+- title: SVG Basics
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/1.png"
+  description: |
+    Understand and learn the basics of SVG. What elements we will use and what attributes they have.
+- title: Selections
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/2.png"
+  description: |
+    Learn the very important concept of selections in d3.
+- title: Projections
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/3.png"
+  description: |
+    How projections can be used with d3 and how they work.
+- title: Project Exercise
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/8.png"
+  description: |
+    Apply what you have learned in the project exercise.

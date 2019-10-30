@@ -1,0 +1,20 @@
+- title: Path object
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/4.png"
+  description: |
+    How the SVG path element works and in-depth explanation of the d attribute.
+- title: GeoPath object
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/5.png"
+  description: |
+    How d3 helps you create path elements from latitude &amp; longitude coordinates.
+- title: Loading Data
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/6.png"
+  description: |
+    How to use d3 to load GeoJSON and CSV data.
+- title: Data Join
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/9.png"
+  description: |
+    Understand one of the most difficult concepts for beginners and intermediate d3 users: data joins.
+- title: Project Exercise
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/8.png"
+  description: |
+    Apply what you have learned in the project exercise.

@@ -1,74 +1,86 @@
-h2.mt-8.mb-4 Course content
+.flex.flex-col.lg:flex-row.flex-wrap.p-4.lg:p-16
 
-h3.mb-2 Lesson 1: Simplest Map Possible Learnings
-p.mb-4 In this lesson, you'll create your first simple map. You'll learn all the important aspects of creating maps with d3.
+  {{ range $index, $element := $.Site.Data.lessons.modules }}
+    {{ with $element }}
+    .lg:w-1/3.py-2.lg:pr-16.mb-4.lg:mb-12
+      h5.mb-1 Module {{$index | add 1}}
+      h3.mb-2 {{.title}}
+      .text-sm.mb-4
+        {{.description | markdownify }}
+      {{ if .images }}
+        {{ range .images }}
+          img.mx-auto.w-64.block.mt-6 src="{{.src}}" alt="{{.alt}}"
+        {{ end }}
+      {{ end }}
+    .lg:w-2/3.flex.flex-row.flex-wrap.mb-6.lg:mb-12
+      {{ range index (index $.Site.Data.lessons .module ) .slug }}
+        .w-1/2.px-2.lg:w-1/3.lg:px-4.py-2
+          img.block.shadow-md.w-full src="{{.image}}"
+          h4.text-xs.font-bold.mt-2 {{.title}}
+          p.mt-1.mb-4.text-xs.leading-tight.text-grey-dark.opacity-75 {{.description | markdownify}}
+      {{ end }}
+    {{ end }}
+  {{ end }}
 
-h3.mb-2 Lesson 2: Housing Burden Project - Basic Choropleth Map
-p.mb-4 Create our first map from a GeoJSON and how to style it.
+  .lg:w-1/2.py-2.mb-4.lg:mb-12
+    h5.mb-1 Module 7
+    h3.mb-2 Election Maps
+    .text-sm.mb-4
+      p.mb-4 We look at a mock election for a city. I will provide a server with real-time data of results and we use Choropleth maps and Cartograms to visualize the election results.
+      .mt-6.uppercase.font-bold.text-sm 6+ Lessons including:
+      ul.pt-4
+        li Live-update your map
+        li Switch geographies
+        li Cartograms
+        li Multivariate Choropleth
+  .lg:w-1/2.mt-10
+    img.mx-auto.w-64.block src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/chicago-election-tribune.png"
+    .text-xs.mt-2.text-center
+      a href="http://apps.chicagotribune.com/elections/2015-mayoral-results/" By Abraham Epton and Alex Bordens from Chicago Tribune
 
-h3.mb-2 Lesson 3: Housing Burden Project - Interactivity
-p.mb-4 How to make your map interactive with tooltips and zoom
+  .lg:w-1/2.mb-4.lg:mb-12.mt-8
+    h5.mb-1 Module 8
+    h3.mb-2 NO2 Maps
+    .text-sm.mb-4
+      p.mb-4 Using satellite raster data we look at NO2 levels in different cities around the world. 
+      .mt-6.uppercase.font-bold.text-sm 4+ Lessons including:
+      ul.pt-4
+        li Load and display raster data
+        li Animate raster data
+        li Contours with d3
+  .lg:w-1/2.mt-10.hidden.lg:block
 
-h3.mb-2 Lesson 4: Housing Burden Project - Bubble Map
-p.mb-4 Learn the concepts of creating a bubble map
+  .lg:w-1/2.mb-4.lg:mb-12.mt-8
+    h5.mb-1 Module 9
+    h3.mb-2 Single Family zoning in San Diego
+    .text-sm.mb-4
+      p.mb-4 We look at zoning data for the city of San Diego and look at different ways to map 
+      p.mb-4 How to use canvas to visualize all buildings in San Diego and their property zone.
 
-h3.mb-2 Lesson 5: Housing Burden Project - Annotations
-p.mb-4 How to enhance your map with annotations
+      .mt-6.uppercase.font-bold.text-sm 3+ Lessons including:
+      ul.pt-4
+        li Use canvas for maps
+        li Zoom with canvas
+        li Events with canvas
+  .lg:w-1/2.mt-10
+    img.mx-auto.w-64.block src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/milafrerichs.com/articles/downtown_sd.png"
 
-h3.mb-2 Lesson 6: Bousing Burden Project - small multiples
-p.mb-4 What are small multiplies and how to use them.
+  .w-full
+    .lg:w-1/2.mb-4.lg:mb-12.mt-8
+      h3.mb-2 Advanced Content
+      .text-sm.mb-4
+        p.mb-4 The more advanced part of the course is still t.b.d. and you can influence the direction of the course.
+        .mt-6.uppercase.font-bold.text-sm 3+ Lessons including:
+        ul.pt-4
+          li Hexbin Map
+          li Basemaps
 
-h3.mb-2 Lesson 7: Housing Burden Project - reusable code
-p.mb-4 How to create code that is reusable among projects and make updating your chart easier
-
-h3.mb-2 Lesson 8: Housing Burden Project - responsiveness
-p.mb-4 Create responsive maps with d3
-
-h3.mb-2 Lesson 9: housing burden project - Animations
-p.mb-4 How to animate your maps with transitions.
-
-h3.mb-2 Lesson 10: housing burden - dashboard
-p.mb-4 Bringing all together and create our first dashboard.
-
-h3.mb-2 Advanced Course Content
-p.mb-4 The more advanced part of the course is still t.b.d. and you can influence the direction of the course.
-
-h3.mb-2 Lesson: Live Election Map Project
-p.mb-4 How to update your chart with live data.
-
-h3.mb-2 Lesson: Hexbin Map
-p.mb-4 When to use Hexbins How to create Hexbins
-
-h3.mb-2 Lesson: Multivariate Choropleth Map
-p.mb-2 What are Multivariate Choropleth Maps 
-p.mb-4 How to use and create them
-
-h3.mb-2 Lesson: Project NO2 levels in the atmosphere
-p.mb-4 How to get satellite data, how to display raster data on a d3 map
-
-h3.mb-2 Lesson: Zoning Project
-p.mb-4 How to use canvas to visualize all buildings in San Diego and their property zone.
-
-h3.mb-2 Lesson: Basemaps with d3
-p.mb-2 How to use vector tiles with d3
-p.mb-4 How to use raster tiles with d3
-
-h3.mb-2 Bonus: Data Aggregations with d3 Learnings: Rollup, map
-
-
-h2.mt-8.mb-4 Projects 
-h3.mb-2 Project 1: Housing Burden Chicago
-p.mb-2 We look at the amount people of Chicago need to invest in housing. There is an interesting dataset from the city of Chicago.
-
-p.mb-2 We first create a basic Choropleth map to visualize the housing burden per neighborhood. The info window will include a bubble map as well with additional data.
-
-p.mb-4 We then move forward and create a dashboard with interactivity, tables, and small multiples.
-
-h3.mb-2 Project 2: Live Election Map
-p.mb-4 We look at a mock election for a city election. I will provide a server with real-time data of results and we use Choropleth maps and Cartograms to visualize the election results.
-
-h3.mb-2 Project 3: NO2 levels in a City
-p.mb-4 Using satellite raster data we look at NO2 levels in different cities around the world.
-
-h3.mb-2 Project 4: Single Family zoning in San Diego
-p.mb-4 We look at zoning data for the city of San Diego and look at different ways to map 
+  .lg:w-1/2.mb-4.lg:mb-12.mt-8
+    h3.mb-2 Bonus Content
+    .text-sm.mb-4
+      p.mb-4 Bonus: Data Aggregations with d3 
+      .mt-6.uppercase.font-bold.text-sm 3+ Lessons including:
+      ul.pt-4
+        li Grouping
+        li Summarizing
+        li Statistics

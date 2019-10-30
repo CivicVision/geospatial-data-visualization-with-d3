@@ -1,0 +1,32 @@
+- title: Simplest Map Possible
+  description: |
+    In this project, you'll create your first simple map. You'll learn all the important aspects of creating maps with d3.
+  slug: "general"
+  module: "simple_map"
+- title: "Housing Burden: Essentials"
+  description: |
+    We look at the amount people of Chicago need to invest in housing. There is an interesting dataset from the city of Chicago.
+
+    We first create a basic Choropleth map to visualize the housing burden per neighborhood. The info window will include a bubble map as well with additional data.
+
+    We then move forward and create a dashboard with interactivity, tables, and small multiples.
+  slug: "essentials"
+  module: "housing_burden"
+  images:
+    - src: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/housing-burden-chicago-t.png"
+      alt: ""
+- title: "Housing Burden: Interactivity"
+  slug: "interactivity"
+  module: "housing_burden"
+  images:
+    - src: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/housing-burden-chicago-tooltip.png"
+      alt: ""
+- title: "Housing Burden: Bubble Map"
+  module: "housing_burden"
+  slug: "bubble"
+- title: "Housing Burden: Advanced Concepts"
+  module: "housing_burden"
+  slug: "advanced"
+- title: "Housing Burden: Dashboard"
+  module: "housing_burden"
+  slug: "dashboard"

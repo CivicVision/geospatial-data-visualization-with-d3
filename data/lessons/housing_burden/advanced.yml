@@ -1,0 +1,24 @@
+- title: Annotations
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/annotations.png"
+  description: |
+    How to enhance your map with annotations
+- title: Small Multiples
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/small-multiples.png"
+  description: |
+    What are small multiplies and how to use them.
+- title: Reusable Code
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/reusable-code.png"
+  description: |
+    How to create code that is reusable among projects and make updating your chart easier
+- title: Responsive Maps
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/responsive-maps.png"
+  description: |
+    Create responsive maps with d3, how to react on changes to the browser size.
+- title: Animations
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/animations.png"
+  description: |
+    How to use transitions to animate your map.
+- title: Project Exercise
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/8.png"
+  description: |
+    Apply what you have learned in the project exercise.
