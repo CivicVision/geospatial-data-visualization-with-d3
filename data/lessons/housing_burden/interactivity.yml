@@ -1,0 +1,16 @@
+- title: Events
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/4.png"
+  description: |
+    Understand and learn the basics of events in d3. Especially mouse events.
+- title: Tooltip
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/tooltips.png"
+  description: |
+    Understand and learn the basics of tooltips in d3. 
+- title: Zoom
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/zoom.png"
+  description: |
+    Understand and learn the basics of zoom in d3. 
+- title: Project Exercise
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/8.png"
+  description: |
+    Apply what you have learned in the project exercise.

@@ -1,0 +1,12 @@
+- title: Circle Object
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/circle.png"
+  description: |
+    Understand the use of the circle SVG element and how we will use it for bubble maps.
+- title: Advanced Scales
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/advanced-scales.png"
+  description: |
+    More in-depth walkthrough into scales and how we will use them for bubble maps.
+- title: Project Exercise
+  image: "https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/course-lessons/8.png"
+  description: |
+    Apply what you have learned in the project exercise.
