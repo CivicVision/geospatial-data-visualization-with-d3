@@ -8,5 +8,5 @@ enableRobotsTXT = true
   body_classes = "font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black"
   rightmessage = "1998050406"
   description = "This online video course on creating maps with d3.js helps you learn the geospatial concepts of d3 and how to create geospatial data visualizations with javascript. The course is taught by Mila Frerichs who is a geospatial data visualization consultant. The course is modeled from successful hands-on workshops at geospatial conferences over the last 4 years. "
-  images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/housing-burden-chicago-t.png"]
+  images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/Mapping_with_d3-3.png"]
   title = "Geospatial Data Visualization with d3"
