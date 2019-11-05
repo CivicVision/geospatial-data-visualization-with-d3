@@ -1,6 +1,6 @@
 .max-w-2xl.mx-auto.mt-8.text-center.px-4.text-2xl class="lg:px-0 {{ .Get "class" }}"
   p.max-w-lg.mb-8.mx-auto.text-left.text-lg
-    {{ .Inner }}
+    {{ .Inner | markdownify }}
   {{ if .Get "image" }}
     img.rounded-full.max-w-testimonial.mb-8 src="{{ .Get "image" }}" alt="{{ .Get "name" }}"
   {{ end }}
