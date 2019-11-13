@@ -1,8 +1,8 @@
 var Airtable = require('airtable');
 
 var getFormValue = function(id) {
-  return document.getElementById(id).value
-}
+  return document.getElementById(id).value;
+};
 var getFormValues = function(name) {
   var values = [];
   document.querySelectorAll('input[name='+name+']').forEach((function(currentValue, currentIndex, listObj) {
@@ -11,18 +11,31 @@ var getFormValues = function(name) {
     }
   }));
   return values;
-}
+};
 
-window.sendSurveyResponse = function(id) {
-  var base = new Airtable({apiKey: 'key500bQxvE9YGdYt'}).base('appAAzAmC8X8gav73');
+window.sendFreeCourseSurvey = function(id, baseId) {
+  var base = new Airtable({apiKey: window.AIRTABLE_KEY}).base(baseId);
+  var struggle = getFormValue('struggle');
+  base('Responses').create({
+    "CK ID": window.localStorage.getItem('rmpanda.sources.convertkit.subscriberId'),
+    "RM ID": window.localStorage.getItem('rmpanda.sources.metrics.visitorId'),
+    "biggest struggle with d3": struggle
+  }, function(err, record) {
+      if (err) { console.error(err); return; }
+      document.getElementById(id).style.display= 'none';
+      document.getElementById(id+'-response').style.display = 'block';
+  });
+};
+window.sendInitialSurvey = function(id, baseId) {
+  var base = new Airtable({apiKey: window.AIRTABLE_KEY}).base(baseId);
 
   var form = document.getElementById(id);
-  var topics = getFormValues('topic')
-  var use_dataviz = getFormValues('use_dataviz')[0]
-  var create_dataviz = getFormValues('create_dataviz')[0]
-  var professional = getFormValues('professional')[0]
-  var oneQuestion = getFormValue('one-question')
-  var excitingArea = getFormValue('exciting-area')
+  var topics = getFormValues('topic');
+  var use_dataviz = getFormValues('use_dataviz')[0];
+  var create_dataviz = getFormValues('create_dataviz')[0];
+  var professional = getFormValues('professional')[0];
+  var oneQuestion = getFormValue('one-question');
+  var excitingArea = getFormValue('exciting-area');
 
   window.sendToRM('survey.topics', topics);
   window.sendToRM('survey.use_dataviz', use_dataviz);

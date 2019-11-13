@@ -16,11 +16,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mappingwithd3.com/subscribe/survey/</guid>
-      <description>How well do you know d3?Use d3 every dayUse d3 occasionallyHave tried it out beforeHeard of itD what?Which of these best describes you?DeveloperExecutiveAnalystGIS ProfessionalData ScientistJournalistWhat industry do you work in?Non-ProfitGovernmentEducationTechnologyHow well do you know mapsWhat mapping libraries other than d3 have you used?Mapbox.jsopenlayersleafletWhat Is your main mapping library other than d3?Mapbox.jsopenlayersleafletWhy did you use that library?What types of maps do you create?InteractiveStaticDo you create more online maps or more offline?OnlineOfflineWhat is a typical problem you try to solve with your map?</description>
+      <description>function sendResponse() { window[&#34;sendInitialSurvey&#34;](&#39;survey&#39;,&#39;appAAzAmC8X8gav73&#39;); } How well do you know d3?Use d3 every dayUse d3 occasionallyHave tried it out beforeHeard of itD what?Which of these best describes you?DeveloperExecutiveAnalystGIS ProfessionalData ScientistJournalistWhat industry do you work in?Non-ProfitGovernmentEducationTechnologyHow well do you know mapsWhat mapping libraries other than d3 have you used?Mapbox.jsopenlayersleafletWhat Is your main mapping library other than d3?Mapbox.jsopenlayersleafletWhy did you use that library?What types of maps do you create?InteractiveStaticDo you create more online maps or more offline?</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Thank you, you&#39;re in</title>
       <link>https://mappingwithd3.com/subscribe/thank-you/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -28,7 +28,9 @@
       <description>Success! You made it!
 Check out the resources that I put together for the course.
 You should receive the first email just about now!
-Have a great day!</description>
+I got one question for you:
+function sendResponse() { window[&#34;sendFreeCourseSurvey&#34;](&#39;survey&#39;,&#39;appPIZ4CImJ9HcVYC&#39;); } What is your biggest struggle learning d3?SubmitThank you for answering the question. I appreciate it a lot! Thanks a lot and have a great day!
+Mila</description>
     </item>
     
   </channel>
