@@ -1,0 +1,9 @@
+baseId: 'appPIZ4CImJ9HcVYC'
+jsCallback: 'sendFreeCourseSurvey'
+thankYou: 'Thank you for answering the question. I appreciate it a lot!'
+questions:
+  - question: "What is your biggest struggle learning d3?"
+    type: "textarea"
+    rows: 6
+    id: "struggle"
+
