@@ -1,8 +1,13 @@
 {{- $survey := .Get 0 -}}
-{{- $data := index .Site.Data.survey "initial"}}
+{{- $data := index .Site.Data.survey .Page.Params.survey }}
 
-form#survey onsubmit="event.preventDefault(); sendSurveyResponse('survey');"
-  {{ range $data }}
+{{ with $data }}
+= javascript
+  function sendResponse() {
+    window[{{.jsCallback}}]('survey','{{.baseId}}');
+  }
+form#survey onsubmit="event.preventDefault();sendResponse();"
+  {{ range .questions }}
     fieldset.mb-6
       legend.mb-2.text-xl.font-bold {{.question}}
       .row
@@ -11,4 +16,5 @@ form#survey onsubmit="event.preventDefault(); sendSurveyResponse('survey');"
 
   button.uppercase.text-sm.text-white.focus:outline-0.w-full.sm:w-auto.bg-blue-darker.p-4 type="submit" Submit
   .mb-10
-#survey-response.hidden Thank you for filling out the survey. Have a great day!
+#survey-response.hidden {{.thankYou | default "Thank you for filling out the survey. Have a great day!"}} 
+{{ end }}

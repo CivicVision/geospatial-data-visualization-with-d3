@@ -1,2 +1,2 @@
 .border
-  textarea name="{{.id}}" id="{{.id}}" rows={{.rows}}
+  textarea class="w-full" name="{{.id}}" id="{{.id}}" rows={{.rows}}

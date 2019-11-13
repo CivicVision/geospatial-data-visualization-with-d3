@@ -8,3 +8,16 @@
     <script src="{{$.Site.BaseURL}}js/{{.}}" type="text/javascript"></script>
   {{ end }}
 {{ end }}
+<script type="text/javascript">
+  window.AIRTABLE_KEY = '{{ getenv "AIRTABLE_KEY" }}';
+</script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="/javascript/housing-map.js"></script>
+<script type="text/javascript">
+  if(document.querySelector('#housing-map-parent')) {
+    chart();
+  }
+</script>
+<script src="https://unpkg.com/airtable@0.7.2/build/airtable.browser.js"></script>
+<script src="/javascript/rmExtras.js"></script>
+<script src="/javascript/survey.js"></script>
