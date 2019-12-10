@@ -1,0 +1,44 @@
+nav.px-6.pt-6.overflow-y-auto.text-base.lg:text-sm.lg:py-12.lg:pl-6.lg:pr-8
+  .block.md:hidden
+    button#menu.flex.items-center.px-3.py-2.border.rounded.text-teal-200.border-teal-400.hover:text-white.hover:border-white
+      svg.fill-current.h-3.w-3 viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+        title Menu
+        path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+  #menu-items.w-full.pt-6.text-base.lg:text-sm
+    .mb-10
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        a.flex.items-center.px-2.-mx-2.py-1.hover:text-gray-900.font-medium class="{{ if $currentPage.IsMenuCurrent "main" . }}text-gray-900{{else}}text-gray-600{{end}}" href="{{.URL}}" {{.Name}}
+        {{ if .HasChildren }}
+          .ml-4
+            {{ range .Children }}
+              a.block.mt-4.md:mt-0.text-grey-darker.hover:text-grey-dark.mr-4 class="{{ if $currentPage.IsMenuCurrent "main" . }}underline{{else}}no-underline{{end}}" href="{{.URL}}" {{.Name}}
+            {{ end }}
+        {{ end }}
+      {{ end }}
+  {{ if in .Params.categories "tutorial" }}
+  .mb-8
+    h5 
+      a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs Basics
+      ul
+        {{ range .Site.Taxonomies.categories.basic }}
+          li.mb-3.lg:mb-1
+            a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+        {{ end }}
+  .mb-8
+    h5 
+      a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs Advanced
+      ul
+        {{ range .Site.Taxonomies.categories.advanced }}
+          li.mb-3.lg:mb-1
+            a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+        {{ end }}
+  .mb-8
+    h5 
+      a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs Deep Dives
+      ul
+        {{ range .Site.Taxonomies.categories.deep_dive }}
+          li.mb-3.lg:mb-1
+            a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+        {{ end }}
+  {{ end }}

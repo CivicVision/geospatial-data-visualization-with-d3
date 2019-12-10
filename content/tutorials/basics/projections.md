@@ -1,6 +1,6 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
-categories = ["resource"]
+categories = ["resource", "tutorial", "basic"]
 keywords = ["d3", "map", "projections"]
 codeexample = ""
 date = "2019-09-02T23:00:00+00:00"
@@ -12,6 +12,9 @@ include_js = []
 layout = "single"
 section = "d3"
 title = "Projections"
+aliases = [
+    "/resources/d3/projection/"
+]
 [sitemap]
 changefreq = []
 
