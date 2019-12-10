@@ -1,8 +1,8 @@
-@tailwind preflight;
+@tailwind base;
 
-@tailwind components;
-
-html {
+html, body {
+  margin: 0;
+  font-family: 'Heebo', sans-serif;
 }
 
 .list-none {
@@ -25,7 +25,7 @@ html {
   @apply leading-normal;
 }
 .post blockquote {
-  @apply bg-grey-light my-2 p-2 leading-normal italic;
+  @apply bg-gray-200 my-2 p-2 leading-normal italic;
 }
 p strong {
     font-weight: bold;
@@ -114,4 +114,5 @@ header::after {
     z-index: -1;
 }
 
+@tailwind components;
 @tailwind utilities;

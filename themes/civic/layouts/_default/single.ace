@@ -1,7 +1,7 @@
 = content header
   {{ partial "subnav" . }}
 = content main
-  .container.m-auto.px-8.md:px-4.lg:p-0 class="md:flex-row max-w-xl"
+  .xl:px-12.w-full.max-w-4xl.mx-auto.lg:ml-0.lg:mr-auto.xl:mx-0
     {{.Content}}
     {{ if .Page.Params.tweet }}
       {{ partial "tweet" . }}
