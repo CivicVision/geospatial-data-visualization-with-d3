@@ -1,4 +1,4 @@
-section.bg-grey-lighter.font-sans
+section.bg-gray-300.font-sans
   .container.m-auto.flex.flex-col.md:flex-row.max-w-xl
     .flex.flex-col.w-full.justify-center.items-start.py-8 class="lg:w-1/2" 
       label.uppercase.tracking-loose for="tagline"  best app ever

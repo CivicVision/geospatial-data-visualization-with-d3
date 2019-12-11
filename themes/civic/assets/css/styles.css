@@ -2,7 +2,7 @@
 
 html, body {
   margin: 0;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Heebo', 'Lato', sans-serif;
 }
 
 .list-none {
@@ -42,6 +42,10 @@ p strong {
 }
 .highlight pre {
   @apply p-4;
+}
+
+.markdown h3 {
+  @apply my-2 text-xl font-bold;
 }
 
 code {

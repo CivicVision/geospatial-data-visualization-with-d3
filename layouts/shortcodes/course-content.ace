@@ -1,10 +1,10 @@
-.flex.flex-col.lg:flex-row.flex-wrap.p-4.lg:p-16
+.flex.flex-col.lg:flex-row.flex-wrap.p-4.lg:p-6
 
   {{ range $index, $element := $.Site.Data.lessons.modules }}
     {{ with $element }}
-    .lg:w-1/3.py-2.lg:pr-16.mb-4.lg:mb-12
-      h5.mb-1 Module {{$index | add 1}}
-      h3.mb-2 {{.title}}
+    .lg:w-1/3.py-2.lg:pr-6.mb-4.lg:mb-12
+      h5.text-sm.font-bold.mb-1 Module {{$index | add 1}}
+      h3.text-xl.font-bold.mb-2 {{.title}}
       .text-sm.mb-4
         {{.description | markdownify }}
       {{ if .images }}
