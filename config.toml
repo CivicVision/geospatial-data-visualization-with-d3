@@ -4,6 +4,16 @@ title = "Geospatial Data Visualization with d3"
 theme = "civic"
 enableRobotsTXT = true
 
+[related]
+threshold = 10
+includeNewer = true
+toLower = true
+[[related.indices]]
+name = "keywords"
+weight = 200
+[[related.indices]]
+name  = "tags"
+weight = 100
 [params]
   body_classes = "font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black"
   rightmessage = "1998050406"

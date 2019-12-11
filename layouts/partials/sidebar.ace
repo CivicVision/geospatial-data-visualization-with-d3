@@ -17,28 +17,8 @@ nav.px-6.pt-6.overflow-y-auto.text-base.lg:text-sm.lg:py-12.lg:pl-6.lg:pr-8
         {{ end }}
       {{ end }}
   {{ if in .Params.categories "tutorial" }}
-  .mb-8
-    h5 
-      a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs Basics
-      ul
-        {{ range .Site.Taxonomies.categories.basic }}
-          li.mb-3.lg:mb-1
-            a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
-        {{ end }}
-  .mb-8
-    h5 
-      a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs Advanced
-      ul
-        {{ range .Site.Taxonomies.categories.advanced }}
-          li.mb-3.lg:mb-1
-            a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
-        {{ end }}
-  .mb-8
-    h5 
-      a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs Deep Dives
-      ul
-        {{ range .Site.Taxonomies.categories.deep_dive }}
-          li.mb-3.lg:mb-1
-            a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
-        {{ end }}
+  {{ partial "tutorials" . }}
+  {{ end }}
+  {{ if in .Params.categories "tips" }}
+  {{ partial "tips" . }}
   {{ end }}
