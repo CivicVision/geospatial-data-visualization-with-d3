@@ -3,6 +3,7 @@ module.exports = {
     extend: {
       colors: {
         civic: '#2b4c7e',
+        orange: '#c7850c',
       },
       maxWidth: theme => {
         return {
