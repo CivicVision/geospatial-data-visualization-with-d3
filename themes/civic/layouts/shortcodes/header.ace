@@ -1,4 +1,4 @@
 section.font-sans
-  .container.m-auto.flex.flex-col.md:flex-row.max-w-xl
+  .container.m-auto.flex.flex-col.md:flex-row.max-w-5xl
     .w-full.lg:pt-6
       {{.Inner}}

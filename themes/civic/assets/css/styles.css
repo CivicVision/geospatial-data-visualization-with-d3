@@ -1,8 +1,16 @@
-@tailwind preflight;
+@tailwind base;
 
-@tailwind components;
+html, body {
+  margin: 0;
+  font-family: 'Heebo', 'Lato', sans-serif;
+}
 
-html {
+a {
+  @apply text-gray-600 underline;
+}
+
+.mk ul {
+  @apply list-disc pl-4
 }
 
 .list-none {
@@ -25,7 +33,7 @@ html {
   @apply leading-normal;
 }
 .post blockquote {
-  @apply bg-grey-light my-2 p-2 leading-normal italic;
+  @apply bg-gray-200 my-2 p-2 leading-normal italic;
 }
 p strong {
     font-weight: bold;
@@ -42,6 +50,10 @@ p strong {
 }
 .highlight pre {
   @apply p-4;
+}
+
+.markdown h3 {
+  @apply my-2 text-xl font-bold;
 }
 
 code {
@@ -114,4 +126,5 @@ header::after {
     z-index: -1;
 }
 
+@tailwind components;
 @tailwind utilities;

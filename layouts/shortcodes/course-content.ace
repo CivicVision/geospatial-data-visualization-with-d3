@@ -1,10 +1,10 @@
-.flex.flex-col.lg:flex-row.flex-wrap.p-4.lg:p-16
+.flex.flex-col.lg:flex-row.flex-wrap.p-4.lg:p-6
 
   {{ range $index, $element := $.Site.Data.lessons.modules }}
     {{ with $element }}
-    .lg:w-1/3.py-2.lg:pr-16.mb-4.lg:mb-12
-      h5.mb-1 Module {{$index | add 1}}
-      h3.mb-2 {{.title}}
+    .lg:w-1/3.py-2.lg:pr-6.mb-4.lg:mb-12
+      h5.text-sm.font-bold.mb-1 Module {{$index | add 1}}
+      h3.text-xl.font-bold.mb-2 {{.title}}
       .text-sm.mb-4
         {{.description | markdownify }}
       {{ if .images }}
@@ -23,12 +23,12 @@
   {{ end }}
 
   .lg:w-1/2.py-2.mb-4.lg:mb-12
-    h5.mb-1 Module 7
-    h3.mb-2 Election Maps
+    h5.text-sm.font-bold.mb-1 Module 7
+    h3.text-xl.font-bold.mb-2 Election Maps
     .text-sm.mb-4
       p.mb-4 We look at a mock election for a city. I will provide a server with real-time data of results and we use Choropleth maps and Cartograms to visualize the election results.
       .mt-6.uppercase.font-bold.text-sm 6+ Lessons including:
-      ul.pt-4
+      ul.pt-4.list-disc.pl-4
         li Live-update your map
         li Switch geographies
         li Cartograms
@@ -39,26 +39,26 @@
       a href="http://apps.chicagotribune.com/elections/2015-mayoral-results/" By Abraham Epton and Alex Bordens from Chicago Tribune
 
   .lg:w-1/2.mb-4.lg:mb-12.mt-8
-    h5.mb-1 Module 8
-    h3.mb-2 NO2 Maps
+    h5.text-sm.font-bold.mb-1 Module 8
+    h3.text-xl.font-bold.mb-2 NO2 Maps
     .text-sm.mb-4
       p.mb-4 Using satellite raster data we look at NO2 levels in different cities around the world. 
       .mt-6.uppercase.font-bold.text-sm 4+ Lessons including:
-      ul.pt-4
+      ul.pt-4.list-disc.pl-4
         li Load and display raster data
         li Animate raster data
         li Contours with d3
   .lg:w-1/2.mt-10.hidden.lg:block
 
   .lg:w-1/2.mb-4.lg:mb-12.mt-8
-    h5.mb-1 Module 9
-    h3.mb-2 Single Family zoning in San Diego
+    h5.text-sm.font-bold.mb-1 Module 9
+    h3.text-xl.font-bold.mb-2 Single Family zoning in San Diego
     .text-sm.mb-4
       p.mb-4 We look at zoning data for the city of San Diego and look at different ways to map 
       p.mb-4 How to use canvas to visualize all buildings in San Diego and their property zone.
 
       .mt-6.uppercase.font-bold.text-sm 3+ Lessons including:
-      ul.pt-4
+      ul.pt-4.list-disc.pl-4
         li Use canvas for maps
         li Zoom with canvas
         li Events with canvas
@@ -67,20 +67,20 @@
 
   .w-full
     .lg:w-1/2.mb-4.lg:mb-12.mt-8
-      h3.mb-2 Advanced Content
+      h3.text-xl.font-bold.mb-2 Advanced Content
       .text-sm.mb-4
         p.mb-4 The more advanced part of the course is still t.b.d. and you can influence the direction of the course.
         .mt-6.uppercase.font-bold.text-sm 3+ Lessons including:
-        ul.pt-4
+        ul.pt-4.list-disc.pl-4
           li Hexbin Map
           li Basemaps
 
   .lg:w-1/2.mb-4.lg:mb-12.mt-8
-    h3.mb-2 Bonus Content
+    h3.text-xl.font-bold.mb-2 Bonus Content
     .text-sm.mb-4
       p.mb-4 Bonus: Data Aggregations with d3 
       .mt-6.uppercase.font-bold.text-sm 3+ Lessons including:
-      ul.pt-4
+      ul.pt-4.list-disc.pl-4
         li Grouping
         li Summarizing
         li Statistics

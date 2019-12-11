@@ -1,2 +1,2 @@
-.max-w-md.bg-white.md:shadow-lg.rounded.mx-auto.p-8
+.max-w-xl.bg-white.md:shadow-lg.rounded.mx-auto.p-8
   {{.Inner}}

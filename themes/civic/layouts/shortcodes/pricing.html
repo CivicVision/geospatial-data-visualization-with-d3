@@ -15,12 +15,12 @@
       <div class="w-full p-2 text-xs text-left">You will get access to the course website and all course material and go through the course by yourself. </div>
       <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
         {{ if .base.discount }}
-          <span class="text-base line-through text-red-lighter">$199</span>
+          <span class="text-base line-through text-red-200">$199</span>
         {{end }}
           <span class="">${{ .base.price | default 199}}</span>
       </div>
       <div class="flex items-center justify-center">
-        <a class="mx-auto lg:mx-0 hover:underline gradient font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="{{.url}}" target="_blank">{{.base.text}}</a>
+        <a class="mx-auto lg:mx-0 hover:underline hover:bg-gray-200 gradient font-bold rounded-full my-6 py-4 px-8 shadow-lg" href="{{.url}}" target="_blank">{{.base.text}}</a>
       </div>
     </div>
   </div>
@@ -43,12 +43,12 @@
       <div class="w-full p-2 text-xs text-left">You get access to the course and will be assigned to a group of 5 people. Your group will get access to a special forum where you can discuss your projects and your progress. I will be available as well for questions and help. </div>
       <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
         {{ if .group.discount }}
-          <span class="text-base line-through text-red-lighter">$450</span>
+          <span class="text-base line-through text-red-200">$450</span>
         {{end }}
           <span class="">${{ .group.price | default 450}}</span>
       </div>
       <div class="flex items-center justify-center">
-        <a class="mx-auto lg:mx-0 hover:underline gradient font-bold rounded-full my-6 py-4 px-8 shadow-lg {{if .group.closed }}bg-grey-light text-grey-dark no-underline hover:no-underline {{end}}" href="{{if .group.closed}}javascript:;{{else}}{{.url}}{{end}}" target="_blank">{{.group.text}}</a>
+        <a class="mx-auto lg:mx-0 hover:underline gradient font-bold rounded-full my-6 py-4 px-4 shadow-lg {{if .group.closed }}bg-gray-400 text-gray-500 no-underline hover:no-underline {{end}}" href="{{if .group.closed}}javascript:;{{else}}{{.url}}{{end}}" target="_blank">{{.group.text}}</a>
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@
         <li class="border-b py-4">By-weekly group coaching call</li>
         <li class="border-b py-4">Access to accountability forum and group</li>
         <li class="border-b py-4">Lifetime access to updates</li>
-        <li class="border-b py-4 {{if .group_plus.discount}}font-bold{{end}}">1x {{if .group_plus.discount}}<span class="line-through">30</span> {{end}}60 minute call with me</li>
+        <li class="border-b py-4 {{if .group_plus.discount}}font-bold{{end}}">1x {{if .group_plus.discount}}<span class="line-through">30</span> 60{{else}}30{{end}} minute call with me</li>
         <li class="border-b py-4">Library of starter projects</li>
         <li class="border-b py-4">Templates (private github repo)</li>
         <li class="border-b py-4">Tip ebook</li>
@@ -74,17 +74,17 @@
     <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
       <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
         {{ if .group_plus.discount }}
-          <span class="text-base line-through text-red-lighter">$999</span>
+          <span class="text-base line-through text-red-200">$999</span>
         {{end }}
           <span class="">${{ .group_plus.price | default 999}}</span>
       </div>
       <div class="flex items-center justify-center">
-        <a class="mx-auto lg:mx-0 hover:underline gradient font-bold rounded-full my-6 py-4 px-8 shadow-lg {{if .group_plus.closed }}bg-grey-light text-grey-dark no-underline hover:no-underline {{end}}" href="{{if .group_plus.closed}}javascript:;{{else}}{{.url}}{{end}}" target="_blank">{{.group_plus.text}}</a>
+        <a class="mx-auto lg:mx-0 hover:underline gradient font-bold rounded-full my-6 py-4 px-4 shadow-lg {{if .group_plus.closed }}bg-gray-400 text-gray-500 no-underline hover:no-underline {{end}}" href="{{if .group_plus.closed}}javascript:;{{else}}{{.url}}{{end}}" target="_blank">{{.group_plus.text}}</a>
       </div>
     </div>
   </div>
   {{end}}
-  <div class="absolute w-32 pin-t -mt-8 -mr-6 pin-r z-10 text-orange">
+  <div class="absolute w-32 top-0 right-0 -mt-8 -mr-6 pin-r z-10 text-orange">
 		{{ partial "money-back" . }}
   </div>
 </div>
