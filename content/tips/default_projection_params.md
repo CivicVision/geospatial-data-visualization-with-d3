@@ -1,7 +1,7 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = ["tips"]
-keywords = ["d3", "map", "projection"]
+keywords = ["d3", "map", "projection", "tip"]
 codeexample = ""
 date = "2019-12-09T02:00:00+00:00"
 description = "What are the default projection params in d3.js"
@@ -11,11 +11,10 @@ images = []
 include_js = []
 layout = "single"
 section = "d3"
-title = "Default Projection Params"
-
+title = "Default Projection Paramameters"
 +++
 
-# Default Projection Params
+# Default Projection Parameters
 
 Have you ever wondered why your map was not centred to your coordinates?
 
@@ -32,7 +31,7 @@ projections.translate()
 // translate = [480,250]
 
 projections.scale()
-// translate = 175.295
+// scale = 175.295
 {{</ highlight >}}
 
 The parameters are different for each projection.

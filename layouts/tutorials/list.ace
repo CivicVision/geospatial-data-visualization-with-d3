@@ -1,7 +1,7 @@
 = content header
   {{ partial "subnav" . }}
 = content main
-  .xl:px-12.w-full.max-w-4xl.mx-auto.lg:ml-0.lg:mr-auto.xl:mx-0.mt-16
+  #list.xl:px-12.w-full.max-w-4xl.mx-auto.lg:ml-0.lg:mr-auto.xl:mx-0.mt-16
     {{.Content}}
 
     .mb-8

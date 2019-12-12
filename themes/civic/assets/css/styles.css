@@ -13,6 +13,11 @@ html, body {
   @apply list-disc pl-4
 }
 
+#list h1 {
+  @apply my-4 text-4xl font-normal mt-8;
+  font-family: 'Heebo', sans-serif;
+}
+
 .list-none {
   list-style: none;
 }
