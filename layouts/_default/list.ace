@@ -1,0 +1,12 @@
+= content header
+  {{ partial "subnav" . }}
+= content main
+  #list.xl:px-12.w-full.max-w-4xl.mx-auto.lg:ml-0.lg:mr-auto.xl:mx-0.mt-16
+    {{.Content}}
+    ul
+      {{ range .Pages }}
+        li.mb-3.lg:mb-1
+          a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+          p.text-gray-500.font-light {{.Page.Description}}
+      {{ end }}
+    .rm-after-resource-article

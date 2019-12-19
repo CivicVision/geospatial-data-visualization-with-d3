@@ -1,6 +1,6 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
-categories = ["resource"]
+categories = ["resource", "tutorial", "advanced"]
 keywords = ["d3", "map", "update"]
 codeexample = ""
 date = "2019-09-03T02:00:00+00:00"

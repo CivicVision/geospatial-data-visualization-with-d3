@@ -1,13 +1,16 @@
 +++
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
-categories = ["resource"]
+categories = ["resource", "tutorial", "basic"]
+tags = ["beginner", "basic", "svg"]
 keywords = ["d3", "map", "svg", "groups", "path"]
 section = "d3"
 description = "Three basic elements of SVG you should know if you want to create maps with d3. "
 images = ["https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/marketing/website/SVG-basics.png"]
 layout = ""
 title = "SVG Basics for d3"
-
+aliases = [
+    "/resources/d3/svg-basics/"
+]
 +++
 # SVG Basics for d3
 

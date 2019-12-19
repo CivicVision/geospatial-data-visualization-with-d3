@@ -1,12 +1,13 @@
 ---
 layout: landingpage
+no_sidebar: true
 title: Geospatial Data Visualization with d3
 description: This online video course on creating maps with d3.js helps you learn
   the geospatial concepts of d3 and how to create geospatial data visualizations with
   javascript. The course is taught by Mila Frerichs who is a geospatial data visualization
   consultant. The course is modeled from successful hands-on workshops at geospatial
   conferences over the last 4 years.
-body_classes: font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black
+body_classes: landingpage font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-gray-700
 price:
   url: "https://gum.co/mappingwithd3/"
   base:
@@ -25,13 +26,13 @@ form:
     <p>Want to learn how to create <span class="lg:hidden">this map?</span><span class="hidden lg:inline">the map to the left? </span></p>
     <p><a href="#buy">Buy the course now!</a></p>
   classes:
-    button: text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold
-      hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6
+    button: text-xl text-white focus:outline-0 w-full bg-civic block py-3 font-bold
+      hover:bg-gray-700 focus:bg-gray-700 tracking-wide px-6
     form: mt-4 w-full
     fields: ''
     error: text-red-darker mb-4
-    input: block border border-transparent focus:border-grey-light rounded transition
-      w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-4 flex-grow
+    input: block border border-transparent focus:border-gray-300 rounded transition
+      w-full focus:outline-0 bg-gray-200 py-3 px-6 mb-4 flex-grow text-gray-900
     after_button: text-base mt-4 text-center
   data:
     options:
@@ -60,12 +61,12 @@ waiting_list_form:
   after_button: Join 200 other people waiting for this course!
   classes:
     button: text-xl text-white focus:outline-0 w-full bg-blue-darker block py-3 font-bold
-      hover:bg-grey-darkest focus:bg-grey-light tracking-wide px-6
+      hover:bg-grey-darkest focus:bg-gray-300 tracking-wide px-6
     form: mt-4 w-full
     fields: ''
     error: text-red-darker mb-4
-    input: block border border-transparent focus:border-grey-light rounded transition
-      w-full focus:outline-0 bg-grey-lighter py-3 px-6 mb-4 flex-grow
+    input: block border border-transparent focus:border-gray-300 rounded transition
+      w-full focus:outline-0 bg-gray-200 py-3 px-6 mb-4 flex-grow
     after_button: text-base mt-4 text-center
   data:
     options:
@@ -93,7 +94,7 @@ waiting_list_form:
   {{< headline-h1 >}}
     Learn how to create great-looking, interactive maps with d3.
   {{</ headline-h1 >}}
-  {{< headline-h2 class="font-light text-grey-darkest w-2/3 m-auto leading-tight" >}}
+  {{< headline-h2 class="font-light text-gray-700 w-2/3 m-auto leading-tight" >}}
     A comprehensive video course to create geospatial data visualizations with javascript and d3.
   {{</ headline-h2 >}}
 {{</ header>}}
@@ -153,14 +154,14 @@ Get the first __six-part lesson for free__ on creating a simple map.
   {{< quote >}}
     "After looking at a few d3.js demos, I had thought that the above task would be trivially easy with d3.js, but in fact I have found it to be insanely difficult."
   {{</ quote >}}
-  <h3>Undocumented example code makes it harder to learn</h3>
+  <h3 class="my-2 text-xl font-bold">Undocumented example code makes it harder to learn</h3>
   {{< paragraph >}}
   A lot of examples don't have of comments or explanations. Which makes it hard to understand what is being done.
   {{</ paragraph >}}
   {{< quote >}}
   "Without comments and explanations of what is happening along the way, it’s very hard for someone starting out to figure out what’s going on."
   {{</ quote >}}
-  <h3>Potentially bad code is hard to fix</h3>
+  <h3 class="my-2 text-xl font-bold">Potentially bad code is hard to fix</h3>
   {{< paragraph >}}
   Everyone can create examples with d3, and it's hard to know the experience level of the creator.  
   Examples may have bad or repetitive code. 
@@ -169,7 +170,7 @@ Get the first __six-part lesson for free__ on creating a simple map.
   {{< quote >}}
   "There’s the problem of blocks that are written with bad code, or don’t include the necessary data files or libraries."
   {{</ quote >}}
-  <h3>Old examples lead to more frustration</h3>
+  <h3 class="my-2 text-xl font-bold">Old examples lead to more frustration</h3>
   {{< paragraph >}}
   Thanks to the introduction of [observable](https://observablehq.com) more examples are created with the current version of d3. But on [bl.ocks](https://bl.ocks.org) a majority of examples are still created with v3 which was replaced in 2016 with v4.
   {{</ paragraph >}}
@@ -185,7 +186,7 @@ Get the first __six-part lesson for free__ on creating a simple map.
   "I’ve gone through some tutorials but I find that they only scratch the surface and are often fragmented — learning the code for building a scale doesn’t mean anything to me without the accompanying chart."
   {{</ quote >}}
 {{</ section-text >}}
-{{< section class="bg-grey-lighter p-4">}}
+{{< section class="bg-gray-200 p-4">}}
   {{< testimonial name="Chris Marx" image="https://pbs.twimg.com/profile_images/897656134118645760/WVanjgdR_400x400.jpg" >}}
   Inspired by the amazing [@milafrerichs](https://twitter.com/milafrerichs) #D3 workshop at #foss4gna, I was able to create an interactive globe map of my twitter friends. 
   {{</ testimonial >}}
@@ -194,26 +195,26 @@ Get the first __six-part lesson for free__ on creating a simple map.
   {{< paragraph >}}
   __Geospatial Data Visualization with d3__ will help you take a more focussed approach for learning d3. 
   {{</ paragraph >}}
-  <h3>Retain more by learning with projects</h3>
+  <h3 class="my-2 text-xl font-bold">Retain more by learning with projects</h3>
   {{< paragraph >}}
   Project-based learning is believed to result in more in-depth knowledge through active exploration of real-world challenges and problems.
   {{</ paragraph >}}
   {{< quote >}}
   "[Project-based learning] encourages higher order critical thinking and de-emphasizes memorization. Increases motivation to learn in order to arrive at a solution. "
   {{</ quote >}}
-  <h3>Self-check your learning</h3>
+  <h3 class="my-2 text-xl font-bold">Self-check your learning</h3>
   {{< paragraph >}}
   Check what you learn after each section with exercises.
   {{</ paragraph >}}
-  <h3>Stay on top of your learning path</h3>
+  <h3 class="my-2 text-xl font-bold">Stay on top of your learning path</h3>
   {{< paragraph >}}
   Weekly accountability emails will help you stay on top of your learning experience and keep you motivated.
   {{</ paragraph >}}
-  <h3>Get help from peers</h3>
+  <h3 class="my-2 text-xl font-bold">Get help from peers</h3>
   {{< paragraph >}}
   You will learn with a group of 5 poeple and will be able help each other. You will get access to a forum and we will have byweekly group video calls.
   {{</ paragraph >}}
-  <h3>Modeled from successful hands-on workshops</h3>
+  <h3 class="my-2 text-xl font-bold">Modeled from successful hands-on workshops</h3>
   {{< paragraph >}}
   This course is modeled from hands-on workshops at geospatial conferences I gave over the last three years. 
   {{</ paragraph >}}
@@ -230,7 +231,7 @@ Get the first __six-part lesson for free__ on creating a simple map.
   - FOSS4G 2017
   {{</ paragraph >}}
 {{</ text >}}
-{{< section class="bg-grey-lighter p-4">}}
+{{< section class="bg-gray-200 p-4">}}
   {{< testimonial name="Joshua Campbell" image="https://pbs.twimg.com/profile_images/378800000251107460/67e423b6232246a70706cc27683bf665_400x400.jpeg" >}}
   If you’ve ever wanted to make maps and visualizations in d3, check out [@milafrerichs](https://twitter.com/milafrerichs) new online course. I’ve taken his workshop @foss4gna and was impressed.
  {{</ testimonial >}}
@@ -238,10 +239,10 @@ Get the first __six-part lesson for free__ on creating a simple map.
 {{< text "What's included!">}}
 This course will guide you through the most important aspects of creating maps with d3 and lead you towards more advanced topics. 
 {{</ text >}}
-{{< section class="p-4 m-auto max-w-2xl bg-grey-lighter shadow-md">}}
+{{< section class="p-4 m-auto max-w-5xl bg-gray-200 shadow-md">}}
   {{< course-content >}}
 {{</ section >}}
-{{< section class="p-4 m-auto max-w-2xl">}}
+{{< section class="p-4 m-auto max-w-5xl">}}
 {{< headline >}}
 About the instructor
 {{</ headline >}}
@@ -258,7 +259,7 @@ About the instructor
   </div>
 </div>
 {{</ section >}}
-{{< section class="p-4 m-auto max-w-2xl">}}
+{{< section class="p-4 m-auto max-w-5xl">}}
   <a name="buy"></a>
   {{< headline >}}
   Plans

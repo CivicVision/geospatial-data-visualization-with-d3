@@ -1,6 +1,7 @@
 +++
-body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
-categories = ["resource"]
+body_classes = "font-light font-sans content post text-base md:text-lg leading-relaxed"
+categories = ["resource", "tutorial", "deep_dive"]
+tutorials = ["deep-dives"]
 codeexample = ""
 date = "2019-09-13T06:00:00+00:00"
 description = "A short introduction into the the d attribute of path elements"
@@ -13,7 +14,9 @@ layout = "single"
 section = "d3"
 title = "D Attribute"
 tweet = ""
-
+aliases = [
+    "/resources/d3/d-attribute/"
+]
 +++
 # d attribute in path
 

@@ -1,8 +1,8 @@
-.max-w-2xl.mx-auto.mt-8.text-center.px-4.text-2xl class="lg:px-0 {{ .Get "class" }}"
-  p.max-w-lg.mb-8.mx-auto.text-left.text-lg
+.max-w-5xl.mx-auto.mt-8.text-center.px-4.text-2xl class="lg:px-0 {{ .Get "class" }}"
+  p.max-w-3xl.mb-8.mx-auto.text-left.text-lg
     {{ .Inner | markdownify }}
   {{ if .Get "image" }}
-    img.rounded-full.max-w-testimonial.mb-8 src="{{ .Get "image" }}" alt="{{ .Get "name" }}"
+    img.inline.rounded-full.max-w-testimonial.mb-8 src="{{ .Get "image" }}" alt="{{ .Get "name" }}"
   {{ end }}
   {{ if .Get "name"}}
     h3.font-bold.text-blue-lighter.text-lg.mb-2 {{.Get "name" }}

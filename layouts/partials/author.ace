@@ -1,0 +1,5 @@
+{{ $author := .Page.Params.author | default "mila" }}
+{{ with (index $.Site.Data.authors $author) }}
+  .text-sm.italic Written by&nbsp;
+    a href="{{.url}}" {{.name }}
+{{end}}

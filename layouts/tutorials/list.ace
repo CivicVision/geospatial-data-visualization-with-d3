@@ -1,0 +1,32 @@
+= content header
+  {{ partial "subnav" . }}
+= content main
+  #list.xl:px-12.w-full.max-w-4xl.mx-auto.lg:ml-0.lg:mr-auto.xl:mx-0.mt-16
+    {{.Content}}
+
+    .mb-8
+      h2 
+        a.block.mb-3.lg:mb-2.text-gray-700.tracking-wide.font-bold.text-xl.lg:text-2xl Basics
+        p Basics include introductions to SVG, HTML, Javascript and basic d3.
+        ul
+          {{ range .Site.Taxonomies.categories.basic }}
+            li.mb-3.lg:mb-1
+              a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+          {{ end }}
+    .mb-8
+      h2 
+        a.block.mb-3.lg:mb-2.text-gray-700.tracking-wide.font-bold.text-xl.lg:text-2xl Advanced
+        ul
+          {{ range .Site.Taxonomies.categories.advanced }}
+            li.mb-3.lg:mb-1
+              a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+          {{ end }}
+    .mb-8
+      h2 
+        a.block.mb-3.lg:mb-2.text-gray-700.tracking-wide.font-bold.text-xl.lg:text-2xl Deep Dives
+        ul
+          {{ range .Site.Taxonomies.categories.deep_dive }}
+            li.mb-3.lg:mb-1
+              a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+          {{ end }}
+    .rm-after-resource-article
