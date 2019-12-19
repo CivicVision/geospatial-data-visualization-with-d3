@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>resource on Geospatial Data Visualization with d3</title>
+    <link>https://mappingwithd3.com/categories/resource/</link>
+    <description>Recent content in resource on Geospatial Data Visualization with d3</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 06:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mappingwithd3.com/categories/resource/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>D Attribute</title>
+      <link>https://mappingwithd3.com/tutorials/deep-dives/d-attribute/</link>
+      <pubDate>Fri, 13 Sep 2019 06:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tutorials/deep-dives/d-attribute/</guid>
+      <description>d attribute in path The infamous d attribute in a path element for SVG is a handful. Or at least at first. Especially for mapping.
+Let‘s look at a d attribute for a geojson feature:
+const feature = { &amp;#34;type&amp;#34;: &amp;#34;Feature&amp;#34;, &amp;#34;geometry&amp;#34;: { &amp;#34;type&amp;#34;: &amp;#34;Polygon&amp;#34;, &amp;#34;coordinates&amp;#34;: [ [ [ 13.31, 52.79 ], [ 13.35, 52.79 ], [ 13.35, 52.80 ], [ 13.31, 52.80 ], [ 13.31, 52.79 ]]] } };  M2.</description>
+    </item>
+    
+    <item>
+      <title>Updating your chart in d3.js</title>
+      <link>https://mappingwithd3.com/tutorials/advanced/updating-your-chart/</link>
+      <pubDate>Tue, 03 Sep 2019 02:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tutorials/advanced/updating-your-chart/</guid>
+      <description>Updating your chart Updating your d3 chart used to be a bit confusing for most people.
+The data pattern takes some time to understand properly and when I teach d3 courses people always got trip up on it.
+But d3 version 5 just made it a whole lot easier to use and understand.
+There is a new method: join And with it we don&amp;rsquo;t need to use enter and exit directly anymore.</description>
+    </item>
+    
+    <item>
+      <title>Projections</title>
+      <link>https://mappingwithd3.com/tutorials/basics/projections/</link>
+      <pubDate>Mon, 02 Sep 2019 23:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tutorials/basics/projections/</guid>
+      <description>Projections Let&amp;rsquo;s talk about projections!
+We need projections to create an actual map.
+Geospatial data is usally in the form of latitude and longitude but in the browser we don&amp;rsquo;t have these concepts.
+We only have x and y coordinates.
+ Goal: Our goal is to transform geo-coordinates to screen-coordinates.
+ Projections are just math. And what they do is transform latitude and longitude coordinates to x and y coordinates on a flat surface (e.</description>
+    </item>
+    
+    <item>
+      <title>How to create a simple tooltip in d3.js</title>
+      <link>https://mappingwithd3.com/tutorials/basics/tooltip/</link>
+      <pubDate>Sun, 01 Sep 2019 22:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tutorials/basics/tooltip/</guid>
+      <description>How to create a simple tooltip in d3   A common question I see on stackoverflow a lot is around Tooltips.
+There are a bunch of examples out there but people sometimes confuse their intention.
+So I thought I create a short post about Tooltips for d3.
+Goal of a tooltip The goal of the tooltip is to show information on things when you hover over them.
+And in our specific case we want the tooltip to follow the mouse.</description>
+    </item>
+    
+    <item>
+      <title>Comparison of Mapbox GL JS and D3.js</title>
+      <link>https://mappingwithd3.com/mapbox-d3/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/mapbox-d3/</guid>
+      <description>Comparison of Mapbox GL JS vs D3.js    Mapbox map   D3 map   When you want to create an online-map from your data you have a ton of options available.
+When I teach d3 or talk to people what tools they&amp;rsquo;re using the questions that comes up a lot is: &amp;ldquo;How do d3 and mapboxGL compare?&amp;rdquo;.
+That is the question that I want to answer on this site.</description>
+    </item>
+    
+    <item>
+      <title>SVG Basics for d3</title>
+      <link>https://mappingwithd3.com/tutorials/basics/svg-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tutorials/basics/svg-basics/</guid>
+      <description>SVG Basics for d3 When you start learning or using d3 you will come across SVGs. That‘s what most people use when they create a visualization with d3. And it‘s the easier choice and the more documented one. So you need to understand a few basic concepts of SVG to make better use of d3 and learn faster.
+In this short post I will show you three elements of SVG that are worth knowing.</description>
+    </item>
+    
+  </channel>
+</rss>

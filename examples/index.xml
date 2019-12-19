@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Examples on Geospatial Data Visualization with d3</title>
+    <link>https://mappingwithd3.com/examples/</link>
+    <description>Recent content in Examples on Geospatial Data Visualization with d3</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Sep 2019 02:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mappingwithd3.com/examples/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple GeoJSON Map Example</title>
+      <link>https://mappingwithd3.com/examples/simple-geojson-map/</link>
+      <pubDate>Wed, 04 Sep 2019 02:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/examples/simple-geojson-map/</guid>
+      <description>Simple GeoJSON map function loadExample() { const replCode = &#39;var url = \x22https:\/\/gist.githubusercontent.com\/milafrerichs\/78ef5702db2dc514fc2bed465d58406b\/raw\/f1366ee2a83a9afb1dd2427e9cbd4cd3db8d87ca\/bundeslaender_simplify200.geojson\x22;\nd3.json(url).then(function(bb) {\n var bbox = d3.select(\x27body\x27).node().getBoundingClientRect()\n var width = window.innerWidth;\n var height = window.innerHeight;\n var projection = d3.geoEqualEarth();\n projection.fitExtent([[20, 20], [width, height]], bb);\n var geoGenerator = d3.geoPath().projection(projection);\n var svg = d3.select(\x22body\x22).append(\x27svg\x27)\n .style(\x22width\x22, \x22100%\x22)\n .style(\x22height\x22, \x22100%\x22);\n svg.append(\x27g\x27).selectAll(\x27path\x27)\n .data(bb.features)\n .enter()\n .append(\x27path\x27)\n .attr(\x27d\x27, geoGenerator)\n .attr(\x27fill\x27, \x27#088\x27)\n .attr(\x27stroke\x27, \x27#000\x27);\n});&#39;; new JavascriptRepl({ target: document.querySelector(&#39;#code-example&#39;), props: { files: [{name: &#39;index.js&#39;, content: replCode, type: &#39;js&#39; }], layout: &#39;minimal&#39; } }); } function makeDoubleDelegate(function1, function2) { return function() { if (function1) function1(); if (function2) function2(); } } window.</description>
+    </item>
+    
+  </channel>
+</rss>

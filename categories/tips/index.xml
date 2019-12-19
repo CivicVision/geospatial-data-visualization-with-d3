@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tips on Geospatial Data Visualization with d3</title>
+    <link>https://mappingwithd3.com/categories/tips/</link>
+    <description>Recent content in tips on Geospatial Data Visualization with d3</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Dec 2019 02:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mappingwithd3.com/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bubble Map Radius</title>
+      <link>https://mappingwithd3.com/tips/bubblemap_radius/</link>
+      <pubDate>Mon, 09 Dec 2019 02:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tips/bubblemap_radius/</guid>
+      <description>Bubble Map Radius Tip for d3.js If you create bubble maps in d3.js and you use a circle SVG element be sure to use the right scale for your radius.
+Since we can only change the radius of a circle we need to use the squareroot scale to scale the area rather than the radius. var sqrtScale = d3.scaleSqrt() .domain([0, 100]) .range([0, 20]); 
+Read more about the specifics on Robert Kosara&amp;rsquo;s blog</description>
+    </item>
+    
+    <item>
+      <title>d3 events tips</title>
+      <link>https://mappingwithd3.com/tips/event_this/</link>
+      <pubDate>Mon, 09 Dec 2019 02:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tips/event_this/</guid>
+      <description> d3 Events select current element If you need to select the current element in d3 on a mouseover for example. D3 makes it very easy. Just use d3.select(this)
+d3.select(&amp;#39;circle&amp;#39;) .on(&amp;#39;mouseover&amp;#39;, () =&amp;gt; d3.select(this))  </description>
+    </item>
+    
+    <item>
+      <title>Default Projection Paramameters</title>
+      <link>https://mappingwithd3.com/tips/default_projection_params/</link>
+      <pubDate>Mon, 09 Dec 2019 02:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tips/default_projection_params/</guid>
+      <description>Default Projection Parameters Have you ever wondered why your map was not centred to your coordinates?
+The reason might be that you&amp;rsquo;re not setting scale and translate and they use the defaults.
+// for example for naturalEarth var projection = d3.geoNaturalEarth1(); projection.center() // center = [0,0]  projections.translate() // translate = [480,250]  projections.scale() // scale = 175.295  The parameters are different for each projection.</description>
+    </item>
+    
+    <item>
+      <title>Promises error</title>
+      <link>https://mappingwithd3.com/tips/async_tip/</link>
+      <pubDate>Mon, 09 Dec 2019 02:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tips/async_tip/</guid>
+      <description> Struggling to use the new Promise way of d3v5? Have you seen this error: await is only valid in async function
+That means that you need to wrap your d3 code inside a function:
+async function map() { const data = await d3.json(&amp;#39;your.geojson&amp;#39;); } map();  </description>
+    </item>
+    
+    <item>
+      <title>shorthand functions</title>
+      <link>https://mappingwithd3.com/tips/shorthand_functions/</link>
+      <pubDate>Mon, 09 Dec 2019 02:00:00 +0000</pubDate>
+      
+      <guid>https://mappingwithd3.com/tips/shorthand_functions/</guid>
+      <description> Shorthand functions Did you know that you can use a shorthand version for your d3 functions?
+When the function you are using expects the same input parameters you can just use the function name instead of creating your own unnamed function.
+//instead of .attr(&amp;#39;d&amp;#39;, function(d) { return geoGenerator(d); }) //use .attr(&amp;#39;d&amp;#39;, geoGenerator)  </description>
+    </item>
+    
+  </channel>
+</rss>
