@@ -52,7 +52,7 @@ build:
   publish_command: hugo -d public
   publish_env:
   - HUGO_ENV=production
-  - HUGO_VERSION=0.54.0
+  - HUGO_VERSION=0.58.3
   - SEGMENT_KEY=TQtxpBDBl25APWnGP3NiJSGmH7uSHzZk
   - RIGHTMESSAGE_KEY=1998050406
   - AIRTABLE_KEY=key500bQxvE9YGdYt
