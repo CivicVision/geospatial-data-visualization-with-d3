@@ -5,10 +5,6 @@ html, body {
   font-family: 'Heebo', 'Lato', sans-serif;
 }
 
-.landingpage a {
-  @apply text-gray-600 underline;
-}
-
 .mk ul {
   @apply list-disc pl-4
 }
