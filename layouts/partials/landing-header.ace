@@ -1,5 +1,5 @@
 .w-full.max-w-screen-xl.mx-auto.px-6
-  .lg:mt-16.relative.flex.flex-wrap.items-start
+  .lg:mt-16.relative.flex.flex-wrap.items-start.mt-6
     .w-full.lg:mt-24 class="lg:w-1/2" 
       h1.text-4xl.leading-tight.font-light
         | Create beautiful and interactive
@@ -21,12 +21,12 @@
         {{ highlight $file.content "js" "linenos=inline" }}
 .w-full.bg-civic.p-4
   .w-full.max-w-screen-xl.mx-auto.px-6
-    .flex.items-stretch
+    .flex.flex-wrap 
       .w-full.lg:w-1/2
-        .p-4.bg-white.mr-6
+        .p-4.bg-white.lg:mr-6
           .rm-main-offer-left
             {{ partial "form" .Page.Params.form }}
-      .w-full.lg:w-1/2
+      .w-full.lg:w-1/2.mt-6.lg:mt-0
         .p-4.bg-white
           .rm-main-offer-right
             h3.uppercase.tracking-wide.text-sm.text-indigo-600.font-bold Online Course
