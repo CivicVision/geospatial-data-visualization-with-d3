@@ -1,6 +1,4 @@
 ---
-layout: landingpage
-no_sidebar: true
 title: Geospatial Data Visualization with d3
 description: This online video course on creating maps with d3.js helps you learn
   the geospatial concepts of d3 and how to create geospatial data visualizations with
@@ -11,10 +9,9 @@ body_classes: landingpage font-light font-sans leading-normal text-xs sm:text-ba
 form:
   id: "1028115"
   uid: ecf915d632
-  subscribe_text: Send me the free lesson!
+  subscribe_text: Get weekly updates!
   after_button: |
-    <p>Want to learn how to create <span class="lg:hidden">this map?</span><span class="hidden lg:inline">the map to the left? </span></p>
-    <p><a href="#buy">Buy the course now!</a></p>
+    <p>Get weekly updates about new examples, tutorials and more!</p>
   classes:
     button: text-xl text-white focus:outline-0 w-full bg-civic block py-3 font-bold
       hover:bg-gray-700 focus:bg-gray-700 tracking-wide px-6
@@ -80,37 +77,9 @@ waiting_list_form:
     placeholder: Your email address
 
 ---
-<div class="lg:mt-16 relative flex flex-wrap items-start">
-  <div class="w-full lg:w-1/2 lg:mt-24">
-    <h1 class="text-4xl leading-tight font-light">Create beautiful and interactive <br/><span class="font-bold">maps</span> with <span class="font-bold">d3.js</span></h1>
-    <p class="mt-6 leading-relaxed sm:text-lg md:text-xl xl:text-lg text-gray-600">
-      You know d3.js for it's power and flexibility creating interactive charts. <br/>But d3.js is also great for creating interactive maps.
-    </p>
-    <div class="flex mt-6 justify-start md:justify-center xl:justify-start">
-      <a href="/tutorials" class="rounded-lg px-4 md:px-5 xl:px-4 py-3 md:py-4 xl:py-3 bg-civic hover:bg-orange md:text-lg xl:text-base text-white font-semibold leading-tight shadow-md text-white">Get started!</a>
-    </div>
+<div class="w-full max-w-screen-xl mx-auto px-6">
+  <div id="sidebar" class="hidden fixed inset-0 h-full pt-24 bg-gray-100 z-90 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:bg-transparent lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5">
   </div>
-  <div class="w-full lg:w-1/2 lg:mt-24">
-    <div class="text-white w-full mt-4 rounded text-sm">
-{{< highlight js "linenos=inline" >}}
-d3.json('data.geojson').then(function(bb) {
-  let width = 200, height = 200;
-  let projection = d3.geoEqualEarth();
-  projection.fitSize([width, height], bb);
-  let geoGenerator = d3.geoPath()
-  .projection(projection);
-
-  let svg = d3.select("body").append('svg')
-  .style("width", width).style("height", height);
-
-  svg.append('g').selectAll('path')
-  .data(bb.features)
-  .join('path')
-  .attr('d', geoGenerator)
-  .attr('fill', '#088')
-  .attr('stroke', '#000');
-});
-{{</ highlight >}}
-    </div>
+  <div id="content-wrapper" class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4 xl:w-4/5 ">
   </div>
 </div>
