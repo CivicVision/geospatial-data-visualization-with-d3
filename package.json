@@ -14,7 +14,7 @@
   "author": "Mila Frerichs <mila.frerichs@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "javascript-repl": "^0.4.3",
+    "javascript-repl": "^0.6.1",
     "tailwind-heropatterns": "0.0.7"
   }
 }
