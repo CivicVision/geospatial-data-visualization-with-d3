@@ -11,6 +11,11 @@
         | You know d3.js for it's power and flexibility creating interactive charts.
         br
         | But d3.js is also great for creating interactive maps.
+        br
+        | The code
+        span.hidden.lg:inline &nbsp;on the right&nbsp;
+        span.inline.lg:hidden &nbsp;below&nbsp;
+        span is all you need to get started creating a simple map with d3.js. Not that complicated, right?
       .flex.mt-6.justify-start.md:justify-center.xl:justify-start
         a.rounded-lg.px-4.md:px-5.xl:px-4.py-3.md:py-4.xl:py-3.bg-civic.hover:bg-orange.md:text-lg.xl:text-base.text-white.font-semibold.leading-tight.shadow-md.text-white href="/tutorials"  Get started!
     .w-full.lg:mt-24 class="lg:w-1/2" 
