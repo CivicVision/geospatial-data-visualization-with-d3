@@ -32,10 +32,10 @@
           .rm-main-offer-left
             {{ partial "form" .Page.Params.form }}
       .w-full.lg:w-1/2.mt-6.lg:mt-0
-        .p-4.bg-white
+        .p-4.bg-white.h-full
           .rm-main-offer-right
             h3.uppercase.tracking-wide.text-sm.text-indigo-600.font-bold Online Course
             a.block.mt-1.text-lg.leading-tight.font-semibold.text-gray-900.hover:underline Learn with exercises not examples
             p.mt-2.text-gray-600 In my online video course you'll learn how to create maps with d3.js with exercises and in-depth videos.
-            .flex.mt-8.mb-16.justify-start.md:justify-center.xl:justify-start
+            .flex.mt-8.justify-start.md:justify-center.xl:justify-start
               a.rounded-lg.px-4.md:px-5.xl:px-4.py-3.md:py-4.xl:py-3.bg-civic.hover:bg-orange.md:text-lg.xl:text-base.text-white.font-semibold.leading-tight.shadow-md.text-white href="/tutorials"  Learn more
