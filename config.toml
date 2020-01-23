@@ -1,6 +1,6 @@
 baseURL = "https://mappingwithd3.com/"
 languageCode = "en-us"
-title = "Geospatial Data Visualization with d3"
+title = "Mapping with d3.js"
 theme = "civic"
 enableRobotsTXT = true
 
@@ -15,7 +15,7 @@ weight = 200
 name  = "tags"
 weight = 100
 [params]
-  body_classes = "font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-black"
+  body_classes = "font-light font-sans leading-normal text-lg md:text-xl text-black"
   rightmessage = "1998050406"
   description = "This online video course on creating maps with d3.js helps you learn the geospatial concepts of d3 and how to create geospatial data visualizations with javascript. The course is taught by Mila Frerichs who is a geospatial data visualization consultant. The course is modeled from successful hands-on workshops at geospatial conferences over the last 4 years. "
   images = ["https://res.cloudinary.com/civicvision/image/upload/v1572533954/geospatial-d3/marketing/website/Mapping_with_d3-3.png"]

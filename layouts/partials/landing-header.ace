@@ -1,3 +1,5 @@
+.flex.fixed.top-0.inset-x-0.z-50.h-16.items-center.flex-row-reverse
+  {{ partial "hamburger" . }}
 .w-full.max-w-screen-xl.mx-auto.px-6
   .lg:mt-16.relative.flex.flex-wrap.items-start.mt-6
     .w-full.lg:mt-24 class="lg:w-1/2" 

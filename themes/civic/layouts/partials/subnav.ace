@@ -1,5 +1,5 @@
-.w-full.bg-civic.p-6.bg-hero-topography-blue-lighter-10
+#menu-header.w-full.bg-civic.p-6.bg-hero-topography-blue-lighter-10.z-50
   .container.m-auto.max-w-screen-xl.flex.justify-between class="md:flex-row"
     a.no-underline.text-white.font-medium.tracking-tight href="{{ .Site.BaseURL }}" {{ .Site.Title }}
-    .flex
-      a.no-underline.text-white.font-medium.tracking-tight href="{{ .Site.BaseURL }}/resources" Resources
+    .block.md:hidden
+      {{ partial "hamburger" . }}
