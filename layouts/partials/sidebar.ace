@@ -3,13 +3,7 @@ nav.px-6.pt-6.overflow-y-auto.text-base.lg:text-sm.lg:py-12.lg:pl-6.lg:pr-8
     .mb-10
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-        a.flex.items-center.px-2.-mx-2.py-1.hover:text-gray-900.font-medium class="{{ if $currentPage.IsMenuCurrent "main" . }}text-gray-900{{else}}text-gray-600{{end}}" href="{{.URL}}" {{.Name}}
-        {{ if .HasChildren }}
-          .ml-4
-            {{ range .Children }}
-              a.block.mt-4.md:mt-0.text-grey-darker.hover:text-grey-dark.mr-4 class="{{ if $currentPage.IsMenuCurrent "main" . }}underline{{else}}no-underline{{end}}" href="{{.URL}}" {{.Name}}
-            {{ end }}
-        {{ end }}
+        a.flex.items-center.px-2.-mx-2.py-1.mt-3.lg:mt-1.hover:text-gray-900.font-medium class="{{ if $currentPage.IsMenuCurrent "main" . }}text-gray-900{{else}}text-gray-600{{end}}" href="{{.URL}}" {{.Name}}
       {{ end }}
   {{ if in .Params.categories "tutorial" }}
   {{ partial "tutorials" . }}
