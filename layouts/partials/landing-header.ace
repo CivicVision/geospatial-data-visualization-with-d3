@@ -40,4 +40,4 @@
             a.block.mt-1.text-lg.leading-tight.font-semibold.text-gray-900.hover:underline Learn with exercises not examples
             p.mt-2.text-gray-600 In my online video course you'll learn how to create maps with d3.js with exercises and in-depth videos.
             .flex.mt-8.justify-start.md:justify-center.xl:justify-start
-              a.rounded-lg.px-4.md:px-5.xl:px-4.py-3.md:py-4.xl:py-3.bg-civic.hover:bg-orange.md:text-lg.xl:text-base.text-white.font-semibold.leading-tight.shadow-md.text-white href="/tutorials"  Learn more
+              a.rounded-lg.px-4.md:px-5.xl:px-4.py-3.md:py-4.xl:py-3.bg-civic.hover:bg-orange.md:text-lg.xl:text-base.text-white.font-semibold.leading-tight.shadow-md.text-white href="https://course.mappingwithd3.com"  Learn more
