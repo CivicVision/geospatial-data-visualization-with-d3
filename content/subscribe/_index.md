@@ -1,6 +1,7 @@
 ---
 layout: single
 no_index: true
+hide_author: true
 ---
 {{< headline class="text-left mt-10 text-6xl">}}
 Awesome!

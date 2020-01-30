@@ -4,6 +4,14 @@ title = "Mapping with d3.js"
 theme = "civic"
 enableRobotsTXT = true
 
+[menu]
+  [[menu.main]]
+    identifier = "course"
+    name = "Video Course"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "https://course.mappingwithd3.com"
+    weight = 110
+
 [related]
 threshold = 10
 includeNewer = true

@@ -3,6 +3,7 @@ layout: single
 survey: "free-course-initial"
 no_index: true
 title: "Thank you, you're in"
+hide_author: true
 ---
 {{< headline class="text-left mt-10 text-6xl">}}
 Success!
@@ -11,10 +12,11 @@ Success!
 You made it!
 {{</ paragraph >}}
 {{< paragraph class="font-light text-xl text-grey-darkest leading-relaxed text-left">}}
-Check out the [resources](/resources) that I put together for the course.
+Check out the [tutorials](/tutorials), [tips](/tips) and [examples](/examples) on the left.
 {{</ paragraph >}}
 {{< paragraph class="font-light text-xl text-grey-darkest leading-relaxed text-left">}}
-You should receive the first email just about __now__!  
+You should receive your first email __soon__!  
+
 I got one question for you: 
 {{</ paragraph >}}
 {{< survey >}}
