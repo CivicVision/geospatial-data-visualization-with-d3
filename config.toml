@@ -4,6 +4,9 @@ title = "Mapping with d3.js"
 theme = "civic"
 enableRobotsTXT = true
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [menu]
   [[menu.main]]
     identifier = "course"

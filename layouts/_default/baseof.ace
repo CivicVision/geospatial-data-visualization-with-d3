@@ -8,7 +8,7 @@ html lang=en
       {{ if .Page.Params.no_sidebar }}
         = yield main
       {{ else }}
-        .lg:flex.md:-mx-6
+        .lg:flex.lg:-mx-6
           #menu-container.hidden.fixed.inset-0.pt-16.h-full.bg-white.z-40.w-full.border-b.-mb-16.lg:-mb-0.lg:static.lg:h-auto.lg:overflow-y-visible.lg:border-b-0.lg:pt-0.lg:w-1/4.lg:block.lg:border-0.xl:w-1/5
             .h-full.overflow-y-auto.scrolling-touch.lg:h-auto.lg:block.lg:relative.lg:sticky.lg:top-0.bg-gray-100.lg:bg-transparent.overflow-hidden
               {{ partial "sidebar.html" . }}

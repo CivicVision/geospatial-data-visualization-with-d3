@@ -127,5 +127,54 @@ header::after {
     z-index: -1;
 }
 
+div.rm-area-offer-mwd3 .rm-widget.rm-inline div.rm-title, div.rm-area-offer-mwd3 .rm-widget.rm-inline div.rm-description {
+  text-align: left !important;
+}
+div.rm-area-offer-mwd3 .rm-widget.rm-inline .rm-meat {
+  padding: 0 !important;
+}
+div.rm-area-offer-mwd3 .rm-widget.rm-inline div.rm-title {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  color: theme('colors.gray.700') !important;
+}
+div.rm-area-offer-mwd3 .rm-widget.rm-inline div.rm-title strong{
+  font-weight: 500 !important;
+}
+div.rm-area-offer-mwd3 .rm-widget.rm-inline div.rm-description {
+  font-size: 1.125rem !important;
+  line-height: 1.5 !important;
+  color: theme('colors.gray.600') !important;
+  margin-top: 1rem !important;
+  font-weight: 300 !important;
+}
+div.rm-area-offer-mwd3 .rm-inline .rm-offer-form {
+  margin-left: 0 !important;
+}
+
+div.rm-area-offer-mwd3 .rm-powered-container{
+  display: none !important;
+}
+/**
+div.rm-area-offer-mwd3 .rm-offer-form fieldset {
+  display: flex !important;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+div.rm-area-offer-mwd3 .rm-offer-form .rm-input-label {
+  width: 37% !important;
+  margin: auto !important;
+}
+div.rm-area-offer-mwd3 .rm-offer-form .rm-button {
+  width: 25% !important;
+  margin: auto !important;
+}
+**/
+div.rm-area-offer-mwd3 {
+}
+div.rm-area-offer-mwd3:empty ~ .fallback {
+  display: block;
+}
+
 @tailwind components;
 @tailwind utilities;
