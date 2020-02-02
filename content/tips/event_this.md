@@ -12,6 +12,7 @@ include_js = []
 layout = "single"
 section = "d3"
 title = "d3 events tips"
+tagId = 1287313
 
 +++
 # d3 Events select current element

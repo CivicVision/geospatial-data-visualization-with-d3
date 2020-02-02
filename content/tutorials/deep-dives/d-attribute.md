@@ -17,6 +17,7 @@ tweet = ""
 aliases = [
     "/resources/d3/d-attribute/"
 ]
+tagId = 1287306
 +++
 # d attribute in path
 

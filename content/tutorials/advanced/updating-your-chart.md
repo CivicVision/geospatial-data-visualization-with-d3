@@ -12,7 +12,7 @@ include_js = []
 layout = "single"
 section = "d3"
 title = "Updating your chart in d3.js"
-
+tagId = 1287307
 +++
 # Updating your chart
 

@@ -14,7 +14,7 @@ window.sendTags = function(subscriberId, tagId) {
   };
   fetch(url, options)
     .then(response => {
-      console.log(response.status);
+      let resp = response;
     });
 }
 window.maybeAddTags = function(post) {
