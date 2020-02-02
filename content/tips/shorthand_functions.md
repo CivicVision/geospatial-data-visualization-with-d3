@@ -13,6 +13,7 @@ layout = "single"
 section = "d3"
 title = "shorthand functions"
 tweet = "1192017035603193856"
+tagId = 1287317
 +++
 # Shorthand functions
 

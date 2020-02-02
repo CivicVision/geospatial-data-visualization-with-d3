@@ -11,6 +11,7 @@ title = "SVG Basics for d3"
 aliases = [
     "/resources/d3/svg-basics/"
 ]
+tagId = 1287310
 +++
 # SVG Basics for d3
 

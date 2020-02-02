@@ -12,6 +12,7 @@ include_js = []
 layout = "single"
 section = "d3"
 title = "Bubble Map Radius"
+tagId = 1287312
 
 +++
 # Bubble Map Radius Tip for d3.js
