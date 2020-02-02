@@ -34,7 +34,7 @@
     
 
 </head>
-
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default%2Cfetch"></script><script src="/javascript/ck.js"></script><script src="/javascript/rmExtras.js"></script>
 <script type="text/javascript"> 
   (function(p, a, n, d, o, b) {
      o = n.createElement('script'); o.type = 'text/javascript'; o.async = true; o.src = 'https://tag.rightmessage.com/'+p+'.js';
@@ -44,6 +44,29 @@
              b.parentNode.insertBefore(o, b); return o; }; o = d('', '-hidden', ''); d('-stay-invisible', '-stay-hidden', '-stay');
      setTimeout(function() { o.parentNode && o.parentNode.removeChild(o); }, a);
   })('1998050406', 2500, document);
+  window.rmExtras = {};
+  
+  var post = {
+        id: "26243486d7e36ecc0fca6fb8f7b05d28",
+        categories: [],
+        tagId: "",
+        categorySlug: "",
+        readingTime:  1 
+  };
+  
+      window.rmExtras.categories = "tips";
+      post.categories = "tips".split(";");
+      post.categorySlug = "tips";
+  
+  
+      window.readPost(post);
+      window.maybeAddTags(post);
+  
+  
+      window.rmExtras.readingTime =  1 ;
+  
+
+
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
   analytics.load('TQtxpBDBl25APWnGP3NiJSGmH7uSHzZk');
   analytics.page();
@@ -103,6 +126,5 @@
   }
 </script>
 <script src="https://unpkg.com/airtable@0.7.2/build/airtable.browser.js"></script>
-<script src="/javascript/rmExtras.js"></script>
 <script src="/javascript/survey.js"></script>
 </body></html>
