@@ -88,6 +88,8 @@ Start at &lt;code&gt;0,282&lt;/code&gt; draw a line to &lt;code&gt;400,282&lt;/c
 &lt;p&gt;This is just a shot explanation of a simple case. The path element is capable of much more. But it is sufficient enough for us to know that much. D3 offers us great helpers, so we don’t have to deal with it directly.&lt;/p&gt;
 
 &lt;p&gt;Here is a great illustrated article that goes even deeper on the &lt;a href=&#34;https://css-tricks.com/svg-path-syntax-illustrated-guide/&#34;&gt;topic&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;rm-area-end-of-content&#34;&gt;&lt;/div&gt;
 </description>
             </item>
         
@@ -146,6 +148,9 @@ You still can. It‘s just a little different:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;This looks a little crazy. But is kinda genius. The uses-cases for these animations and changes are rare, so most people will benefit greatly from this change and the others just need to learn a little bit different syntax.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;div class=&#34;rm-area-after-tutorial&#34;&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
             </item>
         
@@ -204,6 +209,9 @@ Or in other words we set the translation offset to half of the width and height 
 &lt;p&gt;With these parameters we change the &amp;ldquo;position&amp;rdquo; of the map.&lt;/p&gt;
 
 &lt;p&gt;D3 comes with a long list of projections, you will find them &lt;a href=&#34;https://github.com/d3/d3-geo/blob/master/README.md#azimuthal-projections&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;div class=&#34;rm-area-after-tutorial&#34;&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
             </item>
         
@@ -321,7 +329,7 @@ You could even do it more smoothly using &lt;code&gt;transition&lt;/code&gt;&lt;
 
 &lt;p&gt;This is the complete code and you can see the result below. Play around with it. It is interactive!&lt;/p&gt;
 
-&lt;p&gt;&lt;div id=&#34;code-example&#34; class=&#34;w-full min-h-full&#34;&gt;&lt;/div&gt;&lt;link href=&#34;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css&#34; rel=&#34;stylesheet&#34;&gt;&lt;script src=&#34;https://unpkg.com/d3@5.9.7/dist/d3.min.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://mappingwithd3.com/js/repl.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script type=&#34;text/javascript&#34;&gt;
+&lt;div id=&#34;code-example&#34; class=&#34;w-full min-h-full&#34;&gt;&lt;/div&gt;&lt;link href=&#34;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css&#34; rel=&#34;stylesheet&#34;&gt;&lt;script src=&#34;https://unpkg.com/d3@5.9.7/dist/d3.min.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script src=&#34;https://mappingwithd3.com/js/repl.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;script type=&#34;text/javascript&#34;&gt;
 function loadExample() {
   const replCode = &#39;d3.select(\x27body\x27).append(\x27div\x27).attr(\x27id\x27, \x27tooltip\x27).attr(\x27style\x27, \x27position: absolute; opacity: 0;\x27);\n d3.select(\x27body\x27).append(\x27svg\x27).attr(\x27width\x27, 300).attr(\x27height\x27, 300);\n d3.select(\x27svg\x27).selectAll(\x27circle\x27).data([\x27a\x27,\x27b\x27,\x27c\x27])\n .join(\x27circle\x27)\n .attr(\x27r\x27, 3)\n .attr(\x27cy\x27, 5)\n .attr(\x27cx\x27, (d,i) =\x3e i*15\x2b15)\n .on(\x27mouseover\x27, function(d) {\n d3.select(\x27#tooltip\x27).transition().duration(200).style(\x27opacity\x27, 1).text(d)\n })\n .on(\x27mouseout\x27, function() {\n d3.select(\x27#tooltip\x27).style(\x27opacity\x27, 0)\n })\n .on(\x27mousemove\x27, function() {\n d3.select(\x27#tooltip\x27).style(\x27left\x27, (d3.event.pageX\x2b10) \x2b \x27px\x27).style(\x27top\x27, (d3.event.pageY\x2b10) \x2b \x27px\x27)\n })\n&#39;;
   new JavascriptRepl({
@@ -342,7 +350,9 @@ function makeDoubleDelegate(function1, function2) {
 }
 window.onload = makeDoubleDelegate(window.onload, loadExample);
 &lt;/script&gt;
-&lt;div class=&#34;rm-area-end-of-content&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;div class=&#34;rm-area-after-tutorial&#34;&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
             </item>
         
@@ -758,6 +768,9 @@ Why is that useful?&lt;br /&gt;
 Because now you can move elements that have no x,y attributes. Like a group for example.&lt;/p&gt;
 
 &lt;p&gt;Hope you enjoyed this short post.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;div class=&#34;rm-area-end-of-content&#34;&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
             </item>
         
