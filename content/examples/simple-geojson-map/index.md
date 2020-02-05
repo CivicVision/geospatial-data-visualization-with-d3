@@ -11,7 +11,9 @@ include_js = []
 layout = "example"
 section = "d3"
 title = "Simple GeoJSON Map Example"
-
+[repl]
+repo = "milafrerichs/mapping_examples"
+file = "d3/simple-geojson-map/index.js"
 +++
 # Simple GeoJSON map
 
