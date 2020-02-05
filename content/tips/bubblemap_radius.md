@@ -26,3 +26,7 @@ var sqrtScale = d3.scaleSqrt()
 {{</ highlight >}}
 
 Read more about the specifics on [Robert Kosara's blog](https://eagereyes.org/blog/2008/linear-vs-quadratic-change)
+
+<br/>
+<div class="rm-area-after-tutorial"></div>
+

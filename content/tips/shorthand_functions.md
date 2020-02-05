@@ -28,4 +28,5 @@ When the function you are using expects the same input parameters you can just u
 .attr('d', geoGenerator)
 {{</ highlight >}}
 
-
+<br/>
+<div class="rm-area-end-of-content"></div>

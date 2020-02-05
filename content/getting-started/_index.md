@@ -5,11 +5,12 @@ menu:
     weight: 10
 
 ---
+
 # Getting Started
 
 Quick start guide for getting started with mapping with d3.js in four easy steps.
 
----
+<hr/>
 
 {{< numbered-headline number="1" text="Add the library" classes="mt-0">}}
 
@@ -40,3 +41,6 @@ Use this code and replace your data and you should be able to see a map. :)
 Want to know more about how to do it. Check out the [tutorials](/tutorials).
 
 {{< getting-started-map >}}
+
+<br/>
+<div class="rm-area-end-of-content"></div>

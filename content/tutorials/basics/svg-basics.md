@@ -38,3 +38,6 @@ Why is that useful?
 Because now you can move elements that have no x,y attributes. Like a group for example.  
 
 Hope you enjoyed this short post. 
+
+<br/>
+<div class="rm-area-end-of-content"></div>
