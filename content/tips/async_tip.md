@@ -26,3 +26,6 @@ async function map() {
 }
 map();
 {{</ highlight >}}
+
+<br/>
+<div class="rm-area-end-of-content"></div>

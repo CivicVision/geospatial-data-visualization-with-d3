@@ -89,3 +89,5 @@ Start at `0,282` draw a line to `400,282` another line to `400,117` and then to 
 This is just a shot explanation of a simple case. The path element is capable of much more. But it is sufficient enough for us to know that much. D3 offers us great helpers, so we don’t have to deal with it directly. 
 
 Here is a great illustrated article that goes even deeper on the [topic](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+
+<div class="rm-area-end-of-content"></div>

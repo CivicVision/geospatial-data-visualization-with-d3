@@ -134,4 +134,6 @@ d3.select('#tooltip')
 This is the complete code and you can see the result below. Play around with it. It is interactive!
 
 {{< repl >}}
-<div class="rm-area-end-of-content"></div>
+
+<br/>
+<div class="rm-area-after-tutorial"></div>

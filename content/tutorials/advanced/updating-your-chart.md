@@ -64,3 +64,6 @@ circles.join(
 {{< / highlight >}}
 
 This looks a little crazy. But is kinda genius. The uses-cases for these animations and changes are rare, so most people will benefit greatly from this change and the others just need to learn a little bit different syntax.
+
+<br/>
+<div class="rm-area-after-tutorial"></div>
