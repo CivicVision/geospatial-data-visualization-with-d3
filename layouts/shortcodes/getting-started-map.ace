@@ -1,0 +1,4 @@
+{{ $urlPre := "https://api.github.com/gists/"  }}
+{{ $gistJ := getJSON $urlPre "9eb795809d0f420c7d86bf34450fdb17" }}
+{{ $file:= index $gistJ.files "example-d3-map.js" }}
+{{ highlight $file.content "js" "linenos=inline" }}

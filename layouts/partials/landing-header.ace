@@ -1,0 +1,36 @@
+.flex.fixed.top-0.inset-x-0.z-50.h-16.items-center.flex-row-reverse.md:hidden
+  {{ partial "hamburger" . }}
+.w-full.max-w-screen-xl.mx-auto.px-6
+  .lg:mt-16.relative.flex.flex-wrap.items-start.mt-6
+    .w-full.lg:mt-24 class="lg:w-1/2" 
+      h1.text-4xl.leading-tight.font-light
+        | Create beautiful and interactive
+        br
+        span.font-bold maps&nbsp;
+        | with 
+        span.font-bold d3.js
+      p.mt-6.leading-relaxed.sm:text-lg.md:text-xl.xl:text-lg.text-gray-600
+        | You know d3.js for it's power and flexibility creating interactive charts.
+        br
+        | But d3.js is also great for creating interactive maps.
+        br
+        | The code
+        span.hidden.lg:inline &nbsp;on the right&nbsp;
+        span.inline.lg:hidden &nbsp;below&nbsp;
+        span is all you need to get started creating a simple map with d3.js. Not that complicated, right?
+      .flex.mt-6.justify-start.md:justify-center.xl:justify-start
+        a.rounded-lg.px-4.md:px-5.xl:px-4.py-3.md:py-4.xl:py-3.bg-civic.hover:bg-orange.md:text-lg.xl:text-base.text-white.font-semibold.leading-tight.shadow-md.text-white href="/getting-started"  Get started!
+    .w-full.lg:mt-24 class="lg:w-1/2" 
+      .text-white.w-full.mt-4.rounded.text-sm
+        {{ $urlPre := "https://api.github.com/gists/"  }}
+        {{ $gistJ := getJSON $urlPre "9eb795809d0f420c7d86bf34450fdb17" }}
+        {{ $file:= index $gistJ.files "example-d3-map.js" }}
+        {{ highlight $file.content "js" "linenos=inline" }}
+.w-full.p-4.border-t.border-b.mt-6
+  .w-full.max-w-screen-xl.mx-auto.px-2
+    .rm-area-offer-mwd3
+    .flex.justify-center.fallback.hidden
+      .w-full
+        h3.text-2xl.font-medium Get weekly mapping with d3.js tips
+        p.text-gray-600.text-lg.mt-4 I send out weekly emails with examples, tutorials and tips about mapping with d3.
+        {{ partial "form" .Page.Params.form }}

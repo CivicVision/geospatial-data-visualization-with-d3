@@ -1,41 +1,29 @@
 ---
-layout: landingpage
-no_sidebar: true
 title: Geospatial Data Visualization with d3
 description: This online video course on creating maps with d3.js helps you learn
   the geospatial concepts of d3 and how to create geospatial data visualizations with
   javascript. The course is taught by Mila Frerichs who is a geospatial data visualization
   consultant. The course is modeled from successful hands-on workshops at geospatial
   conferences over the last 4 years.
-body_classes: landingpage font-light font-sans leading-normal text-xs sm:text-base md:text-lg text-gray-700
-price:
-  url: "https://gum.co/mappingwithd3/"
-  base:
-    text: Buy now!
-  group:
-    closed: true
-    text: Available again Early 2020!
-  group_plus:
-    closed: true
-    text: Available again Early 2020!
+body_classes: landingpage font-light font-sans leading-normal text-gray-700
 form:
-  id: "1028115"
-  uid: ecf915d632
-  subscribe_text: Send me the free lesson!
-  after_button: |
-    <p>Want to learn how to create <span class="lg:hidden">this map?</span><span class="hidden lg:inline">the map to the left? </span></p>
-    <p><a href="#buy">Buy the course now!</a></p>
+  id: "1050725"
+  uid: e4325745ae
+  subscribe_text: Get weekly updates!
+  after_button: ''
   classes:
-    button: text-xl text-white focus:outline-0 w-full bg-civic block py-3 font-bold
+    button_container: w-full lg:w-1/3 flex items-end lg:ml-6
+    button: rounded mb-4 text-xl text-white focus:outline-0 w-full bg-civic block py-3 font-bold
       hover:bg-gray-700 focus:bg-gray-700 tracking-wide px-6
-    form: mt-4 w-full
-    fields: ''
+    form: mt-4 w-full flex flex-col lg:flex-row
+    fields_container: w-full lg:w-2/3
     error: text-red-darker mb-4
     input: block border border-transparent focus:border-gray-300 rounded transition
       w-full focus:outline-0 bg-gray-200 py-3 px-6 mb-4 flex-grow text-gray-900
     after_button: text-base mt-4 text-center
   data:
     options:
+      version: 5
       settings:
         after_subscribe:
           success_message: Success! Now, you need to perform an action! Check your
@@ -90,200 +78,33 @@ waiting_list_form:
     placeholder: Your email address
 
 ---
-{{< header>}}
-  {{< headline-h1 >}}
-    Learn how to create great-looking, interactive maps with d3.
-  {{</ headline-h1 >}}
-  {{< headline-h2 class="font-light text-gray-700 w-2/3 m-auto leading-tight" >}}
-    A comprehensive video course to create geospatial data visualizations with javascript and d3.
-  {{</ headline-h2 >}}
-{{</ header>}}
-<div class="flex-col lg:flex-row flex">
-  <div class="w-full lg:w-2/3 xl:w-1/2" id="housing-map-parent">
-    <div class="hidden lg:block" id="housing-map">
-      {{< housing-map >}}
+<div class="w-full max-w-screen-xl mx-auto px-6">
+  <div id="content-wrapper" class="min-h-screen w-full">
+    <div class="mt-16 text-base">
+      <h2 class="text-2xl font-light">D3.js is not just for charts</h2>
+      <p class="mt-6">
+        Most developers assume <a href="https://d3js.org">d3.js</a> is just good for charts but d3.js is actually great for maps as well.<br/>
+        And it's not that complicated to create your first map with d3.
+      </p>
+      <p class="mt-6">D3.js maps are different.</p>
+      <p class="mt-6">You provide the data that is displayed and if you want to include a basemap you can, but most often you won't need to. D3.js maps are very clutter-free by default. <br/>You provide all the details you want.</p>
+      <h2 class="text-2xl font-light">With great power comes great responsibility</h2>
+      <p class="mt-6">Since you have all the power to create a map to your liking you are responsible for most of the things. <br/>There are a lot of helpers inside the library that will make things easier but you're still responsible of addin them.</p>
+      <p class="mt-6">
+        On this page I want to give you an overview how you can create maps with d3. <br/>
+        I show you a lot of <a class="font-medium hover:underline text-gray-700" href="/examples">examples</a> and have <a class="font-medium hover:underline text-gray-700" href="/tutorials">tutorials</a> and <a class="font-medium hover:underline text-gray-700" href="/tips">quick tips</a>
+      </p>
+      <h2 class="text-2xl font-light">Here are a few examples of great maps with d3.js</h2>
+      <div class="p-4 rounded mt-8">
+        <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/examples/choropleth-usa-drug-overdose.png" alt="Choropleth map from the New York Times" class="rounded border">
+        <div class="text-xs text-center mt-1 font-light text-gray-500">Choropleth map from <a href="https://www.nytimes.com/interactive/2017/12/22/upshot/opioid-deaths-are-spreading-rapidly-into-black-america.html">NYT</a>.</div>
+      </div>
+      <div class="p-4 rounded mt-8">
+        <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/geospatial-d3/examples/bubblemap-energy-usa.png" alt="Bubble map from the Washington Post" class="rounded border">
+        <div class="text-xs text-center mt-1 font-light text-gray-500">Bubble map from <a href="https://www.washingtonpost.com/graphics/national/power-plants/">WaPo</a>.</div>
+      </div>
+      <div class="mt-8 rm-after-content-mwd3">
+      </div>
     </div>
-    <div class="hidden md:block lg:hidden" id="housing-map-tablet">
-      {{< housing-map-tablet>}}
-    </div>
-    <div class="md:hidden" id="housing-map-mobile">
-      {{< housing-map-phone >}}
-    </div>
-    <div class="mx-auto md:p-0 md:w-1/2" style="width: 320px">
-      {{< housing-legend>}}
-    </div>
-  </div>
-  <div class="w-full lg:w-1/3 xl:w-1/2 mt-8 lg:-ml-6 xl:-ml-8">
-    {{< callout >}}
-    {{< paragraph class="text-2xl font-normal text-center">}}
-Get the first __six-part lesson for free__ on creating a simple map.
-    {{</ paragraph >}}
-    {{< form >}}
-    {{</ callout >}}
   </div>
 </div>
-{{< section-text >}}
-  {{< headline >}}
-  Learning d3 can be hard
-  {{</ headline >}}
-  {{< paragraph >}}
-  You not only need to learn d3 but a lot of other concepts before that.  
-
-  - SVG/Canvas
-  - HTML
-  - Javascript
-
-  There are a lot of ways of doing things in d3. There is no one approach.  
-  If you search on social networks and google, there are a ton of tweets and blog posts about why d3 is hard for them.  
-  {{</ paragraph >}}
-  {{< quote >}}
-    "I want to just jump in, yet it seems like I need to know a bunch of the api to get even a simple graph up."
-  {{</ quote >}}
-  {{< headline >}}
-  Learning with examples is frustrating
-  {{</ headline >}}
-  {{< paragraph >}}
-  Most people learn d3 by looking at examples and changing parts of it to fit their needs. 
-  {{</ paragraph >}}
-  {{< paragraph >}}
-  You iterate on these examples, look at the documentation, maybe consult a book or look at videos on YouTube.
-  {{</ paragraph >}}
-  {{< paragraph >}}
-  But people get __frustrated__ using this method. 
-  {{</ paragraph >}}
-  {{< quote >}}
-    "After looking at a few d3.js demos, I had thought that the above task would be trivially easy with d3.js, but in fact I have found it to be insanely difficult."
-  {{</ quote >}}
-  <h3 class="my-2 text-xl font-bold">Undocumented example code makes it harder to learn</h3>
-  {{< paragraph >}}
-  A lot of examples don't have of comments or explanations. Which makes it hard to understand what is being done.
-  {{</ paragraph >}}
-  {{< quote >}}
-  "Without comments and explanations of what is happening along the way, it’s very hard for someone starting out to figure out what’s going on."
-  {{</ quote >}}
-  <h3 class="my-2 text-xl font-bold">Potentially bad code is hard to fix</h3>
-  {{< paragraph >}}
-  Everyone can create examples with d3, and it's hard to know the experience level of the creator.  
-  Examples may have bad or repetitive code. 
-  If you learn with these possibly bad examples, you could learn the wrong things.  
-  {{</ paragraph >}}
-  {{< quote >}}
-  "There’s the problem of blocks that are written with bad code, or don’t include the necessary data files or libraries."
-  {{</ quote >}}
-  <h3 class="my-2 text-xl font-bold">Old examples lead to more frustration</h3>
-  {{< paragraph >}}
-  Thanks to the introduction of [observable](https://observablehq.com) more examples are created with the current version of d3. But on [bl.ocks](https://bl.ocks.org) a majority of examples are still created with v3 which was replaced in 2016 with v4.
-  {{</ paragraph >}}
-  {{< quote >}}
-    "Most of the resources I’ve found are either old (v3, I know I can still follow them, but I’d rather follow a v4 tutorial) or very convoluted. It seems like I spend half my time trying to figure out why the graph won’t compile."
-  {{</ quote >}}
-  {{< headline >}}
-  Most d3.js tutorials only scratch the surface
-  {{</ headline >}}
-  {{< paragraph >}}
-  {{</ paragraph >}}
-  {{< quote >}}
-  "I’ve gone through some tutorials but I find that they only scratch the surface and are often fragmented — learning the code for building a scale doesn’t mean anything to me without the accompanying chart."
-  {{</ quote >}}
-{{</ section-text >}}
-{{< section class="bg-gray-200 p-4">}}
-  {{< testimonial name="Chris Marx" image="https://pbs.twimg.com/profile_images/897656134118645760/WVanjgdR_400x400.jpg" >}}
-  Inspired by the amazing [@milafrerichs](https://twitter.com/milafrerichs) #D3 workshop at #foss4gna, I was able to create an interactive globe map of my twitter friends. 
-  {{</ testimonial >}}
-{{</ section-text >}}
-{{< text "How this course is different" >}}
-  {{< paragraph >}}
-  __Geospatial Data Visualization with d3__ will help you take a more focussed approach for learning d3. 
-  {{</ paragraph >}}
-  <h3 class="my-2 text-xl font-bold">Retain more by learning with projects</h3>
-  {{< paragraph >}}
-  Project-based learning is believed to result in more in-depth knowledge through active exploration of real-world challenges and problems.
-  {{</ paragraph >}}
-  {{< quote >}}
-  "[Project-based learning] encourages higher order critical thinking and de-emphasizes memorization. Increases motivation to learn in order to arrive at a solution. "
-  {{</ quote >}}
-  <h3 class="my-2 text-xl font-bold">Self-check your learning</h3>
-  {{< paragraph >}}
-  Check what you learn after each section with exercises.
-  {{</ paragraph >}}
-  <h3 class="my-2 text-xl font-bold">Stay on top of your learning path</h3>
-  {{< paragraph >}}
-  Weekly accountability emails will help you stay on top of your learning experience and keep you motivated.
-  {{</ paragraph >}}
-  <h3 class="my-2 text-xl font-bold">Get help from peers</h3>
-  {{< paragraph >}}
-  You will learn with a group of 5 poeple and will be able help each other. You will get access to a forum and we will have byweekly group video calls.
-  {{</ paragraph >}}
-  <h3 class="my-2 text-xl font-bold">Modeled from successful hands-on workshops</h3>
-  {{< paragraph >}}
-  This course is modeled from hands-on workshops at geospatial conferences I gave over the last three years. 
-  {{</ paragraph >}}
-  {{< paragraph >}}
-  I iterated on the format, the course content, and examples over the years to land on this course format and content.
-  {{</ paragraph >}}
-  {{< paragraph >}}
-  Conferences I gave this workshop at:
-
-  - NACIS 2019
-  - FOSS4G UK 2019
-  - FOSS4G North America 2019
-  - FOSS4G Oceania 2018
-  - FOSS4G 2017
-  {{</ paragraph >}}
-{{</ text >}}
-{{< section class="bg-gray-200 p-4">}}
-  {{< testimonial name="Joshua Campbell" image="https://pbs.twimg.com/profile_images/378800000251107460/67e423b6232246a70706cc27683bf665_400x400.jpeg" >}}
-  If you’ve ever wanted to make maps and visualizations in d3, check out [@milafrerichs](https://twitter.com/milafrerichs) new online course. I’ve taken his workshop @foss4gna and was impressed.
- {{</ testimonial >}}
-{{</ section-text >}}
-{{< text "What's included!">}}
-This course will guide you through the most important aspects of creating maps with d3 and lead you towards more advanced topics. 
-{{</ text >}}
-{{< section class="p-4 m-auto max-w-5xl bg-gray-200 shadow-md">}}
-  {{< course-content >}}
-{{</ section >}}
-{{< section class="p-4 m-auto max-w-5xl">}}
-{{< headline >}}
-About the instructor
-{{</ headline >}}
-<div class="flex">
-  <div class="md:w-2/3">
-    <p class="mb-4">My name is Mila Frerichs. I am working with d3 for about five years and teach people d3 for about three. My first d3 workshop was back in 2015 when I was still in college.  </p>
-    <p class="mb-4">Since then I gave iterations of the d3 mapping workshop at five different conferences around the world.</p>
-    <p class="mb-4">I run my own consultancy working with non-profits creating data visualizations and tools.</p>
-    <p class="mb-4">I have a dog and love the outdoors, hiking, swimming, climbing, wakeboarding and more.</p>
-    <p class="mb-4">I would love to have you join me on this journey through d3.</p>
-  </div>
-  <div class="md:w-1/3">
-    <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit/milafrerichs.jpg" width="150" class="rounded-full ml-4" />
-  </div>
-</div>
-{{</ section >}}
-{{< section class="p-4 m-auto max-w-5xl">}}
-  <a name="buy"></a>
-  {{< headline >}}
-  Plans
-  {{</ headline >}}
-  {{< pricing >}}
-{{</ section >}}
-{{< section >}}
-  {{< container >}}
-  {{< headline >}}
-  What kind of maps will you be able to create after you‘ve gone through the course?
-  {{</ headline >}}
-  {{</ container >}}
-  <div class="m-auto max-w-xl">
-    <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit,h_600/geospatial-d3/examples/choropleth-usa-drug-overdose.png" />
-    <img src="https://res.cloudinary.com/civicvision/image/upload/f_auto,q_auto,w_auto,dpr_auto,c_limit,h_600/geospatial-d3/examples/bubblemap-energy-usa.png" />
-  </div>
-{{</ section >}}
-{{< section class="text-xs text-grey">}}
-  {{< container >}}
-  {{< headline >}}
-  Attributions:
-  {{</ headline >}}
-  {{< paragraph >}}
-  Hexbin map at top: [Mike Bostock](https://observablehq.com/@d3/hexbin-map)  
-  Choropleth Map: [New York Time](https://www.nytimes.com/interactive/2017/12/22/upshot/opioid-deaths-are-spreading-rapidly-into-black-america.html)  
-  Bubble Map: [Washington Post](https://www.washingtonpost.com/graphics/national/power-plants/)
-  {{</ paragraph >}}

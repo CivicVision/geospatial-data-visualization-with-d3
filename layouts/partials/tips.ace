@@ -1,8 +1,0 @@
-.mb-8
-  h5 
-    a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs Tips
-    ul
-      {{ range .Site.Taxonomies.categories.tips}}
-        li.mb-3.lg:mb-1
-          a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.text-gray-600.font-medium href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
-      {{ end }}

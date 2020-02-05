@@ -2,7 +2,7 @@
 title: Tips
 menu:
   main:
-    weight: 20
+    weight: 30
 
 ---
 # Tips

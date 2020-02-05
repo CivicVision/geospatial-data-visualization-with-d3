@@ -7,16 +7,18 @@ html lang=en
   {{ partial "rightmessage" . }}
   body class="{{ default .Site.Params.body_classes .Params.body_classes}}"
     = yield header
-    main#content.w-full.max-w-screen-xl.mx-auto.px-6 role="main"
+    main#content.w-full.max-w-screen-xl.mx-auto.px-6.mt-6 role="main"
       {{ if .Page.Params.no_sidebar }}
         = yield main
       {{ else }}
-        .lg:flex.-mx-6
-          .hidden.fixed.inset-0.pt-16.h-full.bg-white.z-90.w-full.border-b.-mb-16.lg:-mb-0.lg:static.lg:h-auto.lg:overflow-y-visible.lg:border-b-0.lg:pt-0.lg:w-1/4.lg:block.lg:border-0.xl:w-1/5
-            {{ partial "sidebar.html" . }}
+        .lg:flex.lg:-mx-6
+          #menu-container.hidden.fixed.inset-0.pt-16.h-full.bg-white.z-40.w-full.border-b.-mb-16.lg:-mb-0.lg:static.lg:h-auto.lg:overflow-y-visible.lg:border-b-0.lg:pt-0.lg:w-1/4.lg:block.lg:border-0.xl:w-1/5
+            .h-full.overflow-y-auto.scrolling-touch.lg:h-auto.lg:block.lg:relative.lg:sticky.lg:top-0.bg-gray-100.lg:bg-transparent.overflow-hidden
+              {{ partial "sidebar.html" . }}
           .content
             = yield main
       {{ end }}
     {{ partial "footer.html" . }}
     = yield modal
+    script src="/javascript/main.js"
     {{ partial "scripts" . }}

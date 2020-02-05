@@ -1,7 +1,7 @@
 ---
 menu:
   main:
-    weight: 10
+    weight: 20
 title: Tutorials
 ---
 # Tutorials

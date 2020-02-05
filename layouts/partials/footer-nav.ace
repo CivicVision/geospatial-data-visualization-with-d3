@@ -18,6 +18,6 @@
         a.text-white.tracking-tight href="/#about" About
         ul.list-reset.lg:mt-4
           li.text-xs
-            a.no-underline.text-white.font-medium.tracking-tight href="http://milafrerichs.de" Instructor's Homepage
+            a.no-underline.text-white.font-medium.tracking-tight href="https://milafrerichs.com" My Homepage
           li.text-xs
             a.no-underline.text-white.font-medium.tracking-tight href="http://twitter.com/milafrerichs" Follow me on twitter

@@ -1,5 +1,9 @@
 ---
 title: Examples
+menu:
+  main:
+    weight: 50
+
 ---
 # Examples
 

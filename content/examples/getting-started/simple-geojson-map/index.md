@@ -11,7 +11,7 @@ include_js = []
 layout = "example"
 section = "d3"
 title = "Simple GeoJSON Map Example"
-
+hide_author = true
 +++
 # Simple GeoJSON map
 

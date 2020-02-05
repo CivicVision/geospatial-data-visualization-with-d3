@@ -1,0 +1,4 @@
+h2.mb-2.text-gray-900.font-normal.text-2xl.mt-4 class="{{ .Get "classes" }}"
+  a name=""
+  span.text-lg.bg-civic.text-gray-200.h-6.w-6.rounded-full.inline-flex.justify-center.items-center.mt-px.mr-3 {{ .Get "number" }}
+  span {{ .Get "text" }}

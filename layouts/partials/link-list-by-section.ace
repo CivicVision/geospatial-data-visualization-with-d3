@@ -1,0 +1,32 @@
+{{ $sort := "Title" }}
+{{ $sortOrder := "asc" }}
+{{ if .sort }}
+  {{$sort = .sort}}
+{{ end }}
+{{ if .sortOrder }}
+  {{$sortOrder = .sortOrder}}
+{{ end }}
+{{ $currentPage := .context }}
+.mb-8
+  h5 
+    {{ if .title}}
+    a.block.mb-3.lg:mb-2.text-gray-500.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs {{.title}}
+    {{end}}
+    ul
+      {{ with .context.Site.GetPage "section" .section }}
+      {{ if .Sections}}
+        {{ range sort .Sections $sort $sortOrder }}
+          .mb-8
+            a.block.mb-3.lg:mb-2.uppercase.tracking-wide.font-bold.text-sm.lg:text-xs.text-gray-500 {{.Title}}
+            {{ range .Pages }}
+              li.mb-3.lg:mb-1
+                a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.font-medium class="{{ if (eq $currentPage .) }}text-gray-900{{else}}text-gray-600{{end}}" href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+            {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ range .Pages }}
+          li.mb-3.lg:mb-1
+            a.px-2.-mx-2.py-1.transition-fast.relative.block.hover:translate-r-2px.hover:text-gray-900.font-medium class="{{ if (eq $currentPage .Page) }}text-gray-900{{else}}text-gray-600{{end}}" href="{{ .Page.RelPermalink }}" {{ .Page.Title }}
+        {{ end }}
+      {{ end }}
+      {{ end }}
