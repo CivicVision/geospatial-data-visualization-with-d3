@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorials on Geospatial Data Visualization with d3</title>
+    <title>Tutorials on Mapping with d3.js</title>
     <link>https://mappingwithd3.com/tutorials/</link>
-    <description>Recent content in Tutorials on Geospatial Data Visualization with d3</description>
+    <description>Recent content in Tutorials on Mapping with d3.js</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     

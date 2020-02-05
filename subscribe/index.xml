@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Geospatial Data Visualization with d3</title>
+    <title>Mapping with d3.js</title>
     <link>https://mappingwithd3.com/subscribe/</link>
-    <description>Recent content on Geospatial Data Visualization with d3</description>
+    <description>Recent content on Mapping with d3.js</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -26,8 +26,8 @@
       
       <guid>https://mappingwithd3.com/subscribe/thank-you/</guid>
       <description>Success! You made it!
- Check out the resources that I put together for the course.
- You should receive the first email just about now!
+ Check out the tutorials, tips and examples on the left.
+ You should receive your first email soon!
 I got one question for you:
  function sendResponse() { window[&#34;sendFreeCourseSurvey&#34;](&#39;survey&#39;,&#39;appPIZ4CImJ9HcVYC&#39;); } What is your biggest struggle learning d3?SubmitThank you for answering the question. I appreciate it a lot! Thanks a lot and have a great day!
 Mila</description>
