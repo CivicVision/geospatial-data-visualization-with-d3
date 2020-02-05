@@ -50,7 +50,11 @@ p strong {
   @apply my-4;
 }
 .highlight pre {
-  @apply p-4;
+  @apply p-4 break-words whitespace-pre-wrap;
+  word-break: normal;
+}
+.highlight pre code {
+  @apply break-words;
 }
 
 .markdown h3 {
