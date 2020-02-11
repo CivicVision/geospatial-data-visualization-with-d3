@@ -5,6 +5,25 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: content/examples
+  label: Examples
+  create: all
+  match: "**/*"
+- type: heading
+  label: Articles
+- type: directory
+  path: content/tutorials
+  label: tutorials
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/tips
+  label: tips
+  create: all
+  match: "**/*"
+- type: heading
+  label: Global
+- type: directory
   path: content/resources/d3
   label: d3
   create: all
@@ -49,13 +68,5 @@ build:
   mount_path: "/opt/buildhome/repo"
   instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
     -d public
-  publish_command: hugo -d public
-  publish_env:
-  - HUGO_ENV=production
-  - HUGO_VERSION=0.58.3
-  - SEGMENT_KEY=TQtxpBDBl25APWnGP3NiJSGmH7uSHzZk
-  - RIGHTMESSAGE_KEY=1998050406
-  - AIRTABLE_KEY=key500bQxvE9YGdYt
-  output_directory: public
   preview_command: hugo -E -F -D -b $DEPLOY_URL -d public
 version: 0.54.0
