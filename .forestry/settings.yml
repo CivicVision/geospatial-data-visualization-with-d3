@@ -4,21 +4,21 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
-- type: directory
-  path: content/examples
-  label: Examples
-  create: all
-  match: "**/*"
 - type: heading
   label: Articles
+- type: directory
+  path: content/tips
+  label: tips
+  create: all
+  match: "**/*"
 - type: directory
   path: content/tutorials
   label: tutorials
   create: all
   match: "**/*"
 - type: directory
-  path: content/tips
-  label: tips
+  path: content/examples
+  label: Examples
   create: all
   match: "**/*"
 - type: heading
