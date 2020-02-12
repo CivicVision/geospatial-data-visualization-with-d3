@@ -22,3 +22,6 @@ function menu() {
   };
 }
 addLoadEvent(menu);
+if(document.querySelector('#housing-map-parent')) {
+  chart();
+}

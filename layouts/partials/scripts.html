@@ -1,0 +1,60 @@
+<script src="https://polyfill.io/v3/polyfill.js?features=default%2Cfetch"></script>
+{{ $airtable := resources.Get "js/airtable.browser.js"  }}
+{{ $ck := resources.Get "js/ck.js"  }}
+{{ $rm := resources.Get "js/rmExtras.js"  }}
+{{ $main := resources.Get "js/main.js"  }}
+{{ $survey := resources.Get "js/survey.js"  }}
+
+{{ $defaultJS := (slice $ck $rm $main ) | resources.Concat "js/post.js"  }}
+{{ $home:= (slice $main ) | resources.Concat "js/global.js"  }}
+{{ $surveyJS := (slice $ck $rm $main $airtable $survey) | resources.Concat "js/survey.js"  }}
+
+{{ $script := $defaultJS  }}
+{{ if .IsHome  }}
+  {{ $script = $home }}
+{{ end  }}
+{{ if eq .Section "subscribe"  }}
+  {{ $script = $surveyJS }}
+{{ end  }}
+{{ $globalJS := $script | resources.Minify | resources.Fingerprint  }}
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}"></script>
+
+{{ if isset .Params "external_libs" }}
+  {{ range index .Params "external_libs" }}
+    <script src="{{.}}" type="text/javascript"></script>
+  {{ end }}
+{{ end }}
+{{ if isset .Params "include_js" }}
+  {{ range index .Params "include_js" }}
+    <script src="{{$.Site.BaseURL}}js/{{.}}" type="text/javascript"></script>
+  {{ end }}
+{{ end }}
+{{ if isset .Params "tweet" }}
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{ end }}
+<script type="text/javascript">
+  window.rmExtras = {};
+  window.AIRTABLE_KEY = '{{ getenv "AIRTABLE_KEY" }}';
+  {{ if gt .Params.tags 0  }}
+      window.rmExtras.tags = "{{ delimit .Params.tags ";"  }}";
+  {{ end  }}
+  var post = {
+        id: "{{ .Page.UniqueID  }}",
+        categories: [],
+        tagId: "{{ .Page.Params.tagId }}",
+        categorySlug: "",
+        readingTime: {{ .ReadingTime  }}
+  };
+  {{ if gt .Params.categories 0  }}
+      window.rmExtras.categories = "{{ delimit .Params.categories ";"  }}";
+      post.categories = "{{ delimit .Params.categories ";"  }}".split(";");
+      post.categorySlug = "{{ delimit .Params.categories ","  }}";
+  {{ end  }}
+  {{ if or (eq .Page.Type "tips") (eq .Page.Type "tutorials" )  }}
+      window.readPost(post);
+      window.maybeAddTags(post);
+  {{ end  }}
+  {{ if .ReadingTime  }}
+      window.rmExtras.readingTime = {{ .ReadingTime  }};
+  {{ end  }}
+</script>
