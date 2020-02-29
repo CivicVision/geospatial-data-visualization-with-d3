@@ -1,11 +1,9 @@
 +++
+aliases = ["/resources/d3/tooltip/"]
 body_classes = "font-light font-sans content post mb-6 text-base md:text-lg leading-relaxed"
 categories = ["resource", "tutorial", "basic"]
-aliases = [
-    "/resources/d3/tooltip/"
-]
 codeexample = "d3.select('body').append('div').attr('id', 'tooltip').attr('style', 'position: absolute; opacity: 0;');\n d3.select('body').append('svg').attr('width', 300).attr('height', 300);\n d3.select('svg').selectAll('circle').data(['a','b','c'])\n .join('circle')\n .attr('r', 3)\n .attr('cy', 5)\n .attr('cx', (d,i) => i*15+15)\n .on('mouseover', function(d) {\n d3.select('#tooltip').transition().duration(200).style('opacity', 1).text(d)\n })\n .on('mouseout', function() {\n d3.select('#tooltip').style('opacity', 0)\n })\n .on('mousemove', function() {\n d3.select('#tooltip').style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')\n })\n"
-date = "2019-09-01T22:00:00+00:00"
+date = 2019-09-01T22:00:00Z
 description = "Learn how to create tooltips in d3. This post shows you actual d3 code and adds explanations to the most important aspects of tooltips in d3 and has a demo as well. "
 external_css = ["https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"]
 external_libs = ["https://unpkg.com/d3@5.9.7/dist/d3.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js", "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js"]
@@ -14,9 +12,9 @@ include_js = ["repl.js"]
 keywords = ["d3", "map", "tooltip"]
 layout = "single"
 section = "d3"
+tagId = 1287309
 title = "How to create a simple tooltip in d3.js"
 tweet = "1171067111655038977"
-tagId = 1287309
 
 +++
 {{< header>}}
@@ -42,7 +40,7 @@ First off let’s add a new element to the page.
 d3.select('body').append('div');
 {{< / highlight >}}
 
-**Important here: **  
+\**Important here: **  
 Add it to the body or an div **outside** your SVG/Canvas. This is important!
 
 ### Why?
@@ -81,7 +79,7 @@ d3.select('svg').selectAll('circle').data(data)
 })
 {{< / highlight >}}
 
-Let‘s look first at the ``mouseover``:
+Let‘s look first at the `mouseover`:
 
 {{< highlight js >}}
 on('mouseover', function(d) {
@@ -136,4 +134,4 @@ This is the complete code and you can see the result below. Play around with it.
 {{< repl >}}
 
 <br/>
-<div class="rm-area-after-tutorial"></div>
+<div class="rm-area-end-of-content"></div>
