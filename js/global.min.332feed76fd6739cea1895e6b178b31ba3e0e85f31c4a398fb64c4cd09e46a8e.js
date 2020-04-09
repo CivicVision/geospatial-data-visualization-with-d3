@@ -3,4 +3,4 @@ func();};}};function menu(){let menu=document.getElementById('menu')
 let menuContainer=document.getElementById('menu-container')
 let menuHeader=document.getElementById('menu-header')
 menu.onclick=function(e){menuContainer.classList.toggle('hidden');menuHeader.classList.toggle('fixed');menuHeader.classList.toggle('top-0');};}
-addLoadEvent(menu);if(document.querySelector('#housing-map-parent')){chart();}
+window.metrical={"app":"T8-lk2u2M"};let script=document.createElement('script');script.src="https://cdn.metrical.xyz/script.js";document.body.append(script);addLoadEvent(menu);if(document.querySelector('#housing-map-parent')){chart();}
