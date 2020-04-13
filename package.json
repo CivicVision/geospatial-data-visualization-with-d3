@@ -15,6 +15,6 @@
   "license": "MIT",
   "devDependencies": {
     "javascript-repl": "^0.4.3",
-    "tailwind-heropatterns": "0.0.7"
+    "tailwind-heropatterns": "0.0.8"
   }
 }
